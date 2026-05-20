@@ -1,0 +1,344 @@
+{
+  "scenario_id": "UTIL_PNK_001",
+  "title": "Decision Tree - Child Abduction / Missing Infant Response (Code Pink)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Operations Room",
+      "prompt": "Step 1: What should be done first after receiving a report of a missing or abducted child or infant?",
+      "options": [
+        {
+          "text": "Identify the exact incident location and begin immediate response.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C01"
+          ]
+        },
+        {
+          "text": "Wait for another department to confirm the report before taking action.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The first action is to identify the exact location and begin immediate response."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Team / Nursing Staff",
+      "prompt": "Step 2: How should the internal search begin?",
+      "options": [
+        {
+          "text": "Direct nursing staff and security personnel to search carefully throughout the building while observing suspicious behavior.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C02"
+          ]
+        },
+        {
+          "text": "Limit the search to the room where the child was last seen.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The search should cover the building carefully and include observation of suspicious behavior."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Security Operations Room",
+      "prompt": "Step 3: What access-control action must be applied immediately?",
+      "options": [
+        {
+          "text": "Close all exits, main entrances, emergency exits, and elevators except for authorized access.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C03"
+          ]
+        },
+        {
+          "text": "Keep elevators operating and close only the main gate.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The procedure requires immediate control of all exits and elevators except authorized access."
+        }
+      ]
+    },
+    "N3": {
+      "role": "CCTV Monitoring Team",
+      "prompt": "Step 4: What is required from the CCTV monitoring team?",
+      "options": [
+        {
+          "text": "Enhance surveillance through the CCTV system and track movement in all relevant internal areas.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C04"
+          ]
+        },
+        {
+          "text": "Review footage only after the internal search has failed.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "CCTV monitoring must be enhanced immediately."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Security Operations Room",
+      "prompt": "Step 5: How should Code Pink be activated inside the facility?",
+      "options": [
+        {
+          "text": "Announce Code Pink through the internal overhead speaker system and repeat the announcement.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C05"
+          ]
+        },
+        {
+          "text": "Notify only the nursery unit and avoid wider announcement.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The code must be announced facility-wide through the overhead speaker system."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Operations Room",
+      "prompt": "Step 6: When should specialized security authorities be contacted?",
+      "options": [
+        {
+          "text": "Immediately through the approved emergency numbers.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C06"
+          ]
+        },
+        {
+          "text": "Only after the internal search is fully completed.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The specialized security authorities must be contacted without delay."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Team",
+      "prompt": "Step 7: When should female security staff be involved?",
+      "options": [
+        {
+          "text": "When inspection of female companions or visitors is required as part of the search process.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C07"
+          ]
+        },
+        {
+          "text": "Only after the incident is fully closed.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Female security staff may be required during the search and inspection process."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Security Team",
+      "prompt": "Step 8: What should security do if the child is found with a suspicious person?",
+      "options": [
+        {
+          "text": "Stop the person, verify identity, and keep them under control until specialized authorities arrive.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C08"
+          ]
+        },
+        {
+          "text": "Allow the person to leave if they claim to know the child.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The suspicious person must be stopped, identified, and controlled until authorities arrive."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Security Team / Specialized Authorities",
+      "prompt": "Step 9: What is required if the child is not found during the initial internal search?",
+      "options": [
+        {
+          "text": "Expand the search to the outside surroundings of the facility and provide the authorities with all incident details and actions already taken.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C09"
+          ]
+        },
+        {
+          "text": "Suspend the response and wait for new information.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "If the child is not found internally, the search must expand externally and authorities must be updated."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Facility Leadership",
+      "prompt": "Step 10: What coordination action should facility leadership take?",
+      "options": [
+        {
+          "text": "Nominate a member or coordinator from the security team to communicate directly with specialized security authorities.",
+          "next": "N10",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C10"
+          ]
+        },
+        {
+          "text": "Assign all communication duties to visitors' relatives.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A security coordinator should be nominated to coordinate with specialized authorities."
+        }
+      ]
+    },
+    "N10": {
+      "role": "Security Team / Relevant Specialists",
+      "prompt": "Step 11: What investigation-support action is required?",
+      "options": [
+        {
+          "text": "Coordinate with specialists and competent authorities to access information related to persons involved and review CCTV recordings and supporting records.",
+          "next": "N11",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C11"
+          ]
+        },
+        {
+          "text": "Restrict all review of CCTV and records until the final report stage.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The investigation requires coordinated access to CCTV and supporting information."
+        }
+      ]
+    },
+    "N11": {
+      "role": "Security Team",
+      "prompt": "Step 12: Why must security presence remain intensified during the incident?",
+      "options": [
+        {
+          "text": "Because the investigation may take time and there is a possibility that the offender may return to the scene.",
+          "next": "N12",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C12"
+          ]
+        },
+        {
+          "text": "Only to maintain routine staffing appearance.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security presence remains intensified because the investigation may take time and the offender may return."
+        }
+      ]
+    },
+    "N12": {
+      "role": "Facility Departments",
+      "prompt": "Step 13: What documentation is required from facility departments?",
+      "options": [
+        {
+          "text": "Prepare a joint incident record involving Security, Patient Experience, Nursing, and Quality, and submit it to facility leadership.",
+          "next": "N13",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C13"
+          ]
+        },
+        {
+          "text": "Submit separate uncoordinated notes only if requested later.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A joint incident record involving the specified departments is required."
+        }
+      ]
+    },
+    "N13": {
+      "role": "Relevant Authorities",
+      "prompt": "Step 14: What should be obtained after the specialized authorities complete the investigation and close the case?",
+      "options": [
+        {
+          "text": "A copy of the final report including observations and recommendations.",
+          "next": "N14",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C14"
+          ]
+        },
+        {
+          "text": "Only a verbal update with no written record.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A copy of the final report including observations and recommendations should be obtained."
+        }
+      ]
+    },
+    "N14": {
+      "role": "Facility Leadership / Quality Department",
+      "prompt": "Step 15: What is the correct post-incident improvement action?",
+      "options": [
+        {
+          "text": "Study and analyze the incident and implement recommendations to reduce the possibility of recurrence.",
+          "next": "N15",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C15"
+          ]
+        },
+        {
+          "text": "Close the case without analysis because the incident has already ended.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The incident should be analyzed and corrective recommendations should be implemented."
+        }
+      ]
+    },
+    "N15": {
+      "role": "Relevant Authority",
+      "prompt": "Step 16: What is the final external communication requirement?",
+      "options": [
+        {
+          "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_PNK_001_C16"
+          ]
+        },
+        {
+          "text": "No further communication is required once the internal report is submitted.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The National Center must receive the required incident information."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

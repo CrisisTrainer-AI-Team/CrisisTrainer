@@ -1,0 +1,259 @@
+{
+  "scenario_id": "UTIL_YLW_001",
+  "title": "External Disaster Response (Code Yellow)",
+  "source_document": {
+    "file_name": "MOH Security Manual.pdf",
+    "standard_no": "Security Procedures",
+    "sub_standard": "External Disaster Response - Code Yellow"
+  },
+  "domain": "hospital_emergency",
+  "facility": "Healthcare Facility",
+  "language": "en",
+  "utility_type": "external_disaster",
+  "code_activation": {
+    "code": "Code Yellow"
+  },
+  "contact_extensions": {
+    "overhead_speaker": "Internal announcement network",
+    "security_operations_room": "Security Operations Room",
+    "ambulance_command": "Ambulance Command",
+    "emergency_department": "Emergency Department",
+    "planning_unit": "Planning and Preparedness Unit",
+    "specialized_authorities": "Relevant Facility Authority",
+    "national_center": "National Center for Emergency and Health Crisis Management"
+  },
+  "roles_involved": [
+    "Security Operations Room",
+    "Security Team",
+    "Security Leadership",
+    "Ambulance Command",
+    "Emergency Department",
+    "Planning and Preparedness Unit",
+    "Medical Staff",
+    "Relevant Facility Authority",
+    "Hazmat Response Team",
+    "Infection Control Department",
+    "Public Health Authority Liaison",
+    "Facility Leadership",
+    "National Center Representative"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "Security Operations Room",
+      "action": "When the healthcare facility receives a report from an external party about the occurrence of a disaster, the security team must first verify the source of the report, the type and magnitude of the disaster, the disaster location, and the approximate number and type of expected casualties as available through the code announcement.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 2,
+      "responsible": "Security Operations Room",
+      "action": "Announce Code Yellow through the internal overhead speaker system and send a signal through wireless communication devices to the security teams assigned for emergency response.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 3,
+      "responsible": "Facility Leadership / Security Leadership",
+      "action": "Activate the facility external disaster emergency plan and implement the relevant internal preparedness procedures.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 4,
+      "responsible": "Security Leadership",
+      "action": "Coordinate with ambulance command, emergency departments, and the planning and emergency preparedness unit to raise the level of readiness and preparedness for security personnel in the receiving area.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 5,
+      "responsible": "Security Team",
+      "action": "Prepare ambulance access points and control movement routes by assigning one-way entry paths to emergency and ambulance sections, while facilitating arrival to the triage area.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 6,
+      "responsible": "Security Team",
+      "action": "At the main external gate, direct minor cases and low-severity patients under medical supervision to other nearby hospitals according to the external emergency plan.",
+      "expected_time": "During incident"
+    },
+    {
+      "step": 7,
+      "responsible": "Security Team",
+      "action": "Adhere strictly to access control policies related to entry into ambulance and emergency departments, and permit access only to authorized persons.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 8,
+      "responsible": "CCTV Monitoring Team / Security Team",
+      "action": "Ensure full CCTV coverage of the ambulance and emergency zones, including triage and patient transport areas, and maintain active monitoring during the event.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 9,
+      "responsible": "Security Team",
+      "action": "Prevent crowd gathering or photography around the triage area and ambulance/emergency perimeter.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 10,
+      "responsible": "Security Team",
+      "action": "Direct families of casualties and injured persons to the designated authority in the facility for information and coordination.",
+      "expected_time": "During incident"
+    },
+    {
+      "step": 11,
+      "responsible": "Security Team / Relevant Facility Authority",
+      "action": "Apply strict procedures for receiving, transferring, and handling deceased persons in coordination with authorized specialists and the facility mortuary.",
+      "expected_time": "As required"
+    },
+    {
+      "step": 12,
+      "responsible": "Relevant Facility Authority",
+      "action": "Ensure that all records and belongings related to casualties, injured persons, and deceased persons are preserved according to facility policies and procedures.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 13,
+      "responsible": "Security Team / Relevant Specialists",
+      "action": "When a pre-activated response plan exists for biological, chemical, or radiological weapons, security personnel must implement required personal protective equipment measures and comply with instructions issued by the Hazmat Response Team.",
+      "expected_time": "As required"
+    },
+    {
+      "step": 14,
+      "responsible": "Security Team / Infection Control Department",
+      "action": "When a pre-activated response plan exists for epidemic or infectious disease events, security personnel must implement required personal protective equipment measures and comply with precautionary procedures according to the relevant public health guidance, in coordination with the Infection Control Department.",
+      "expected_time": "As required"
+    },
+    {
+      "step": 15,
+      "responsible": "Security Leadership",
+      "action": "Communicate with the relevant authority to provide the necessary personal protective equipment for security staff and ensure that security personnel have received the required vaccinations when applicable.",
+      "expected_time": "As required"
+    },
+    {
+      "step": 16,
+      "responsible": "Facility Leadership / Security Operations Room",
+      "action": "Code Red may be announced during activation of the external disaster emergency plan in situations including, but not limited to, when the number of casualties exceeds the facility response capacity or when an internal disaster such as a fire occurs.",
+      "expected_time": "Conditional"
+    },
+    {
+      "step": 17,
+      "responsible": "Security Team",
+      "action": "After the end of an internal or external disaster, continue security presence to secure the area, facilitate the entry and exit of ambulances, and support return to normal operations only after receiving the approved security directions.",
+      "expected_time": "Post-incident"
+    },
+    {
+      "step": 18,
+      "responsible": "Security Leadership / Facility Leadership",
+      "action": "After the event, evaluate the performance of security staff and the security plan, identify weaknesses and gaps, extract lessons learned, circulate them to security personnel, and submit recommendations to facility leadership.",
+      "expected_time": "Post-incident"
+    }
+  ],
+  "learning_objectives": [
+    "Verify and escalate an external disaster using the correct Code Yellow procedure.",
+    "Control ambulance and emergency access routes while supporting triage and external casualty flow.",
+    "Protect operational areas from crowding, unauthorized access, and information leakage during high-casualty events.",
+    "Apply special protection procedures for biological, chemical, radiological, and epidemic scenarios when relevant plans are activated.",
+    "Support post-incident recovery, operational normalization, and lessons-learned review after the disaster ends."
+  ],
+  "tags": [
+    "code_yellow",
+    "external_disaster",
+    "mass_casualty",
+    "triage",
+    "ambulance_access",
+    "hospital_security"
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_YLW_001_C01",
+      "title": "Step 1",
+      "text": "When the healthcare facility receives a report from an external party about the occurrence of a disaster, the security team must first verify the source of the report, the type and magnitude of the disaster, the disaster location, and the approximate number and type of expected casualties as available through the code announcement."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C02",
+      "title": "Step 2",
+      "text": "Announce Code Yellow through the internal overhead speaker system and send a signal through wireless communication devices to the security teams assigned for emergency response."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C03",
+      "title": "Step 3",
+      "text": "Activate the facility external disaster emergency plan and implement the relevant internal preparedness procedures."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C04",
+      "title": "Step 4",
+      "text": "Coordinate with ambulance command, emergency departments, and the planning and emergency preparedness unit to raise the level of readiness and preparedness for security personnel in the receiving area."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C05",
+      "title": "Step 5",
+      "text": "Prepare ambulance access points and control movement routes by assigning one-way entry paths to emergency and ambulance sections, while facilitating arrival to the triage area."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C06",
+      "title": "Step 6",
+      "text": "At the main external gate, direct minor cases and low-severity patients under medical supervision to other nearby hospitals according to the external emergency plan."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C07",
+      "title": "Step 7",
+      "text": "Adhere strictly to access control policies related to entry into ambulance and emergency departments, and permit access only to authorized persons."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C08",
+      "title": "Step 8",
+      "text": "Ensure full CCTV coverage of the ambulance and emergency zones, including triage and patient transport areas, and maintain active monitoring during the event."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C09",
+      "title": "Step 9",
+      "text": "Prevent crowd gathering or photography around the triage area and ambulance/emergency perimeter."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C10",
+      "title": "Step 10",
+      "text": "Direct families of casualties and injured persons to the designated authority in the facility for information and coordination."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C11",
+      "title": "Step 11",
+      "text": "Apply strict procedures for receiving, transferring, and handling deceased persons in coordination with authorized specialists and the facility mortuary."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C12",
+      "title": "Step 12",
+      "text": "Ensure that all records and belongings related to casualties, injured persons, and deceased persons are preserved according to facility policies and procedures."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C13",
+      "title": "Step 13",
+      "text": "When a pre-activated response plan exists for biological, chemical, or radiological weapons, security personnel must implement required personal protective equipment measures and comply with instructions issued by the Hazmat Response Team."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C14",
+      "title": "Step 14",
+      "text": "When a pre-activated response plan exists for epidemic or infectious disease events, security personnel must implement required personal protective equipment measures and comply with precautionary procedures according to the relevant public health guidance, in coordination with the Infection Control Department."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C15",
+      "title": "Step 15",
+      "text": "Communicate with the relevant authority to provide the necessary personal protective equipment for security staff and ensure that security personnel have received the required vaccinations when applicable."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C16",
+      "title": "Step 16",
+      "text": "Code Red may be announced during activation of the external disaster emergency plan in situations including, but not limited to, when the number of casualties exceeds the facility response capacity or when an internal disaster such as a fire occurs."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C17",
+      "title": "Step 17",
+      "text": "After the end of an internal or external disaster, continue security presence to secure the area, facilitate the entry and exit of ambulances, and support return to normal operations only after receiving the approved security directions."
+    },
+    {
+      "chunk_id": "UTIL_YLW_001_C18",
+      "title": "Step 18",
+      "text": "After the event, evaluate the performance of security staff and the security plan, identify weaknesses and gaps, extract lessons learned, circulate them to security personnel, and submit recommendations to facility leadership."
+    }
+  ]
+}

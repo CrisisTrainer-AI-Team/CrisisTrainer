@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrisisTrainer — My Trainings</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .score-badge {
+      display: inline-flex; align-items: center;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.78rem; font-weight: 700;
+      background: rgba(26,122,74,0.1);
+      color: var(--success);
+    }
+    .quiz-alert-box {
+      position: fixed;
+      bottom: 1rem; left: 50%; transform: translateX(-50%);
+      background: var(--c-dark); color: white;
+      padding: 0.6rem 1.3rem; border-radius: 8px;
+      font-size: 0.875rem; font-weight: 500;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .employee-stats {
+      display: flex; gap: 1.2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .emp-stat {
+      flex: 1; min-width: 130px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.3rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .emp-stat .val { font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--c-darkest); }
+    .emp-stat .lbl { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="navbar-brand">
+    <div class="navbar-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <span class="navbar-name">CrisisTrainer</span>
+  </div>
+  <div class="navbar-right">
+    <div class="user-info">
+      <span class="user-name" id="userName"></span>
+      <span class="badge badge-employee">Employee</span>
+    </div>
+    <button class="btn-logout" id="logoutBtn">Logout</button>
+  </div>
+</nav>
+
+<!-- ── Main Content ── -->
+<div class="main-content">
+
+  <!-- Welcome Card -->
+  <div class="welcome-card">
+    <h2>My Training Dashboard</h2>
+    <p>Hello, <strong id="welcomeName" style="color:var(--c-lightest);"></strong>! Complete your assigned crisis training modules below.</p>
+  </div>
+
+  <!-- Summary Stats -->
+  <div class="employee-stats">
+    <div class="emp-stat">
+      <div class="val" id="pendingCount">0</div>
+      <div class="lbl">⏳ Pending</div>
+    </div>
+    <div class="emp-stat">
+      <div class="val" id="completedCount">0</div>
+      <div class="lbl">✅ Completed</div>
+    </div>
+    <div class="emp-stat">
+      <div class="val" id="totalCount">0</div>
+      <div class="lbl">📋 Total Assigned</div>
+    </div>
+  </div>
+
+  <!-- Assignments Grid -->
+  <div class="section-header">
+    <h2 class="section-title">My Assignments</h2>
+  </div>
+
+  <div class="assignments-grid" id="assignmentsGrid">
+    <!-- Rendered by employee.js -->
+    <div class="empty-state">
+      <div class="icon">⏳</div>
+      <p>Loading assignments...</p>
+    </div>
+  </div>
+
+</div><!-- /main-content -->
+
+
+<!-- ══════════════════════════════════════
+     Quiz Modal
+══════════════════════════════════════ -->
+<div class="modal-overlay" id="quizModal">
+  <div class="modal" style="max-width:580px;">
+
+    <div class="modal-header">
+      <span class="modal-title" id="quizTitle">Training Quiz</span>
+      <button class="modal-close" data-close-modal="quizModal">✕</button>
+    </div>
+
+    <!-- Quiz Body -->
+    <div class="modal-body" id="quizBody">
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8rem;">
+        <span class="text-muted">Time Remaining</span>
+        <strong id="timerText">--:--</strong>
+      </div>
+
+      <!-- Progress -->
+      <div class="quiz-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <span class="progress-label" id="progressLabel">1 / 5</span>
+      </div>
+      
+      <!-- Question Text -->
+      <div class="quiz-question" id="questionText">
+        Loading question...
+      </div>
+
+      <!-- Answer Choices -->
+      <div class="quiz-choices" id="quizChoices">
+        <!-- Rendered by employee.js -->
+      </div>
+    </div>
+
+    <!-- Score Screen (hidden until submit) -->
+    <div id="scoreScreen" style="display:none;padding:1.5rem;"></div>
+
+    <!-- Alert (bottom float) -->
+    <div id="quizAlert" class="alert alert-error" style="display:none;margin:0 1.5rem 1rem;"></div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer" id="quizFooter">
+      <button class="btn btn-ghost" id="prevBtn">← Back</button>
+      <div style="display:flex;gap:0.6rem;">
+        <button class="btn btn-primary" id="nextBtn">Next →</button>
+        <button class="btn btn-success" id="submitBtn" style="display:none;">Submit Answers ✓</button>
+      </div>
+    </div>
+
+  </div><!-- /modal -->
+</div><!-- /overlay -->
+
+
+<script src="js/api.js"></script>
+<script src="js/employee.js"></script>
+</body>
+</html>

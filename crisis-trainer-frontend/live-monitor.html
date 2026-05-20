@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrisisTrainer — Live Monitor</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Monitor page extras */
+    .filter-bar {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 0.8rem;
+      padding: 1rem 1.2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .filter-bar .form-control {
+      width: auto; min-width: 140px;
+      background: white;
+    }
+
+    .search-wrap {
+      position: relative; flex: 1; min-width: 180px;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      padding-left: 2.2rem;
+      background: white;
+    }
+
+    .search-icon {
+      position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%);
+      font-size: 0.9rem; color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .completion-bar-wrap {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      margin-bottom: 1.5rem;
+    }
+
+    .completion-bar-bg {
+      height: 10px;
+      background: var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .completion-bar-bg .fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--c-soft), var(--c-accent));
+      border-radius: 5px;
+      transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
+    }
+
+    .table-wrap table th:last-child,
+    .table-wrap table td:last-child { text-align: right; }
+
+    .page-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;
+    }
+
+    .breadcrumb {
+      font-size: 0.82rem; color: var(--text-muted);
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+
+    .breadcrumb a { color: var(--c-accent); }
+  </style>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="navbar-brand">
+    <div class="navbar-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <span class="navbar-name">CrisisTrainer</span>
+  </div>
+  <div class="navbar-right">
+    <div class="user-info">
+      <span class="user-name" id="userName"></span>
+      <span class="badge badge-supervisor">Supervisor</span>
+    </div>
+    <button class="btn-logout" id="logoutBtn">Logout</button>
+  </div>
+</nav>
+
+<!-- ── Main Content ── -->
+<div class="main-content full">
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div>
+      <div class="breadcrumb">
+        <a href="supervisor-dashboard.html">Dashboard</a>
+        <span>›</span>
+        <span>Live Monitor</span>
+      </div>
+      <h1 class="page-title" style="margin-top:0.3rem;">📊 Live Training Monitor</h1>
+    </div>
+    <button class="btn btn-outline btn-sm" id="refreshBtn">🔄 Refresh</button>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3 class="section-title">📊 Average Score by Department</h3>
+      </div>
+      <div style="padding:1rem;">
+        <canvas id="deptScoreChart"></canvas>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3 class="section-title">✅ Completion by Department</h3>
+      </div>
+      <div style="padding:1rem;">
+        <canvas id="deptCompletionChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-bottom:1.5rem;">
+    <div class="table-header">
+      <h3 class="section-title">⚠️ Weakest Scenarios</h3>
+    </div>
+    <div style="padding:1rem;">
+      <canvas id="scenarioChart"></canvas>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-bottom:1.5rem;">
+    <div class="table-header">
+      <h3 class="section-title" style="margin:0;">📊 Department Performance</h3>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Department</th>
+          <th>Assignments</th>
+          <th>Completed</th>
+          <th>Avg Score</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="departmentRows">
+        <tr>
+          <td colspan="4" style="text-align:center;padding:1rem;">Loading...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Assignments Table -->
+  <div class="table-wrap">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="form-control"
+               placeholder="Search employee or scenario..." />
+      </div>
+
+      <select id="filterDept" class="form-control">
+        <option value="">All Departments</option>
+        <option value="Nursing">Nursing</option>
+        <option value="Security">Security</option>
+        <option value="Maintenance">Maintenance</option>
+        <option value="Administration">Administration</option>
+        <option value="Medical Staff">Medical Staff</option>
+      </select>
+
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Department</th>
+          <th>Assigned Trainings</th>
+          <th>Completed</th>
+          <th>Avg Score</th>
+          <th>Risk Level</th>
+          <th>Last Activity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeRows">
+        <!-- Rendered by monitor.js -->
+        <tr>
+          <td colspan="8" style="text-align:center;padding:2rem;color:var(--text-muted);">
+            Loading data...
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div><!-- /table-wrap -->
+</div><!-- /main-content -->
+
+<div class="modal-overlay" id="detailsModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">Assignment Details</span>
+      <button class="modal-close" onclick="closeDetailsModal()">✕</button>
+    </div>
+
+    <div class="modal-body" id="detailsContent">
+      <!-- Rendered by monitor.js -->
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeDetailsModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="deptDetailsModal">
+  <div class="modal" style="max-width:900px;">
+    <div class="modal-header">
+      <span class="modal-title" id="deptDetailsTitle">Department Details</span>
+      <button class="modal-close" onclick="closeDeptDetails()">✕</button>
+    </div>
+
+    <div class="modal-body" id="deptDetailsContent">
+      <!-- Rendered by monitor.js -->
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeDeptDetails()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/api.js"></script>
+<script src="js/monitor.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+{
+  "scenario_id": "UTIL_FIRE_001",
+  "title": "Fire Emergency Response (Code Red)",
+  "source_document": {
+    "file_name": "MOH Security Manual.pdf",
+    "standard_no": "Security Procedures",
+    "sub_standard": "Internal Emergency Response - Code Red"
+  },
+  "domain": "hospital_emergency",
+  "facility": "Healthcare Facility",
+  "language": "en",
+  "utility_type": "fire_emergency",
+  "code_activation": {
+    "code": "Code Red"
+  },
+  "contact_extensions": {
+    "overhead_speaker": "Internal announcement network",
+    "security_operations_room": "Security Operations Room",
+    "civil_defense": "Direct external coordination",
+    "national_center": "National Center for Emergency and Health Crisis Management"
+  },
+  "roles_involved": [
+    "Security Operations Room",
+    "Nearest Security Staff",
+    "Security Team",
+    "Civil Defense",
+    "Incident Command",
+    "Specialists / Relevant Authorities",
+    "Facility Leadership",
+    "National Center Representative"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "Security Operations Room",
+      "action": "When the security operations room receives a report of a fire outbreak or suspicion of a fire, it must rapidly verify the source of the report and the exact incident location.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 2,
+      "responsible": "Security Operations Room",
+      "action": "Announce Code Red through the internal overhead speaker system and repeat the announcement several times, while also sending a signal through wireless communication devices to the security teams assigned for emergency response.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 3,
+      "responsible": "Security Operations Room",
+      "action": "Communicate directly with Civil Defense and the facility firefighting unit regarding the incident.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 4,
+      "responsible": "Nearest Security Staff",
+      "action": "The nearest security staff must immediately respond to the incident and provide the required support, including fire response assistance, opening emergency exits, and supporting medical staff in evacuation operations.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 5,
+      "responsible": "Security Team",
+      "action": "Facilitate entry of specialists and relevant emergency personnel to the incident site.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 6,
+      "responsible": "Security Team",
+      "action": "Secure the incident zone and control access to maintain safety in the affected area.",
+      "expected_time": "During incident"
+    },
+    {
+      "step": 7,
+      "responsible": "Security Team",
+      "action": "Comply with all directions and operational instructions issued by incident command and facility leadership.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 8,
+      "responsible": "Incident Command / Relevant Authorities",
+      "action": "Permit activity to resume at the affected site only after the recovery phase is completed, debris has been removed, the site has been prepared, and approval has been obtained from Civil Defense and the relevant authorities within the facility.",
+      "expected_time": "Post-incident"
+    },
+    {
+      "step": 9,
+      "responsible": "Relevant Authorities / Facility Leadership",
+      "action": "Prepare and submit a joint incident report with the relevant specialists in the facility and Civil Defense to the facility leadership.",
+      "expected_time": "After incident"
+    },
+    {
+      "step": 10,
+      "responsible": "Relevant Authority",
+      "action": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident.",
+      "expected_time": "After incident"
+    }
+  ],
+  "learning_objectives": [
+    "Verify and escalate a fire emergency using the correct Code Red procedure.",
+    "Coordinate internal announcements, Civil Defense communication, and on-site emergency support.",
+    "Support evacuation, secure the incident area, and control access for specialists.",
+    "Follow command instructions and complete recovery, reporting, and external notification requirements."
+  ],
+  "tags": [
+    "fire_emergency",
+    "code_red",
+    "evacuation",
+    "civil_defense",
+    "security_response"
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_FIRE_001_C01",
+      "title": "Step 1",
+      "text": "When the security operations room receives a report of a fire outbreak or suspicion of a fire, it must rapidly verify the source of the report and the exact incident location."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C02",
+      "title": "Step 2",
+      "text": "Announce Code Red through the internal overhead speaker system and repeat the announcement several times, while also sending a signal through wireless communication devices to the security teams assigned for emergency response."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C03",
+      "title": "Step 3",
+      "text": "Communicate directly with Civil Defense and the facility firefighting unit regarding the incident."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C04",
+      "title": "Step 4",
+      "text": "The nearest security staff must immediately respond to the incident and provide the required support, including fire response assistance, opening emergency exits, and supporting medical staff in evacuation operations."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C05",
+      "title": "Step 5",
+      "text": "Facilitate entry of specialists and relevant emergency personnel to the incident site."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C06",
+      "title": "Step 6",
+      "text": "Secure the incident zone and control access to maintain safety in the affected area."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C07",
+      "title": "Step 7",
+      "text": "Comply with all directions and operational instructions issued by incident command and facility leadership."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C08",
+      "title": "Step 8",
+      "text": "Permit activity to resume at the affected site only after the recovery phase is completed, debris has been removed, the site has been prepared, and approval has been obtained from Civil Defense and the relevant authorities within the facility."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C09",
+      "title": "Step 9",
+      "text": "Prepare and submit a joint incident report with the relevant specialists in the facility and Civil Defense to the facility leadership."
+    },
+    {
+      "chunk_id": "UTIL_FIRE_001_C10",
+      "title": "Step 10",
+      "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident."
+    }
+  ]
+}

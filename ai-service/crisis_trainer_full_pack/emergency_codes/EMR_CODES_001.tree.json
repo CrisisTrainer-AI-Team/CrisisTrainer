@@ -1,0 +1,28 @@
+{
+  "scenario_id": "EMR_CODES_001",
+  "title": "Reference Flow - Emergency Codes",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "system",
+      "prompt": "Select the correct emergency code based on the situation.",
+      "options": [
+        {
+          "text": "Use the reference chunks to map situation -> code.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "EMR_CODES_001_R01"
+          ]
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Reference complete.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-02-24T01:14:41Z"
+}

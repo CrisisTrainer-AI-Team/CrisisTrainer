@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrisisTrainer — Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .login-footer {
+      text-align: center;
+      padding: 1rem 1.5rem 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .tab-pane .btn {
+      margin-top: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-card">
+
+    <!-- Brand header -->
+    <div class="login-brand">
+      <div class="logo-icon">🏥</div>
+      <h1>CrisisTrainer</h1>
+      <p>Hospital Crisis Training System</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="loginTab">Sign In</button>
+      <button class="tab-btn" data-tab="registerTab">Register</button>
+    </div>
+
+    <!-- Login Tab -->
+    <div class="tab-pane active" id="loginTab">
+
+      <div id="loginAlert" class="alert" style="display:none;"></div>
+
+      <form id="loginForm" novalidate>
+
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input type="email"
+                 id="loginEmail"
+                 class="form-control"
+                 placeholder="you@hospital.com"
+                 required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password"
+                 id="loginPassword"
+                 class="form-control"
+                 placeholder="••••••••"
+                 required />
+        </div>
+
+        <button type="submit"
+                id="loginBtn"
+                class="btn btn-primary w-100 btn-lg">
+          Sign In
+        </button>
+
+      </form>
+
+      <p class="text-center mt-2 text-sm text-muted">
+        <a href="reset-password.html">
+          Forgot Password?
+        </a>
+      </p>
+
+      <p class="text-center mt-2 text-sm text-muted">
+        No account?
+        <a href="#"
+           onclick="document.querySelector('[data-tab=registerTab]').click();return false;">
+          Register here
+        </a>
+      </p>
+
+    </div>
+
+    <!-- Register Tab -->
+    <div class="tab-pane" id="registerTab">
+
+      <div id="registerAlert" class="alert" style="display:none;"></div>
+
+      <form id="registerForm" novalidate>
+
+        <div class="form-group">
+          <label class="form-label" for="regName">Full Name</label>
+          <input type="text"
+                 id="regName"
+                 class="form-control"
+                 placeholder="Dr. Aisha Al-Rashidi"
+                 required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regEmail">Email Address</label>
+          <input type="email"
+                 id="regEmail"
+                 class="form-control"
+                 placeholder="you@hospital.com"
+                 required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regPassword">Password</label>
+          <input type="password"
+                 id="regPassword"
+                 class="form-control"
+                 placeholder="Min. 6 characters"
+                 required />
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label class="form-label" for="regType">User Type</label>
+
+            <select id="regType" class="form-control">
+              <option value="employee">Employee</option>
+              <option value="supervisor">Supervisor</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regDept">Department</label>
+
+            <select id="regDept" class="form-control">
+              <option value="1">Nursing</option>
+              <option value="2">Security</option>
+              <option value="3">Maintenance</option>
+              <option value="4">Administration</option>
+              <option value="5">Medical Staff</option>
+            </select>
+          </div>
+
+        </div>
+
+        <button type="submit"
+                id="registerBtn"
+                class="btn btn-accent w-100 btn-lg">
+          Create Account
+        </button>
+
+      </form>
+
+    </div>
+
+    <div class="login-footer">
+      &copy; 2025 CrisisTrainer · Hospital Training System
+    </div>
+
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>

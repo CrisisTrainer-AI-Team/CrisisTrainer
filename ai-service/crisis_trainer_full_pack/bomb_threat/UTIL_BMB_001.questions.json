@@ -1,0 +1,246 @@
+{
+  "scenario_id": "UTIL_BMB_001",
+  "title": "Assessment Items - Bomb Threat Response (Code Black)",
+  "items": [
+    {
+      "item_id": "UTIL_BMB_001_Q01",
+      "role": "Security Operations Room",
+      "question": "What is the first required action when a bomb threat report is received?",
+      "choices": [
+        "Evacuate the whole facility immediately without collecting any information.",
+        "Rapidly verify the source of the report and collect the initial available information related to the threat.",
+        "Ignore the report unless a suspicious object is visible.",
+        "Send maintenance staff to inspect the area first."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure starts with immediate verification of the report source and initial information gathering.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q02",
+      "role": "Security Operations Room",
+      "question": "Who must be notified immediately after the initial report is received?",
+      "choices": [
+        "Only the reception desk.",
+        "Relevant specialized authorities through approved emergency numbers and facility leadership.",
+        "Visitors in the parking area.",
+        "The cafeteria supervisor."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires immediate notification of specialized authorities and communication with facility leadership.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C02"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q03",
+      "role": "Security Operations Room",
+      "question": "How is Code Black activated inside the facility?",
+      "choices": [
+        "By sending handwritten notices to departments.",
+        "Through facility leadership coordination and announcement via the internal overhead speaker system.",
+        "Only by text message from the maintenance office.",
+        "By waiting for public media confirmation."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure refers to coordination with leadership for announcing Code Black through the overhead speaker system.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C02"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q04",
+      "role": "Security Team",
+      "question": "What must security teams do regarding specialist instructions during a bomb threat incident?",
+      "choices": [
+        "Follow only internal guesses if specialists are delayed.",
+        "Strictly follow all directions and technical guidance issued by specialists responsible for this type of incident.",
+        "Create their own disposal plan independently.",
+        "Ignore specialist guidance if the area looks safe."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires precise adherence to specialist guidance to reduce possible risk.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C03"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q05",
+      "role": "CCTV Monitoring Team",
+      "question": "What is the role of the CCTV monitoring team after the threat is reported?",
+      "choices": [
+        "Shut down all cameras to protect confidentiality.",
+        "Monitor all possible locations related to the reported threat according to the initial available information.",
+        "Use cameras only after evacuation is completed.",
+        "Record only the building entrance."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires monitoring possible sites linked to the threat using CCTV based on initial information.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C04"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q06",
+      "role": "Security Team",
+      "question": "What communication restriction applies to security personnel moving toward a suspected site?",
+      "choices": [
+        "They may use any communication device as long as they speak quietly.",
+        "They should not use wired or wireless communication devices in order to avoid triggering potential risks.",
+        "They should use all radios continuously to maintain awareness.",
+        "Only mobile phones are prohibited, but radios are encouraged."
+      ],
+      "answer_index": 1,
+      "rationale": "The policy explicitly prohibits use of wired and wireless communication devices near the suspected site.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C05"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q07",
+      "role": "Security Team",
+      "question": "What should security personnel do if they encounter a suspicious object?",
+      "choices": [
+        "Move it carefully to a safer location.",
+        "Open it to identify the source of the threat.",
+        "Avoid moving, examining, opening, or approaching it until specialists arrive.",
+        "Take photographs from close range for faster analysis."
+      ],
+      "answer_index": 2,
+      "rationale": "The procedure warns against moving, examining, opening, or approaching suspicious objects.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C06"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q08",
+      "role": "Security Team",
+      "question": "What is the correct site-control action for a suspected area?",
+      "choices": [
+        "Leave the area open so people can exit faster through it.",
+        "Establish a perimeter around the suspected area, prevent entry, and maintain isolation until specialists begin their tasks.",
+        "Allow only staff with ID cards to pass through.",
+        "Move the perimeter only after media arrive."
+      ],
+      "answer_index": 1,
+      "rationale": "The suspected area must be isolated and protected from access until specialists take over.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C07"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q09",
+      "role": "Incident Command / Facility Leadership",
+      "question": "When should evacuation be executed during a bomb threat incident?",
+      "choices": [
+        "Only after police confirm the device is real.",
+        "When directed by incident command and according to the severity and location of the threat.",
+        "Never, because evacuation increases panic.",
+        "Only after the final report is written."
+      ],
+      "answer_index": 1,
+      "rationale": "Evacuation is executed based on incident command direction and the threat situation.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C08"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q10",
+      "role": "Security Team",
+      "question": "What is expected from security teams while specialized authorities are handling the event?",
+      "choices": [
+        "Coordinate and cooperate with specialized authorities according to the approved protocol.",
+        "Withdraw completely and stop all support.",
+        "Continue independent action without coordination.",
+        "Prioritize media statements over response support."
+      ],
+      "answer_index": 0,
+      "rationale": "The procedure requires ongoing coordination and cooperation with specialized authorities.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C09"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q11",
+      "role": "Security Operations Room",
+      "question": "What should the operations room continue doing during the incident?",
+      "choices": [
+        "Stop all updates until the incident ends.",
+        "Track security updates, operational information, and incident developments and relay them to relevant leadership and response authorities.",
+        "Share unverified rumors to prepare departments.",
+        "Focus only on visitor movement."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires continuous tracking of developments and communication with leadership and response الجهات.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C10"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q12",
+      "role": "Incident Command / Relevant Authorities",
+      "question": "When may activity return to the incident area?",
+      "choices": [
+        "As soon as security believes the area looks safe.",
+        "Only after the event has ended and formal approval has been issued by the relevant specialists.",
+        "Immediately after evacuation is completed.",
+        "As soon as the area is quieter."
+      ],
+      "answer_index": 1,
+      "rationale": "Return to activity requires the event to end and formal approval from relevant specialists.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C11"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q13",
+      "role": "Relevant Authorities / Facility Leadership",
+      "question": "What reporting action is required after the incident?",
+      "choices": [
+        "No report is required if no device was found.",
+        "Prepare and submit a joint incident report with facility specialists and specialized security authorities to facility leadership.",
+        "Write only a short verbal summary.",
+        "Document the event only in CCTV logs."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires a joint incident report after the event.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C12"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_BMB_001_Q14",
+      "role": "Relevant Authority",
+      "question": "Which organization must receive incident information after the event?",
+      "choices": [
+        "National Center for Emergency and Health Crisis Management",
+        "Parking Department",
+        "Cafeteria Services",
+        "Outpatient Registration"
+      ],
+      "answer_index": 0,
+      "rationale": "The final step is to provide the National Center with the required incident information.",
+      "evidence_chunk_ids": [
+        "UTIL_BMB_001_C13"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

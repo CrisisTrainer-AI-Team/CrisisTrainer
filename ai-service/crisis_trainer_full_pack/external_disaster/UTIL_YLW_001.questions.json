@@ -1,0 +1,314 @@
+{
+  "scenario_id": "UTIL_YLW_001",
+  "title": "Assessment Items - External Disaster Response (Code Yellow)",
+  "items": [
+    {
+      "item_id": "UTIL_YLW_001_Q01",
+      "role": "Security Operations Room",
+      "question": "What must be verified first when the facility receives a report from an external party about a disaster?",
+      "choices": [
+        "Only the name of the reporting person.",
+        "The source of the report, type and magnitude of the disaster, disaster location, and approximate number and type of expected casualties.",
+        "Only the nearest available ambulance unit.",
+        "Only whether media coverage has started."
+      ],
+      "answer_index": 1,
+      "rationale": "The first step is to verify the report source and the key operational details of the disaster.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q02",
+      "role": "Security Operations Room",
+      "question": "How should Code Yellow be activated inside the facility?",
+      "choices": [
+        "By sending a private email to administration only.",
+        "Through the internal overhead speaker system and by signaling emergency security teams through wireless communication devices.",
+        "By waiting until ambulances arrive at the gate.",
+        "Through a handwritten note at the emergency entrance."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires overhead announcement and signaling to the assigned response teams.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C02"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q03",
+      "role": "Facility Leadership / Security Leadership",
+      "question": "What should happen immediately after Code Yellow activation?",
+      "choices": [
+        "The facility external disaster emergency plan should be activated.",
+        "All departments should close independently without coordination.",
+        "Only the front gate should be secured.",
+        "Patients should be discharged immediately."
+      ],
+      "answer_index": 0,
+      "rationale": "Code Yellow requires activation of the external disaster emergency plan and relevant preparedness procedures.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C03"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q04",
+      "role": "Security Leadership",
+      "question": "Which entities should security coordinate with to increase readiness in the receiving area?",
+      "choices": [
+        "Only visitor services and housekeeping.",
+        "Ambulance command, emergency departments, and the planning and emergency preparedness unit.",
+        "Only the mortuary unit.",
+        "Only the outpatient clinic supervisor."
+      ],
+      "answer_index": 1,
+      "rationale": "These are the key operational entities involved in preparing the receiving area during an external disaster.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C04"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q05",
+      "role": "Security Team",
+      "question": "What is required regarding ambulance access points during the disaster response?",
+      "choices": [
+        "Keep all traffic routes open in both directions without control.",
+        "Prepare ambulance access points, assign one-way movement paths, and facilitate arrival to the triage area.",
+        "Close all access points until triage is completed.",
+        "Use only visitor parking entrances for ambulance traffic."
+      ],
+      "answer_index": 1,
+      "rationale": "Controlled one-way ambulance access is part of the required movement management.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C05"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q06",
+      "role": "Security Team",
+      "question": "How should minor or low-severity cases be handled at the main external gate?",
+      "choices": [
+        "Direct them to other nearby hospitals under medical supervision according to the external emergency plan.",
+        "Admit all minor cases to the main emergency area immediately.",
+        "Turn them away without documentation.",
+        "Send them to the facility cafeteria until staff are available."
+      ],
+      "answer_index": 0,
+      "rationale": "Minor cases may be redirected to nearby hospitals according to the external emergency plan and medical supervision.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C06"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q07",
+      "role": "Security Team",
+      "question": "What access-control rule applies to ambulance and emergency departments during Code Yellow?",
+      "choices": [
+        "Access should be allowed to all companions for reassurance.",
+        "Only authorized persons are permitted to enter ambulance and emergency departments.",
+        "Any staff member may enter if they know a patient.",
+        "Only visitors with badges are restricted."
+      ],
+      "answer_index": 1,
+      "rationale": "The policy requires strict access control and authorized-entry-only rules.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C07"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q08",
+      "role": "CCTV Monitoring Team / Security Team",
+      "question": "Which areas must remain fully covered by CCTV during the event?",
+      "choices": [
+        "Only staff break rooms and pharmacy storage.",
+        "Ambulance and emergency zones, including triage and patient transport areas.",
+        "Only the administration lobby.",
+        "Only the main exit gate."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires full monitoring coverage of ambulance, emergency, triage, and transport areas.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C08"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q09",
+      "role": "Security Team",
+      "question": "What must security prevent around the triage and ambulance/emergency perimeter?",
+      "choices": [
+        "Only staff discussion.",
+        "Crowd gathering and photography.",
+        "Ambulance communication.",
+        "Patient transport documentation."
+      ],
+      "answer_index": 1,
+      "rationale": "Crowd gathering and photography around sensitive response areas must be prevented.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C09"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q10",
+      "role": "Security Team",
+      "question": "Where should families of casualties and injured persons be directed?",
+      "choices": [
+        "To the designated authority in the facility for information and coordination.",
+        "Directly into the triage area.",
+        "To the ambulance parking zone.",
+        "To any available clinical room."
+      ],
+      "answer_index": 0,
+      "rationale": "Families should be directed to the designated authority for controlled information and coordination.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C10"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q11",
+      "role": "Security Team / Relevant Facility Authority",
+      "question": "What is required when handling deceased persons during the disaster response?",
+      "choices": [
+        "Follow strict procedures for receiving, transferring, and handling deceased persons with authorized specialists and the mortuary.",
+        "Transfer all deceased persons through public entrances.",
+        "Store bodies temporarily in the triage area.",
+        "Handle the process only after all living casualties are discharged."
+      ],
+      "answer_index": 0,
+      "rationale": "The policy requires strict controlled handling of deceased persons with authorized specialists and mortuary coordination.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C11"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q12",
+      "role": "Relevant Facility Authority",
+      "question": "What must happen to records and belongings related to casualties, injured persons, and deceased persons?",
+      "choices": [
+        "They should be preserved according to facility policies and procedures.",
+        "They may be released to companions immediately without documentation.",
+        "They should be discarded after patient transfer.",
+        "They are only preserved if police request them later."
+      ],
+      "answer_index": 0,
+      "rationale": "All related records and belongings must be preserved according to policy.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C12"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q13",
+      "role": "Security Team / Relevant Specialists",
+      "question": "What is required if the activated disaster scenario involves biological, chemical, or radiological weapons?",
+      "choices": [
+        "Security staff may respond normally without special equipment.",
+        "Security personnel must implement required PPE measures and follow Hazmat Response Team instructions.",
+        "Only medical staff need protection in such scenarios.",
+        "The triage area should remain unchanged without protective controls."
+      ],
+      "answer_index": 1,
+      "rationale": "These scenarios require PPE and compliance with Hazmat team instructions.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C13"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q14",
+      "role": "Security Team / Infection Control Department",
+      "question": "What should security do when the activated external disaster scenario involves epidemic or infectious disease events?",
+      "choices": [
+        "Ignore PPE and rely only on distancing.",
+        "Implement PPE, follow precautionary procedures, and coordinate with Infection Control according to public health guidance.",
+        "Leave all infectious disease control to outpatient clinics only.",
+        "Suspend all screening and isolation processes."
+      ],
+      "answer_index": 1,
+      "rationale": "Epidemic scenarios require PPE, precautionary procedures, and coordination with Infection Control.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C14"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q15",
+      "role": "Security Leadership",
+      "question": "What support-related responsibilities apply regarding PPE and staff protection readiness?",
+      "choices": [
+        "Communicate with the relevant authority to provide PPE and ensure security personnel have the required vaccinations when applicable.",
+        "Wait for staff to arrange their own protection individually.",
+        "Request PPE only after casualties begin arriving.",
+        "Vaccination status is irrelevant to disaster response planning."
+      ],
+      "answer_index": 0,
+      "rationale": "Security leadership must coordinate PPE supply and verify required vaccination readiness where applicable.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C15"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q16",
+      "role": "Facility Leadership / Security Operations Room",
+      "question": "When may Code Red be announced during activation of the external disaster plan?",
+      "choices": [
+        "Only if the disaster is fully under control.",
+        "When casualties exceed the facility response capacity or when an internal disaster such as a fire occurs.",
+        "Only if visitors demand additional security presence.",
+        "Only after the final report is completed."
+      ],
+      "answer_index": 1,
+      "rationale": "Code Red may be declared during the external disaster response if capacity is exceeded or if an internal disaster occurs.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C16"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q17",
+      "role": "Security Team",
+      "question": "What should security do after the end of the internal or external disaster?",
+      "choices": [
+        "Leave the area immediately because the event is over.",
+        "Continue security presence, secure the area, facilitate ambulance movement, and support return to normal operations only after approved security directions.",
+        "Reopen all routes without coordination.",
+        "Stop all post-event support and documentation."
+      ],
+      "answer_index": 1,
+      "rationale": "Post-incident security presence remains necessary until approved normalization steps are completed.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C17"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_YLW_001_Q18",
+      "role": "Security Leadership / Facility Leadership",
+      "question": "What is the required post-incident improvement process after the disaster ends?",
+      "choices": [
+        "Archive the event with no operational review.",
+        "Evaluate security staff and the security plan, identify weaknesses and gaps, extract lessons learned, circulate them, and submit recommendations to facility leadership.",
+        "Destroy temporary records after the last ambulance leaves.",
+        "Limit review only to the triage team."
+      ],
+      "answer_index": 1,
+      "rationale": "A full lessons-learned and improvement review is required after the event.",
+      "evidence_chunk_ids": [
+        "UTIL_YLW_001_C18"
+      ],
+      "difficulty": "easy"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

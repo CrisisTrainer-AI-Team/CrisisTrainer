@@ -1,0 +1,180 @@
+{
+  "scenario_id": "UTIL_CROWD_001",
+  "title": "Crowd Gathering Control and Management",
+  "source_document": {
+    "file_name": "MOH Security Manual.pdf",
+    "standard_no": "Security Procedures",
+    "sub_standard": "Handling Crowd Gatherings"
+  },
+  "domain": "hospital_security",
+  "facility": "Healthcare Facility",
+  "language": "en",
+  "utility_type": "crowd_control",
+  "contact_extensions": {
+    "security_operations_room": "Security Operations Room",
+    "security_leadership": "Security Administration",
+    "specialized_security_authorities": "911 / 999",
+    "facility_management": "Facility Leadership"
+  },
+  "roles_involved": [
+    "Security Team",
+    "Security Leadership",
+    "Security Operations Room",
+    "Specialized Security Authorities",
+    "Facility Management",
+    "Authorized Individuals",
+    "Visitors / Crowd"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "Security Team",
+      "action": "Prevent crowds or unauthorized gatherings from entering the healthcare facility and its associated premises unless official instructions are received.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 2,
+      "responsible": "Security Team",
+      "action": "Investigate and determine the precise reasons behind the gathering and assess whether the situation may escalate.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 3,
+      "responsible": "Security Leadership",
+      "action": "Ensure deployment of sufficient security personnel to manage the gathering and establish security perimeters when required.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 4,
+      "responsible": "Security Leadership",
+      "action": "Notify facility leadership and communicate with specialized security authorities through the approved emergency channels.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 5,
+      "responsible": "Security Team",
+      "action": "Do not allow members of the gathering to take photographs or raise banners in the vicinity of the healthcare facility and its related premises.",
+      "expected_time": "During incident"
+    },
+    {
+      "step": 6,
+      "responsible": "Security Team",
+      "action": "Maintain continuous coordination and communication with the specialized security authorities during the entire incident.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 7,
+      "responsible": "Security Team",
+      "action": "Count the number of individuals involved, classify them according to the security situation, and submit the information to the security administration.",
+      "expected_time": "During incident"
+    },
+    {
+      "step": 8,
+      "responsible": "Security Team",
+      "action": "Assign an adequate number of security personnel to accompany persons who may be allowed entry for the purpose of meeting responsible officials inside the facility.",
+      "expected_time": "As needed"
+    },
+    {
+      "step": 9,
+      "responsible": "Security Team",
+      "action": "Do not use force except in very limited cases explicitly permitted by law and applicable regulations.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 10,
+      "responsible": "Security Team",
+      "action": "Continue monitoring the situation until it ends completely and ensure that the crowd disperses from the surrounding area of the healthcare facility.",
+      "expected_time": "Until resolution"
+    },
+    {
+      "step": 11,
+      "responsible": "Security Leadership",
+      "action": "Prepare a joint report with the specialized security authorities and submit it to facility leadership after the incident is concluded.",
+      "expected_time": "Post-incident"
+    },
+    {
+      "step": 12,
+      "responsible": "Security Team",
+      "action": "During interaction with the crowd, demonstrate patience, calm behavior, and respectful communication, avoid provocative verbal or physical expressions, and avoid creating fear by referring to previous incidents.",
+      "expected_time": "Continuous"
+    }
+  ],
+  "learning_objectives": [
+    "Apply the correct security response when dealing with crowd gatherings near a healthcare facility.",
+    "Control access to the facility and protect surrounding premises from disruption.",
+    "Coordinate with leadership and specialized security authorities using approved channels.",
+    "Manage the situation professionally while avoiding escalation and using lawful, proportionate actions.",
+    "Complete monitoring, classification, reporting, and post-incident documentation requirements."
+  ],
+  "tags": [
+    "crowd_control",
+    "hospital_security",
+    "gathering_management",
+    "access_control",
+    "incident_reporting"
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_CROWD_001_C01",
+      "title": "Step 1",
+      "text": "Prevent crowds or unauthorized gatherings from entering the healthcare facility and its associated premises unless official instructions are received."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C02",
+      "title": "Step 2",
+      "text": "Investigate and determine the precise reasons behind the gathering and assess whether the situation may escalate."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C03",
+      "title": "Step 3",
+      "text": "Ensure deployment of sufficient security personnel to manage the gathering and establish security perimeters when required."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C04",
+      "title": "Step 4",
+      "text": "Notify facility leadership and communicate with specialized security authorities through the approved emergency channels."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C05",
+      "title": "Step 5",
+      "text": "Do not allow members of the gathering to take photographs or raise banners in the vicinity of the healthcare facility and its related premises."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C06",
+      "title": "Step 6",
+      "text": "Maintain continuous coordination and communication with the specialized security authorities during the entire incident."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C07",
+      "title": "Step 7",
+      "text": "Count the number of individuals involved, classify them according to the security situation, and submit the information to the security administration."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C08",
+      "title": "Step 8",
+      "text": "Assign an adequate number of security personnel to accompany persons who may be allowed entry for the purpose of meeting responsible officials inside the facility."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C09",
+      "title": "Step 9",
+      "text": "Do not use force except in very limited cases explicitly permitted by law and applicable regulations."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C10",
+      "title": "Step 10",
+      "text": "Continue monitoring the situation until it ends completely and ensure that the crowd disperses from the surrounding area of the healthcare facility."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C11",
+      "title": "Step 11",
+      "text": "Prepare a joint report with the specialized security authorities and submit it to facility leadership after the incident is concluded."
+    },
+    {
+      "chunk_id": "UTIL_CROWD_001_C12",
+      "title": "Behavior and Communication",
+      "text": "During interaction with crowd situations, security personnel should demonstrate patience and calmness, show good conduct, avoid provocative verbal or physical expressions, and avoid creating fear by referencing previous incidents."
+    }
+  ]
+}

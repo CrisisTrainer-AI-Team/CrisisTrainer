@@ -1,0 +1,76 @@
+{
+  "scenario_id": "EMR_CODES_001",
+  "title": "Hospital Emergency Codes Reference (All Staff)",
+  "source_document": {
+    "file_name": "Photo 3.pdf",
+    "page_note": "Emergency Codes poster (last page in the upload)"
+  },
+  "domain": "hospital_emergency",
+  "language": "en",
+  "applies_to_roles": "all",
+  "reference_table": [
+    {
+      "code": "Code Red",
+      "meaning": "Fire and internal disaster"
+    },
+    {
+      "code": "Code Yellow",
+      "meaning": "External disaster outside the hospital"
+    },
+    {
+      "code": "Code Blue",
+      "meaning": "Cardiac pulmonary arrest"
+    },
+    {
+      "code": "RRT",
+      "meaning": "Rapid Response Team"
+    },
+    {
+      "code": "Code Pink",
+      "meaning": "Child abduction"
+    },
+    {
+      "code": "Code White",
+      "meaning": "Bomb threat"
+    },
+    {
+      "code": "Code Gray",
+      "meaning": "Severe weather (flood & stream)"
+    },
+    {
+      "code": "Code Orange",
+      "meaning": "Hazardous materials spills"
+    },
+    {
+      "code": "Code Brown",
+      "meaning": "Utility failure"
+    },
+    {
+      "code": "Code Silver",
+      "meaning": "Active shooter with weapon/hostage situation"
+    },
+    {
+      "code": "Code Black",
+      "meaning": "Aggressive person"
+    },
+    {
+      "code": "Hospital Evacuation",
+      "meaning": "Hospital evacuation"
+    },
+    {
+      "code": "End of Disaster",
+      "meaning": "End of disaster"
+    },
+    {
+      "code": "Emergency Call",
+      "meaning": "Call 2222"
+    }
+  ],
+  "tags": [
+    "emergency_codes",
+    "reference",
+    "all_roles"
+  ],
+  "version": "1.0",
+  "created_at": "2026-02-24T01:14:41Z"
+}

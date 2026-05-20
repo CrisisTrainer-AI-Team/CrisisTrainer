@@ -1,0 +1,224 @@
+{
+  "scenario_id": "UTIL_ELV_001",
+  "title": "Decision Tree - Elevator Failure/Interruption (Including Trapped People)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "General Maintenance Department",
+      "prompt": "Step 1: What should be done now?",
+      "options": [
+        {
+          "text": "Announce Code Brown and inform the Planning & Preparedness Unit through extension (3432).",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C01"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N1": {
+      "role": "PPU Manager",
+      "prompt": "Step 2: What should be done now?",
+      "options": [
+        {
+          "text": "Inform the Safety & Security Manager through extension (7777).",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C02"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Engineer on duty / Safety & Security Officer",
+      "prompt": "Step 3: What should be done now?",
+      "options": [
+        {
+          "text": "If there are trapped people: record names/time/location (elevator number/code); inquire number of trapped people and health status (elderly/infants/patients); provide support/instructions and reassurance until help arrives.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C03"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N3": {
+      "role": "Engineer in Charge",
+      "prompt": "Step 4: What should be done now?",
+      "options": [
+        {
+          "text": "Dispatch technicians to inspect, determine the cause, and prioritize releasing trapped people.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C04"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N4": {
+      "role": "PPU Manager",
+      "prompt": "Step 5: What should be done now?",
+      "options": [
+        {
+          "text": "Call the Rapid Response Team (RRT) when required.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C05"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Site Manager",
+      "prompt": "Step 6: What should be done now?",
+      "options": [
+        {
+          "text": "Call the engineer in charge to conduct follow-up inspection and detect the cause of the issue.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C06"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Engineer in Charge",
+      "prompt": "Step 7: What should be done now?",
+      "options": [
+        {
+          "text": "If elevator maintenance is ongoing, switch off the elevator, label it as 'out of service' and under maintenance on each floor to prevent use until maintenance is completed.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C07"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Engineer in Charge",
+      "prompt": "Step 8: What should be done now?",
+      "options": [
+        {
+          "text": "After the issue is over, report and record findings and inform the Safety & Security Manager that the system returned to operation.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C08"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Safety & Security Manager",
+      "prompt": "Step 9: What should be done now?",
+      "options": [
+        {
+          "text": "Inform DCCT that the failure/interruption ended and the system is back to work.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C09"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N9": {
+      "role": "General Maintenance Manager",
+      "prompt": "Step 10: What should be done now?",
+      "options": [
+        {
+          "text": "If Civil Defense is involved, obtain a copy of the report including remarks and authority.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_ELV_001_C10"
+          ]
+        },
+        {
+          "text": "Skip this step",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Follow the procedure order."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-02-24T01:14:41Z"
+}

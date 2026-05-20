@@ -1,0 +1,212 @@
+{
+  "scenario_id": "UTIL_SLV_001",
+  "title": "Assessment Items - Active Shooter Response (Code Silver)",
+  "items": [
+    {
+      "item_id": "UTIL_SLV_001_Q01",
+      "role": "Security Operations Room",
+      "question": "What is the first required action when a report of an armed person is received?",
+      "choices": [
+        "Immediately evacuate the whole city block.",
+        "Rapidly verify the source of the report and the exact location of the armed person.",
+        "Wait for a second call before acting.",
+        "Send visitors to inspect the location."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure begins with immediate verification of the report source and exact location.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q02",
+      "role": "Security Operations Room",
+      "question": "Which type of information should be collected about the armed person?",
+      "choices": [
+        "Only the building name.",
+        "Gender, age, appearance, clothing description, type of weapon, and number of injured or hostages if present.",
+        "Only the suspect's first name.",
+        "Only the number of staff on duty."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires collecting all available identifying and incident-related information.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C02"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q03",
+      "role": "Security Operations Room",
+      "question": "Who must be notified immediately after the initial information is obtained?",
+      "choices": [
+        "Only housekeeping services.",
+        "Relevant specialized authorities through approved emergency channels.",
+        "Parking control first.",
+        "Only cafeteria staff."
+      ],
+      "answer_index": 1,
+      "rationale": "Specialized authorities must be notified immediately.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C03"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q04",
+      "role": "Security Operations Room",
+      "question": "How should Code Silver be activated inside the facility?",
+      "choices": [
+        "By posting a message on a notice board.",
+        "Through the internal overhead speaker system repeatedly and by signaling emergency security teams through wireless communication devices.",
+        "Only by private email to department heads.",
+        "By waiting for external media confirmation."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires repeated overhead announcement and security-team signaling.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C04"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q05",
+      "role": "Security Operations Room",
+      "question": "What is required regarding facility leadership during the incident?",
+      "choices": [
+        "Leadership should be informed only after the incident ends.",
+        "Facility leadership should be notified immediately and kept updated on incident developments.",
+        "Leadership should receive only a written summary the next day.",
+        "Leadership does not need to be involved."
+      ],
+      "answer_index": 1,
+      "rationale": "Immediate notification and continuous updates to leadership are required.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C05"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q06",
+      "role": "Security Team",
+      "question": "What access-control measure should security apply near the armed person's location?",
+      "choices": [
+        "Allow staff to approach if they are curious.",
+        "Prevent patients, staff, and visitors from approaching or entering the location.",
+        "Allow visitors to pass quickly through the area.",
+        "Keep the area open until leadership arrives."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires preventing people from approaching or entering the danger location.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C06"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q07",
+      "role": "Security Team",
+      "question": "How should communication with the armed person be handled when required?",
+      "choices": [
+        "Through direct confrontation to force a quick outcome.",
+        "Cautiously and carefully, without direct confrontation unless directed by competent authorities.",
+        "By challenging the armed person loudly in public areas.",
+        "Only through untrained bystanders."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure calls for cautious communication and avoiding direct confrontation unless directed by authorities.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C07"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q08",
+      "role": "Security Team / Medical Staff",
+      "question": "What should be done regarding injured persons during the incident?",
+      "choices": [
+        "Wait until all reporting is finished.",
+        "Attempt to reach injured persons together with medical staff for safe transfer while maintaining high safety standards.",
+        "Move injured persons without medical staff.",
+        "Leave injured persons in place regardless of conditions."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure supports attempting safe access and transfer of injured persons with medical staff when conditions allow.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C08"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q09",
+      "role": "Security Team",
+      "question": "What is the role of security regarding movement routes in the incident zone?",
+      "choices": [
+        "Block all exits permanently.",
+        "Secure exit routes and guide evacuation or protected movement according to the evolving situation.",
+        "Let everyone leave through any path without direction.",
+        "Use only staff elevators regardless of risk."
+      ],
+      "answer_index": 1,
+      "rationale": "Security must secure routes and guide movement safely based on the current situation.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C09"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q10",
+      "role": "Security Team",
+      "question": "What is expected from security teams while specialized authorities are handling the incident?",
+      "choices": [
+        "Stop all coordination and wait silently.",
+        "Coordinate and cooperate with specialized security teams and relevant authorities until the incident is fully concluded.",
+        "Work separately without sharing information.",
+        "Leave the scene as soon as external teams arrive."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires continuous coordination and cooperation with specialized teams.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C10"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q11",
+      "role": "Relevant Authorities / Facility Leadership",
+      "question": "What documentation is required after the incident?",
+      "choices": [
+        "No documentation is needed if the situation ends quickly.",
+        "Prepare required reports, document the incident, and submit the information according to approved procedures.",
+        "Only save CCTV footage with no written record.",
+        "Record the event only verbally."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires reporting and documentation according to approved processes.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C11"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_SLV_001_Q12",
+      "role": "Relevant Authority",
+      "question": "Which organization must receive the final incident information?",
+      "choices": [
+        "National Center for Emergency and Health Crisis Management",
+        "Parking Services Department",
+        "Food and Beverage Unit",
+        "Reception Desk"
+      ],
+      "answer_index": 0,
+      "rationale": "The final step is to provide the National Center with the required incident information.",
+      "evidence_chunk_ids": [
+        "UTIL_SLV_001_C12"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

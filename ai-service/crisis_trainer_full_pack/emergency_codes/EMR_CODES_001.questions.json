@@ -1,0 +1,42 @@
+{
+  "scenario_id": "EMR_CODES_001",
+  "title": "Quick Check - Emergency Codes",
+  "items": [
+    {
+      "item_id": "EMR_CODES_001_Q01",
+      "role": "All",
+      "question": "Which code is used for utility failure?",
+      "choices": [
+        "Code Brown",
+        "Code Blue",
+        "Code Red",
+        "Code Orange"
+      ],
+      "answer_index": 0,
+      "rationale": "Emergency Codes poster lists Code Brown as utility failure.",
+      "evidence_chunk_ids": [
+        "EMR_CODES_001_R09"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "EMR_CODES_001_Q02",
+      "role": "All",
+      "question": "Which number should be called in an emergency (per poster)?",
+      "choices": [
+        "2222",
+        "3432",
+        "7777",
+        "8555"
+      ],
+      "answer_index": 0,
+      "rationale": "Poster includes CALL 2222 for emergency.",
+      "evidence_chunk_ids": [
+        "EMR_CODES_001_R14"
+      ],
+      "difficulty": "easy"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-02-24T01:14:41Z"
+}

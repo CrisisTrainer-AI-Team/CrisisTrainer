@@ -1,0 +1,467 @@
+{
+  "scenario_id": "UTIL_WHT_001",
+  "title": "Assessment Items - Aggressive / Violent Behavior Response (Code White)",
+  "items": [
+    {
+      "item_id": "UTIL_WHT_001_Q01",
+      "role": "Security Team",
+      "question": "Who should be notified immediately when a violence situation, suspicion of violence, or behavior likely to lead to violence is observed?",
+      "choices": [
+        "Only the nearest receptionist.",
+        "The Security Operations Room, Security Supervisor, Security Manager, and shift manager.",
+        "Only the maintenance unit.",
+        "Only facility visitors."
+      ],
+      "answer_index": 1,
+      "rationale": "The first required action is immediate notification of the internal security leadership chain.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q02",
+      "role": "Security Operations Room",
+      "question": "What is the first action after receiving a report of verbal aggression, physical aggression, or disorderly behavior inside the facility?",
+      "choices": [
+        "Wait for the next shift to confirm the case.",
+        "Rapidly verify the source of the report and the exact incident location.",
+        "Immediately evacuate the entire hospital.",
+        "Close the case if there is no visible injury."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure begins with rapid verification of the report source and exact location.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C02"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q03",
+      "role": "Security Team",
+      "question": "How should security personnel deal with persons showing behavioral or emotional disturbance?",
+      "choices": [
+        "Ignore them until aggression becomes physical.",
+        "Exercise caution and monitor their movements closely.",
+        "Immediately restrain them in every case.",
+        "Transfer all responsibility to visitors."
+      ],
+      "answer_index": 1,
+      "rationale": "The policy requires caution and movement monitoring for persons showing unstable behavior.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C03"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q04",
+      "role": "Security Team",
+      "question": "What type of information should security collect about persons with behavioral or emotional disturbance?",
+      "choices": [
+        "Only their department number.",
+        "Available information relevant to the person and the situation, then report it to the Operations Room or Security Supervisor.",
+        "Only their clothing color.",
+        "No information is needed until police arrive."
+      ],
+      "answer_index": 1,
+      "rationale": "Security should collect available useful information and report it through the proper chain.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C04"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q05",
+      "role": "Security Operations Room / Security Leadership",
+      "question": "When should additional security personnel be requested?",
+      "choices": [
+        "Only after the incident has ended.",
+        "Whenever the assessed situation requires additional support.",
+        "Only if media are present.",
+        "Only during night shifts."
+      ],
+      "answer_index": 1,
+      "rationale": "The incident must be assessed and support increased whenever needed.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C05"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q06",
+      "role": "Security Operations Room",
+      "question": "How should Code White be activated inside the facility?",
+      "choices": [
+        "By a handwritten note at the security office.",
+        "Through the internal overhead speaker system and by signaling emergency security teams through wireless communication devices.",
+        "By email only after approval from all departments.",
+        "No formal announcement is necessary."
+      ],
+      "answer_index": 1,
+      "rationale": "The code is activated through overhead announcement and team signaling.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C06"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q07",
+      "role": "Security Leadership",
+      "question": "What is required regarding security reinforcement during a Code White incident?",
+      "choices": [
+        "Reduce staffing to avoid visible escalation.",
+        "Provide additional security support according to the type and severity of the aggression.",
+        "Hand over all response tasks to nursing staff.",
+        "Keep the same staffing level regardless of severity."
+      ],
+      "answer_index": 1,
+      "rationale": "Additional support depends on the type and severity of the aggression.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C07"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q08",
+      "role": "Security Operations Room",
+      "question": "When should specialized authorities be contacted during a Code White incident?",
+      "choices": [
+        "Only after the incident is resolved internally.",
+        "Immediately, depending on the type of aggression and the extent to which the situation can be controlled internally.",
+        "Only after a written report is prepared.",
+        "Only if there is damage to hospital property."
+      ],
+      "answer_index": 1,
+      "rationale": "Specialized authorities are contacted immediately based on incident type and controllability.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C08"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q09",
+      "role": "Security Operations Room",
+      "question": "If a police security point exists inside the facility, what should be done?",
+      "choices": [
+        "Ignore it and wait for outside support only.",
+        "Notify it immediately or contact the specialized security authorities directly.",
+        "Use it only after the case is closed.",
+        "Transfer the case only to administration staff."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure explicitly includes immediate notification of the police security point if present.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C08"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q10",
+      "role": "Security Operations Room",
+      "question": "What is required regarding facility leadership during the incident?",
+      "choices": [
+        "Facility leadership should be notified immediately and kept updated on developments.",
+        "Leadership should be informed only after external authorities arrive.",
+        "Leadership does not need to be involved in Code White cases.",
+        "Leadership should receive only a final report the next day."
+      ],
+      "answer_index": 0,
+      "rationale": "Immediate notification and ongoing updates to leadership are required.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C09"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q11",
+      "role": "Security Team",
+      "question": "What is the correct protective action in the incident area?",
+      "choices": [
+        "Allow staff to handle the aggressor alone.",
+        "Protect workers, isolate them from the aggressor when possible, and prevent crowd gathering around the site.",
+        "Encourage bystanders to assist in calming the aggressor.",
+        "Leave the incident area open to avoid congestion."
+      ],
+      "answer_index": 1,
+      "rationale": "Workers should be protected, separated from the aggressor, and the crowd must be controlled.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C10"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q12",
+      "role": "Security Team / Medical Staff",
+      "question": "What should be done regarding injured persons during the incident?",
+      "choices": [
+        "Wait until the aggressor leaves before any attempt to assist.",
+        "Attempt to reach injured persons together with medical staff for safe transfer while maintaining high safety standards.",
+        "Move injured persons without coordination with medical staff.",
+        "Prioritize documentation before medical assistance."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires coordinated safe access to injured persons with medical staff.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C11"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q13",
+      "role": "Security Team",
+      "question": "How should dialogue with the aggressor be handled when the situation allows?",
+      "choices": [
+        "By using threatening language to end the incident quickly.",
+        "By engaging only when appropriate, aiming to calm and de-escalate the situation.",
+        "By confronting the aggressor publicly in front of bystanders.",
+        "By remaining completely silent in all cases."
+      ],
+      "answer_index": 1,
+      "rationale": "Dialogue is used only when suitable and for de-escalation.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C12"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q14",
+      "role": "Security Team",
+      "question": "Which behavioral approach is correct while dealing with an aggressor?",
+      "choices": [
+        "Use firm provocation to establish dominance.",
+        "Exercise caution, avoid unnecessary confrontation, remain calm, and avoid provoking the aggressor.",
+        "Encourage staff to argue back equally.",
+        "Increase noise around the aggressor to confuse them."
+      ],
+      "answer_index": 1,
+      "rationale": "The guidance emphasizes calm, caution, and avoiding provocation.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C12"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q15",
+      "role": "Security Team",
+      "question": "When should female security staff be requested?",
+      "choices": [
+        "Only after the incident is closed.",
+        "If the nature of the situation or the persons involved requires it.",
+        "In every Code White case without exception.",
+        "Only for documentation reviews."
+      ],
+      "answer_index": 1,
+      "rationale": "Female security support is requested when the situation or persons involved require it.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C13"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q16",
+      "role": "Security Team / Social Work Department",
+      "question": "What environmental and support measures are required in the incident area?",
+      "choices": [
+        "Keep all tools in place and avoid involving other departments.",
+        "Ensure the area is free from tools or hazardous objects that may be used as violence means and seek assistance from Social Work in communication and control.",
+        "Allow companions to keep personal items near the aggressor.",
+        "Avoid any coordination with non-security departments."
+      ],
+      "answer_index": 1,
+      "rationale": "Potentially dangerous tools should be removed when safe, and Social Work support may assist in controlling the situation.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C14"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q17",
+      "role": "Security Team",
+      "question": "What should security do if the violence escalates into a fight or direct assault?",
+      "choices": [
+        "Withdraw all security staff immediately.",
+        "Intervene to control the aggressor.",
+        "Wait for documentation staff before taking any action.",
+        "Open all entrances to ease movement."
+      ],
+      "answer_index": 1,
+      "rationale": "If violence escalates into direct assault, security intervenes to control the aggressor.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C15"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q18",
+      "role": "Security Team",
+      "question": "How should security personnel deal if the aggressor is carrying a bladed weapon or firearm?",
+      "choices": [
+        "Approach rapidly from all directions.",
+        "Deal cautiously and calmly until specialized security authorities arrive.",
+        "Use any available bystander to help intervene.",
+        "Treat it the same as a minor verbal dispute."
+      ],
+      "answer_index": 1,
+      "rationale": "The policy emphasizes caution and calmness until specialized authorities arrive.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C15"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q19",
+      "role": "Security Team / Security Leadership",
+      "question": "What is the correct procedure if the situation is controlled without resistance?",
+      "choices": [
+        "End the incident without paperwork.",
+        "Complete the required formal procedures according to the approved internal process.",
+        "Transfer all documentation to visitors.",
+        "Reopen all areas immediately without review."
+      ],
+      "answer_index": 1,
+      "rationale": "Formal procedures must still be completed after control is achieved.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C16"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q20",
+      "role": "Security Team / Security Leadership",
+      "question": "What should be done if security is unable to control the aggressor?",
+      "choices": [
+        "Continue acting alone without notifying anyone.",
+        "Request support, protect people present, and wait for specialized authorities and reinforcement personnel.",
+        "Close the case and leave the scene.",
+        "Move all staff toward the aggressor."
+      ],
+      "answer_index": 1,
+      "rationale": "If control is not possible, support must be requested and people protected until reinforcement arrives.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C16"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q21",
+      "role": "Security Leadership",
+      "question": "When the incident moves beyond control, what is the correct next step?",
+      "choices": [
+        "Remove all visible security presence.",
+        "Establish a security perimeter around the aggression area, and if force becomes necessary, it must be carried out only by trained personnel according to approved procedures and regulations.",
+        "Let companions negotiate freely on behalf of security.",
+        "Open the area for observation by staff."
+      ],
+      "answer_index": 1,
+      "rationale": "Escalated situations require perimeter control and only trained lawful intervention if necessary.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C17"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q22",
+      "role": "Security Team",
+      "question": "How should people present in the incident area be managed?",
+      "choices": [
+        "Tell them to stay where they are without guidance.",
+        "Instruct them to remain calm and guide them toward safe places and emergency exits away from the aggressor’s range.",
+        "Allow everyone to move in random directions.",
+        "Direct them toward the aggressor for faster resolution."
+      ],
+      "answer_index": 1,
+      "rationale": "People present should be kept calm and guided toward safe places away from danger.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C18"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q23",
+      "role": "Security Team",
+      "question": "What access-control measure applies to the main facility entrances during the incident?",
+      "choices": [
+        "Keep them all open for convenience.",
+        "Close the main entrances and allow access only to specialized security authorities reaching the incident area.",
+        "Open only staff parking entrances for visitors.",
+        "Transfer entrance control to volunteers."
+      ],
+      "answer_index": 1,
+      "rationale": "Main entrances are controlled to limit access and allow specialized authorities to reach the scene.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C18"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q24",
+      "role": "CCTV Monitoring Team",
+      "question": "What is the role of CCTV during the incident?",
+      "choices": [
+        "Archive footage after the incident only.",
+        "Monitor the incident, track the aggressor’s movements, and direct relevant response personnel based on developments.",
+        "Record only exits after the event.",
+        "Stop monitoring to avoid confusion."
+      ],
+      "answer_index": 1,
+      "rationale": "CCTV is used actively to monitor developments and support the response team.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C19"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q25",
+      "role": "Security Team / Relevant Facility Authorities",
+      "question": "What documentation is required after the incident?",
+      "choices": [
+        "Only a verbal summary from the nearest guard.",
+        "An incident registration report and a joint internal incident record involving Security, Patient Experience, Nursing, Department Head, and Social Work, submitted to facility leadership.",
+        "No documentation if the incident was brief.",
+        "Only CCTV footage with no written report."
+      ],
+      "answer_index": 1,
+      "rationale": "The policy requires both an incident registration report and a joint internal record.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C20"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q26",
+      "role": "Relevant Authorities",
+      "question": "What should be obtained after specialized authorities complete the investigation and close the case?",
+      "choices": [
+        "A copy of the final report including observations and recommendations.",
+        "Only a verbal phone update.",
+        "A visitor attendance list.",
+        "No further documentation is needed."
+      ],
+      "answer_index": 0,
+      "rationale": "A final report copy including observations and recommendations should be obtained after case closure.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C21"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_WHT_001_Q27",
+      "role": "Relevant Authority",
+      "question": "Which organization must receive the required final incident information?",
+      "choices": [
+        "National Center for Emergency and Health Crisis Management.",
+        "Parking Control Office.",
+        "Food Services Unit.",
+        "Reception Desk."
+      ],
+      "answer_index": 0,
+      "rationale": "The final step is to provide the National Center with the required incident information.",
+      "evidence_chunk_ids": [
+        "UTIL_WHT_001_C22"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

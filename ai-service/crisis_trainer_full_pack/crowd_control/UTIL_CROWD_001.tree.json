@@ -1,0 +1,264 @@
+{
+  "scenario_id": "UTIL_CROWD_001",
+  "title": "Decision Tree - Crowd Gathering Control and Management",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Team",
+      "prompt": "Step 1: A crowd begins gathering near the healthcare facility. What should security do first?",
+      "options": [
+        {
+          "text": "Prevent unauthorized entry into the facility and associated premises unless official instructions are received.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C01"
+          ]
+        },
+        {
+          "text": "Allow the crowd to enter temporarily until leadership arrives.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The first action is to prevent unauthorized entry unless official instructions are issued."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Team",
+      "prompt": "Step 2: After controlling entry, what should security assess next?",
+      "options": [
+        {
+          "text": "Determine the precise reasons behind the gathering and assess whether escalation is possible.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C02"
+          ]
+        },
+        {
+          "text": "Wait until the crowd grows larger before assessing the situation.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security should immediately investigate the cause of the gathering."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Security Leadership",
+      "prompt": "Step 3: What staffing measure is required once the gathering is confirmed?",
+      "options": [
+        {
+          "text": "Deploy sufficient security personnel and establish security perimeters when required.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C03"
+          ]
+        },
+        {
+          "text": "Reduce visible staff so the crowd remains calm.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Adequate staffing and perimeter control are necessary in crowd situations."
+        }
+      ]
+    },
+    "N3": {
+      "role": "Security Leadership",
+      "prompt": "Step 4: Who must be notified after initial control measures are in place?",
+      "options": [
+        {
+          "text": "Notify facility leadership and communicate with specialized security authorities through approved channels.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C04"
+          ]
+        },
+        {
+          "text": "Only inform reception staff and continue without escalation.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Facility leadership and specialized authorities must be informed."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Security Team",
+      "prompt": "Step 5: What should security do regarding photography and banners?",
+      "options": [
+        {
+          "text": "Do not allow members of the gathering to take photographs or raise banners around the facility and related premises.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C05"
+          ]
+        },
+        {
+          "text": "Allow both as long as the crowd remains outside the main entrance.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Photography and banner display should not be allowed in the facility surroundings."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Team",
+      "prompt": "Step 6: How should security coordinate with external authorities during the incident?",
+      "options": [
+        {
+          "text": "Maintain continuous coordination and communication with specialized security authorities during the entire incident.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C06"
+          ]
+        },
+        {
+          "text": "Send one message and wait for the incident to end.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Continuous communication is required throughout the incident."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Team",
+      "prompt": "Step 7: What information must security collect and report?",
+      "options": [
+        {
+          "text": "Count the number of individuals, classify them according to the security situation, and submit the information to the security administration.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C07"
+          ]
+        },
+        {
+          "text": "Record only the number of vehicles parked outside.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security must document the people involved and classify the situation."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Security Team",
+      "prompt": "Step 8: Some individuals are allowed entry to meet responsible officials. What is the correct action?",
+      "options": [
+        {
+          "text": "Assign an adequate number of security personnel to accompany them under controlled access.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C08"
+          ]
+        },
+        {
+          "text": "Allow them to enter without supervision to reduce tension.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Authorized entry must remain controlled and accompanied by security."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Security Team",
+      "prompt": "Step 9: What is the policy on using force during the crowd situation?",
+      "options": [
+        {
+          "text": "Do not use force except in very limited cases explicitly permitted by law and regulations.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C09"
+          ]
+        },
+        {
+          "text": "Use force early to guarantee fast dispersal.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Force is restricted to narrow lawful situations only."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Security Team",
+      "prompt": "Step 10: When should security stop monitoring the situation?",
+      "options": [
+        {
+          "text": "Only after the situation is fully resolved and the crowd disperses from the surrounding area.",
+          "next": "N10",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C10"
+          ]
+        },
+        {
+          "text": "As soon as the crowd becomes quieter.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Monitoring continues until the incident fully ends and dispersal is complete."
+        }
+      ]
+    },
+    "N10": {
+      "role": "Security Leadership",
+      "prompt": "Step 11: What documentation is required after the incident ends?",
+      "options": [
+        {
+          "text": "Prepare a joint report with specialized security authorities and submit it to facility leadership.",
+          "next": "N11",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C11"
+          ]
+        },
+        {
+          "text": "No report is needed if no damage occurred.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A joint report is required after the incident."
+        }
+      ]
+    },
+    "N11": {
+      "role": "Security Team",
+      "prompt": "Behavior Guidance: What communication approach should security maintain while interacting with the crowd?",
+      "options": [
+        {
+          "text": "Demonstrate patience and calmness, show good conduct, and avoid provocative verbal or physical expressions.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_CROWD_001_C12"
+          ]
+        },
+        {
+          "text": "Use provocative language and mention past incidents to create fear.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The guidance emphasizes patience, calmness, respectful behavior, and avoiding provocation or fear."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

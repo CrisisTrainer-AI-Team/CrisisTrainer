@@ -1,0 +1,384 @@
+{
+  "scenario_id": "UTIL_YLW_001",
+  "title": "Decision Tree - External Disaster Response (Code Yellow)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Operations Room",
+      "prompt": "Step 1: The facility receives a report from an external party about a disaster. What should be verified first?",
+      "options": [
+        {
+          "text": "Verify the report source, disaster type and magnitude, location, and the approximate number and type of expected casualties.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C01"
+          ]
+        },
+        {
+          "text": "Wait for ambulances to arrive before collecting any operational details.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The first action is to verify the report source and core disaster details immediately."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Operations Room",
+      "prompt": "Step 2: How should Code Yellow be activated inside the facility?",
+      "options": [
+        {
+          "text": "Announce Code Yellow through the overhead speaker system and signal the emergency security teams through wireless communication devices.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C02"
+          ]
+        },
+        {
+          "text": "Notify only one department quietly and wait for confirmation.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Formal internal activation requires announcement and response-team signaling."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Facility Leadership / Security Leadership",
+      "prompt": "Step 3: What should happen immediately after Code Yellow activation?",
+      "options": [
+        {
+          "text": "Activate the facility external disaster emergency plan and relevant preparedness procedures.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C03"
+          ]
+        },
+        {
+          "text": "Continue normal operations until casualties physically reach the hospital.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The external disaster emergency plan must be activated immediately."
+        }
+      ]
+    },
+    "N3": {
+      "role": "Security Leadership",
+      "prompt": "Step 4: Which entities should security coordinate with to increase readiness?",
+      "options": [
+        {
+          "text": "Coordinate with ambulance command, emergency departments, and the planning and emergency preparedness unit.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C04"
+          ]
+        },
+        {
+          "text": "Coordinate only with visitor reception.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "These operational entities are essential to raising readiness in the receiving area."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Security Team",
+      "prompt": "Step 5: What is required regarding ambulance access routes?",
+      "options": [
+        {
+          "text": "Prepare ambulance access points, assign one-way movement paths, and facilitate arrival to the triage area.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C05"
+          ]
+        },
+        {
+          "text": "Leave all routes open in both directions without control.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Ambulance routes must be controlled and triage access must be facilitated."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Team",
+      "prompt": "Step 6: How should low-severity cases be managed at the main external gate?",
+      "options": [
+        {
+          "text": "Direct them to nearby hospitals under medical supervision according to the external emergency plan.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C06"
+          ]
+        },
+        {
+          "text": "Admit all minor cases into the main emergency area regardless of crowding.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Low-severity cases may be redirected according to the external emergency plan."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Team",
+      "prompt": "Step 7: What access-control rule applies to ambulance and emergency departments?",
+      "options": [
+        {
+          "text": "Permit access only to authorized persons.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C07"
+          ]
+        },
+        {
+          "text": "Allow companions and visitors to enter freely for reassurance.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Strict access control to ambulance and emergency departments is required."
+        }
+      ]
+    },
+    "N7": {
+      "role": "CCTV Monitoring Team / Security Team",
+      "prompt": "Step 8: What monitoring requirement applies during the event?",
+      "options": [
+        {
+          "text": "Ensure full CCTV coverage of ambulance, emergency, triage, and patient transport zones.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C08"
+          ]
+        },
+        {
+          "text": "Monitor only the main entrance after casualties begin arriving.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Full active monitoring of ambulance and triage-related zones is required."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Security Team",
+      "prompt": "Step 9: What must security prevent around the triage area and ambulance/emergency perimeter?",
+      "options": [
+        {
+          "text": "Crowd gathering and photography.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C09"
+          ]
+        },
+        {
+          "text": "Only loud talking among staff.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The procedure specifically requires prevention of crowd gathering and photography."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Security Team",
+      "prompt": "Step 10: Where should families of casualties and injured persons be directed?",
+      "options": [
+        {
+          "text": "To the designated authority in the facility for information and coordination.",
+          "next": "N10",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C10"
+          ]
+        },
+        {
+          "text": "Directly into the triage area to speak with staff.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Families should be directed to the designated authority, not to operational response areas."
+        }
+      ]
+    },
+    "N10": {
+      "role": "Security Team / Relevant Facility Authority",
+      "prompt": "Step 11: What is required when handling deceased persons?",
+      "options": [
+        {
+          "text": "Apply strict receiving, transfer, and handling procedures with authorized specialists and the facility mortuary.",
+          "next": "N11",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C11"
+          ]
+        },
+        {
+          "text": "Move deceased persons through public pathways for speed.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Handling of deceased persons must follow strict controlled procedures."
+        }
+      ]
+    },
+    "N11": {
+      "role": "Relevant Facility Authority",
+      "prompt": "Step 12: What must happen to records and belongings related to casualties and deceased persons?",
+      "options": [
+        {
+          "text": "They must be preserved according to facility policies and procedures.",
+          "next": "N12",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C12"
+          ]
+        },
+        {
+          "text": "They may be discarded after transfer if space is limited.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "All related records and belongings must be preserved according to policy."
+        }
+      ]
+    },
+    "N12": {
+      "role": "Security Team / Relevant Specialists",
+      "prompt": "Step 13: If the disaster scenario involves biological, chemical, or radiological hazards, what is required?",
+      "options": [
+        {
+          "text": "Implement required PPE measures and comply with Hazmat Response Team instructions.",
+          "next": "N13",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C13"
+          ]
+        },
+        {
+          "text": "Continue normal disaster operations without any special protection.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "These hazard scenarios require PPE and compliance with Hazmat team instructions."
+        }
+      ]
+    },
+    "N13": {
+      "role": "Security Team / Infection Control Department",
+      "prompt": "Step 14: If the disaster scenario involves an epidemic or infectious disease event, what should security do?",
+      "options": [
+        {
+          "text": "Implement PPE, follow precautionary procedures, and coordinate with Infection Control according to public health guidance.",
+          "next": "N14",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C14"
+          ]
+        },
+        {
+          "text": "Leave all protective procedures to outpatient staff only.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Infectious disease scenarios require PPE and coordinated precautionary procedures."
+        }
+      ]
+    },
+    "N14": {
+      "role": "Security Leadership",
+      "prompt": "Step 15: What protection-readiness responsibilities apply regarding security staff?",
+      "options": [
+        {
+          "text": "Coordinate PPE provision and ensure required vaccinations when applicable.",
+          "next": "N15",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C15"
+          ]
+        },
+        {
+          "text": "Wait until the event is over before arranging protection resources.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Protection-readiness measures should be coordinated when such plans are activated."
+        }
+      ]
+    },
+    "N15": {
+      "role": "Facility Leadership / Security Operations Room",
+      "prompt": "Step 16: When may Code Red be announced during the external disaster response?",
+      "options": [
+        {
+          "text": "When casualties exceed facility response capacity or when an internal disaster such as a fire occurs.",
+          "next": "N16",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C16"
+          ]
+        },
+        {
+          "text": "Only when all casualties have already been discharged.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Code Red may be declared if capacity is exceeded or an internal disaster occurs during the external disaster response."
+        }
+      ]
+    },
+    "N16": {
+      "role": "Security Team",
+      "prompt": "Step 17: What should security do after the internal or external disaster ends?",
+      "options": [
+        {
+          "text": "Continue security presence, secure the area, facilitate ambulance movement, and support return to normal operations only after approved directions.",
+          "next": "N17",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C17"
+          ]
+        },
+        {
+          "text": "Leave the response area immediately because the event is over.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Post-incident security support continues until approved normalization steps are completed."
+        }
+      ]
+    },
+    "N17": {
+      "role": "Security Leadership / Facility Leadership",
+      "prompt": "Step 18: What is the required post-incident improvement action?",
+      "options": [
+        {
+          "text": "Evaluate staff and the plan, identify weaknesses and gaps, extract lessons learned, circulate them, and submit recommendations to facility leadership.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_YLW_001_C18"
+          ]
+        },
+        {
+          "text": "Archive the event without operational review.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A full lessons-learned review and recommendation process is required after the event."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

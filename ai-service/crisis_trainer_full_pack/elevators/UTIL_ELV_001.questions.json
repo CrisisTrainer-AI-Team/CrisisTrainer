@@ -1,0 +1,93 @@
+{
+  "scenario_id": "UTIL_ELV_001",
+  "title": "Assessment Items - Elevator Failure/Interruption (Including Trapped People)",
+  "items": [
+    {
+      "item_id": "UTIL_ELV_001_Q01",
+      "role": "General Maintenance Department",
+      "question": "What is the first required action?",
+      "choices": [
+        "Announce Code Brown and inform the Planning & Preparedness Unit through extension (3432).",
+        "Skip to final report",
+        "Inform DCCT immediately",
+        "Do nothing"
+      ],
+      "answer_index": 0,
+      "rationale": "See procedure step evidence.",
+      "evidence_chunk_ids": [
+        "UTIL_ELV_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_ELV_001_Q02",
+      "role": "PPU Manager",
+      "question": "Which extension/number is referenced for the initial announcement/call (if applicable)?",
+      "choices": [
+        "2222",
+        "3432",
+        "7777",
+        "8555"
+      ],
+      "answer_index": 0,
+      "rationale": "See procedure step evidence.",
+      "evidence_chunk_ids": [
+        "UTIL_ELV_001_C01"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_ELV_001_Q03",
+      "role": "Safety & Security Officer",
+      "question": "What is the next notification after the initial step?",
+      "choices": [
+        "Inform the Safety & Security Manager through extension (7777).",
+        "If there are trapped people: record names/time/location (elevator number/code); inquire number of trapped people and health status (elderly/infants/patients); provide support/instructions and reassurance until help arrives.",
+        "Announce Code Brown and inform the Planning & Preparedness Unit through extension (3432).",
+        "Not specified"
+      ],
+      "answer_index": 0,
+      "rationale": "See procedure step evidence.",
+      "evidence_chunk_ids": [
+        "UTIL_ELV_001_C02"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_ELV_001_Q04",
+      "role": "Engineer in Charge",
+      "question": "Which step involves inspection/identifying the cause and estimating time to solve?",
+      "choices": [
+        "Announce Code Brown and inform the Planning & Preparedness Unit through extension (3432).",
+        "Dispatch technicians to inspect, determine the cause, and prioritize releasing trapped people.",
+        "Call the Rapid Response Team (RRT) when required.",
+        "None"
+      ],
+      "answer_index": 1,
+      "rationale": "See procedure step evidence.",
+      "evidence_chunk_ids": [
+        "UTIL_ELV_001_C04"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_ELV_001_Q05",
+      "role": "Safety & Security Manager",
+      "question": "After the issue is over, what is required?",
+      "choices": [
+        "Inform DCCT that the failure/interruption ended and the system is back to work.",
+        "If Civil Defense is involved, obtain a copy of the report including remarks and authority.",
+        "Announce Code Brown and inform the Planning & Preparedness Unit through extension (3432).",
+        "Only restart equipment"
+      ],
+      "answer_index": 0,
+      "rationale": "See procedure step evidence.",
+      "evidence_chunk_ids": [
+        "UTIL_ELV_001_C09"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-02-24T01:14:41Z"
+}

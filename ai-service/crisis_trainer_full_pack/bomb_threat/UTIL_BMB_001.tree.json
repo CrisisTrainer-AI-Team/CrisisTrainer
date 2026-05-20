@@ -1,0 +1,284 @@
+{
+  "scenario_id": "UTIL_BMB_001",
+  "title": "Decision Tree - Bomb Threat Response (Code Black)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Operations Room",
+      "prompt": "Step 1: What should be done first after receiving a bomb threat report?",
+      "options": [
+        {
+          "text": "Rapidly verify the source of the report and collect the initial available information related to the threat.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C01"
+          ]
+        },
+        {
+          "text": "Delay action until a suspicious object is physically found.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The first action is immediate verification of the report and collection of initial information."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Operations Room",
+      "prompt": "Step 2: After the initial report is received, what is the correct escalation action?",
+      "options": [
+        {
+          "text": "Immediately notify specialized authorities through emergency numbers and communicate with facility leadership to determine Code Black activation through the overhead speaker system.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C02"
+          ]
+        },
+        {
+          "text": "Keep the incident internal until the next shift arrives.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Specialized authorities and facility leadership must be informed immediately."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Security Team",
+      "prompt": "Step 3: How should security personnel deal with specialist instructions during the event?",
+      "options": [
+        {
+          "text": "Strictly follow all directions and technical guidance issued by specialists responsible for this type of incident.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C03"
+          ]
+        },
+        {
+          "text": "Use internal judgment only, regardless of specialist guidance.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Specialist guidance must be followed accurately to reduce risk."
+        }
+      ]
+    },
+    "N3": {
+      "role": "CCTV Monitoring Team",
+      "prompt": "Step 4: What is the required monitoring action after a bomb threat is reported?",
+      "options": [
+        {
+          "text": "Monitor all possible locations related to the reported threat according to the initial information available using CCTV.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C04"
+          ]
+        },
+        {
+          "text": "Use CCTV only after the threat is confirmed by external authorities.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Possible locations must be monitored immediately according to available initial information."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Security Team",
+      "prompt": "Step 5: What communication rule applies to security teams moving toward a suspected location?",
+      "options": [
+        {
+          "text": "Do not use wired or wireless communication devices in order to avoid triggering potential risks.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C05"
+          ]
+        },
+        {
+          "text": "Use all radios and phones actively to maintain close coordination at the suspicious site.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Communication devices must not be used near the suspected site because of potential risk."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Team",
+      "prompt": "Step 6: What should security personnel do if they identify a suspicious object?",
+      "options": [
+        {
+          "text": "Do not move, examine, open, or approach the suspicious object until specialists arrive and assess the scene.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C06"
+          ]
+        },
+        {
+          "text": "Move it to a remote area to reduce danger.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Suspicious objects must not be moved, opened, examined, or approached."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Team",
+      "prompt": "Step 7: What is the correct control measure for the suspected area?",
+      "options": [
+        {
+          "text": "Establish a perimeter around the suspected area, prevent persons from entering it, and maintain site isolation until specialists begin their direct tasks.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C07"
+          ]
+        },
+        {
+          "text": "Allow controlled entry for staff so operations can continue.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The area must be isolated and entry must be prevented until specialists take over."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Incident Command / Facility Leadership",
+      "prompt": "Step 8: When should evacuation be implemented?",
+      "options": [
+        {
+          "text": "When directed by incident command and according to the severity and location of the threat.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C08"
+          ]
+        },
+        {
+          "text": "Only after media confirmation that the threat is credible.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Evacuation is executed according to incident command direction and threat conditions."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Security Team",
+      "prompt": "Step 9: What is expected from security teams while specialists handle the event?",
+      "options": [
+        {
+          "text": "Coordinate and cooperate with specialized authorities to facilitate incident handling according to the approved protocol.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C09"
+          ]
+        },
+        {
+          "text": "Withdraw completely and stop all support activities.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security must continue coordinated support with specialized authorities."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Security Operations Room",
+      "prompt": "Step 10: What should the operations room continue doing throughout the incident?",
+      "options": [
+        {
+          "text": "Track security updates, operational information, and incident developments and relay them to the relevant leadership and response authorities.",
+          "next": "N10",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C10"
+          ]
+        },
+        {
+          "text": "Pause updates until the suspected object is cleared.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The operations room must continue following and relaying developments throughout the incident."
+        }
+      ]
+    },
+    "N10": {
+      "role": "Incident Command / Relevant Authorities",
+      "prompt": "Step 11: When can activity return to the incident area?",
+      "options": [
+        {
+          "text": "Only after the event has ended and formal approval has been issued by the relevant specialists.",
+          "next": "N11",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C11"
+          ]
+        },
+        {
+          "text": "As soon as the perimeter is reduced.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Return to normal activity requires the event to end and formal approval from relevant specialists."
+        }
+      ]
+    },
+    "N11": {
+      "role": "Relevant Authorities / Facility Leadership",
+      "prompt": "Step 12: What reporting action is required after the incident?",
+      "options": [
+        {
+          "text": "Prepare and submit a joint incident report with the relevant specialists in the facility and the specialized security authorities to facility leadership.",
+          "next": "N12",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C12"
+          ]
+        },
+        {
+          "text": "No report is needed if no explosive device is confirmed.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A joint incident report is required after the event regardless of outcome."
+        }
+      ]
+    },
+    "N12": {
+      "role": "Relevant Authority",
+      "prompt": "Step 13: What is the final external communication requirement?",
+      "options": [
+        {
+          "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_BMB_001_C13"
+          ]
+        },
+        {
+          "text": "No further communication is required after the internal report is completed.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The National Center must receive the required incident information."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

@@ -1,0 +1,224 @@
+{
+  "scenario_id": "UTIL_FIRE_001",
+  "title": "Decision Tree - Fire Emergency Response (Code Red)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Operations Room",
+      "prompt": "Step 1: What should be done first after receiving a report of fire or suspected fire?",
+      "options": [
+        {
+          "text": "Rapidly verify the source of the report and the exact incident location.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C01"
+          ]
+        },
+        {
+          "text": "Ignore the report until a second caller confirms it.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The first action is immediate verification of the report source and location."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Operations Room",
+      "prompt": "Step 2: After verification, what is the correct escalation action?",
+      "options": [
+        {
+          "text": "Announce Code Red through the internal overhead speaker system repeatedly and signal emergency security teams through wireless communication devices.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C02"
+          ]
+        },
+        {
+          "text": "Send a single email and wait for replies.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The procedure requires an immediate Code Red announcement and wireless signaling."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Security Operations Room",
+      "prompt": "Step 3: Who must be contacted directly after Code Red activation?",
+      "options": [
+        {
+          "text": "Communicate directly with Civil Defense and the facility firefighting unit.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C03"
+          ]
+        },
+        {
+          "text": "Wait until the end of the incident before external communication.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Civil Defense must be contacted directly during the incident."
+        }
+      ]
+    },
+    "N3": {
+      "role": "Nearest Security Staff",
+      "prompt": "Step 4: What is expected from the nearest security staff?",
+      "options": [
+        {
+          "text": "Respond immediately, assist in fire response, open emergency exits, and support medical staff in evacuation operations.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C04"
+          ]
+        },
+        {
+          "text": "Stay away from the incident location and wait for written instructions.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Nearest security staff must provide immediate operational support."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Security Team",
+      "prompt": "Step 5: What should security do for specialists and emergency responders?",
+      "options": [
+        {
+          "text": "Facilitate entry of specialists and relevant emergency personnel to the incident site.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C05"
+          ]
+        },
+        {
+          "text": "Delay access until the area is fully reopened.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Specialists must be allowed access to the incident site."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Team",
+      "prompt": "Step 6: What is the required action regarding the affected zone?",
+      "options": [
+        {
+          "text": "Secure the incident zone and control access to maintain safety.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C06"
+          ]
+        },
+        {
+          "text": "Leave the area open to reduce congestion.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The area must be secured and access controlled."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Team",
+      "prompt": "Step 7: During incident operations, whose instructions must be followed?",
+      "options": [
+        {
+          "text": "Comply with incident command and facility leadership instructions.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C07"
+          ]
+        },
+        {
+          "text": "Follow whichever instruction arrives first from any person nearby.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security must follow official command instructions."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Incident Command / Relevant Authorities",
+      "prompt": "Step 8: When can activity return to the affected site?",
+      "options": [
+        {
+          "text": "Only after recovery is completed, debris is removed, the site is prepared, and approval is obtained from Civil Defense and the relevant facility authorities.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C08"
+          ]
+        },
+        {
+          "text": "Immediately after the visible smoke disappears.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Resumption requires recovery completion and formal approval."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Relevant Authorities / Facility Leadership",
+      "prompt": "Step 9: What reporting action is required after the incident?",
+      "options": [
+        {
+          "text": "Prepare and submit a joint incident report with facility specialists and Civil Defense to facility leadership.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C09"
+          ]
+        },
+        {
+          "text": "Close the case without documentation.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A joint incident report is required after the event."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Relevant Authority",
+      "prompt": "Step 10: What is the final external communication requirement?",
+      "options": [
+        {
+          "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_FIRE_001_C10"
+          ]
+        },
+        {
+          "text": "No further communication is required once the report is finished.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The National Center must receive the required incident information."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

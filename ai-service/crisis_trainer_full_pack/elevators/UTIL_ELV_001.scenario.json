@@ -1,0 +1,159 @@
+{
+  "scenario_id": "UTIL_ELV_001",
+  "title": "Elevator Failure/Interruption (Including Trapped People)",
+  "source_document": {
+    "file_name": "Photo 3.pdf",
+    "standard_no": "FMS 28",
+    "sub_standard": "28.2.5 Elevators"
+  },
+  "domain": "hospital_emergency",
+  "facility": "KSSH & CCH (per document)",
+  "language": "en",
+  "utility_type": "elevators",
+  "code_activation": {
+    "code": "Code Brown"
+  },
+  "contact_extensions": {
+    "overhead_paging": "2222",
+    "planning_preparedness_unit": "3432",
+    "safety_security": "7777",
+    "general_maintenance_reports": "8555",
+    "external_call": "016 236 2222"
+  },
+  "roles_involved": [
+    "General Maintenance Department",
+    "PPU Manager",
+    "Safety & Security Officer",
+    "Engineer on duty",
+    "Engineer in Charge",
+    "Site Manager",
+    "Safety & Security Manager",
+    "DCCT"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "General Maintenance Department",
+      "action": "Announce Code Brown and inform the Planning & Preparedness Unit through extension (3432).",
+      "expected_time": "3 minutes"
+    },
+    {
+      "step": 2,
+      "responsible": "PPU Manager",
+      "action": "Inform the Safety & Security Manager through extension (7777).",
+      "expected_time": "3 minutes"
+    },
+    {
+      "step": 3,
+      "responsible": "Engineer on duty / Safety & Security Officer",
+      "action": "If there are trapped people: record names/time/location (elevator number/code); inquire number of trapped people and health status (elderly/infants/patients); provide support/instructions and reassurance until help arrives.",
+      "expected_time": "5 minutes"
+    },
+    {
+      "step": 4,
+      "responsible": "Engineer in Charge",
+      "action": "Dispatch technicians to inspect, determine the cause, and prioritize releasing trapped people.",
+      "expected_time": "5 minutes"
+    },
+    {
+      "step": 5,
+      "responsible": "PPU Manager",
+      "action": "Call the Rapid Response Team (RRT) when required.",
+      "expected_time": "2 minutes"
+    },
+    {
+      "step": 6,
+      "responsible": "Site Manager",
+      "action": "Call the engineer in charge to conduct follow-up inspection and detect the cause of the issue.",
+      "expected_time": "5 minutes"
+    },
+    {
+      "step": 7,
+      "responsible": "Engineer in Charge",
+      "action": "If elevator maintenance is ongoing, switch off the elevator, label it as 'out of service' and under maintenance on each floor to prevent use until maintenance is completed.",
+      "expected_time": "10 minutes"
+    },
+    {
+      "step": 8,
+      "responsible": "Engineer in Charge",
+      "action": "After the issue is over, report and record findings and inform the Safety & Security Manager that the system returned to operation.",
+      "expected_time": "24 hours"
+    },
+    {
+      "step": 9,
+      "responsible": "Safety & Security Manager",
+      "action": "Inform DCCT that the failure/interruption ended and the system is back to work.",
+      "expected_time": "3 minutes"
+    },
+    {
+      "step": 10,
+      "responsible": "General Maintenance Manager",
+      "action": "If Civil Defense is involved, obtain a copy of the report including remarks and authority.",
+      "expected_time": "24 hours"
+    }
+  ],
+  "learning_objectives": [
+    "Manage elevator interruption and trapped-person response with correct documentation and escalation.",
+    "Ensure safety controls (out-of-service labeling) and complete reporting/coordination."
+  ],
+  "tags": [
+    "elevators",
+    "code_brown",
+    "trapped_people",
+    "rrt"
+  ],
+  "version": "1.0",
+  "created_at": "2026-02-24T01:14:41Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_ELV_001_C01",
+      "title": "Step 1",
+      "text": "Announce Code Brown and inform the Planning & Preparedness Unit through extension (3432)."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C02",
+      "title": "Step 2",
+      "text": "Inform the Safety & Security Manager through extension (7777)."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C03",
+      "title": "Step 3",
+      "text": "If there are trapped people: record names/time/location (elevator number/code); inquire number of trapped people and health status (elderly/infants/patients); provide support/instructions and reassurance until help arrives."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C04",
+      "title": "Step 4",
+      "text": "Dispatch technicians to inspect, determine the cause, and prioritize releasing trapped people."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C05",
+      "title": "Step 5",
+      "text": "Call the Rapid Response Team (RRT) when required."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C06",
+      "title": "Step 6",
+      "text": "Call the engineer in charge to conduct follow-up inspection and detect the cause of the issue."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C07",
+      "title": "Step 7",
+      "text": "If elevator maintenance is ongoing, switch off the elevator, label it as 'out of service' and under maintenance on each floor to prevent use until maintenance is completed."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C08",
+      "title": "Step 8",
+      "text": "After the issue is over, report and record findings and inform the Safety & Security Manager that the system returned to operation."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C09",
+      "title": "Step 9",
+      "text": "Inform DCCT that the failure/interruption ended and the system is back to work."
+    },
+    {
+      "chunk_id": "UTIL_ELV_001_C10",
+      "title": "Step 10",
+      "text": "If Civil Defense is involved, obtain a copy of the report including remarks and authority."
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "scenario_id": "UTIL_HAZ_001",
+  "title": "Assessment Items - Hazardous Material Spill Response (Code Orange)",
+  "items": [
+    {
+      "item_id": "UTIL_HAZ_001_Q01",
+      "role": "Security Operations Room",
+      "question": "What is the first required action when a chemical spill or hazardous material leak is reported?",
+      "choices": [
+        "Wait for a second report before taking action.",
+        "Rapidly verify the source of the report and the exact incident location.",
+        "Allow staff to inspect the area informally.",
+        "Open the area to improve access."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure starts with immediate verification of the report source and location.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q02",
+      "role": "Security Operations Room",
+      "question": "How should Code Orange be announced inside the facility?",
+      "choices": [
+        "By a single phone call to the nearest department.",
+        "Through the internal overhead speaker system repeatedly and by wireless communication devices to emergency security teams.",
+        "Only through written messages at the security desk.",
+        "By waiting for Civil Defense to issue the alert."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires repeated Code Orange announcement and wireless communication signaling.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C02"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q03",
+      "role": "Security Operations Room",
+      "question": "Which parties must be contacted directly after the incident is confirmed?",
+      "choices": [
+        "Civil Defense and the Hazmat Response Team",
+        "Only the pharmacy department",
+        "Public relations office",
+        "Visitors waiting outside"
+      ],
+      "answer_index": 0,
+      "rationale": "The procedure explicitly requires direct communication with Civil Defense and the Hazmat Response Team.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C03"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q04",
+      "role": "Security Team",
+      "question": "What exposure-related warning must be given to security personnel?",
+      "choices": [
+        "Remain in the affected area continuously until the incident is over.",
+        "Avoid direct exposure to toxic emissions or dangerous substances and avoid staying in the affected area for long periods.",
+        "Approach the spill closely to identify the chemical manually.",
+        "Work without rotation to maintain area continuity."
+      ],
+      "answer_index": 1,
+      "rationale": "The policy requires minimizing exposure, avoiding long presence in the area, and rotating staff when necessary.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C04"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q05",
+      "role": "Nearest Security Staff",
+      "question": "What must the nearest security staff do before approaching the incident?",
+      "choices": [
+        "Enter immediately without protection to save time.",
+        "Take the minimum necessary protective measures, including personal protective equipment.",
+        "Wait outside the facility until the incident is fully resolved.",
+        "Send another employee instead."
+      ],
+      "answer_index": 1,
+      "rationale": "The nearest security staff may respond only after taking the required minimum protective measures including PPE.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C05"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q06",
+      "role": "Security Team",
+      "question": "What is the correct action for the contaminated or affected zone?",
+      "choices": [
+        "Leave the area accessible to avoid panic.",
+        "Establish a safety perimeter at an adequate distance and guide nearby people to the nearest emergency exit.",
+        "Close all communication and wait silently.",
+        "Move people toward the affected area for instructions."
+      ],
+      "answer_index": 1,
+      "rationale": "The affected area must be isolated with a safe perimeter and people must be directed toward emergency exits.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C06"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q07",
+      "role": "Security Team",
+      "question": "What is required before allowing specialists to access the incident site?",
+      "choices": [
+        "No verification is required if they identify themselves verbally.",
+        "Ensure that they are wearing the designated clothing and protective equipment for chemical spill response.",
+        "Allow only administrative staff to enter.",
+        "Delay all specialist access until the site reopens."
+      ],
+      "answer_index": 1,
+      "rationale": "Specialists may enter after confirming compliance with designated protective clothing and equipment requirements.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C07"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q08",
+      "role": "Security Team",
+      "question": "Whose instructions must be followed during incident operations?",
+      "choices": [
+        "Any nearby staff member who appears experienced.",
+        "Incident command and relevant authorities inside the facility.",
+        "The first person who reported the spill.",
+        "Only building maintenance."
+      ],
+      "answer_index": 1,
+      "rationale": "Security staff are required to comply with directions issued by incident command and relevant authorities.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C08"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q09",
+      "role": "Incident Command / Relevant Authorities",
+      "question": "When can activity return to the affected area?",
+      "choices": [
+        "Immediately after the visible liquid disappears.",
+        "After recovery is completed, decontamination and ventilation are carried out, and approval is obtained from Civil Defense and relevant facility authorities.",
+        "As soon as staff request access.",
+        "Before inspection is completed."
+      ],
+      "answer_index": 1,
+      "rationale": "Activity may return only after full recovery, decontamination, ventilation, and formal approval.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C09"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q10",
+      "role": "Relevant Authorities / Facility Leadership",
+      "question": "What reporting action is required after the incident?",
+      "choices": [
+        "No report is needed if the leak was contained quickly.",
+        "Prepare and submit a joint incident report with relevant specialists and Civil Defense to facility leadership.",
+        "Only notify the reception desk verbally.",
+        "Send a supply request form."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires a joint incident report after the event.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C10"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_HAZ_001_Q11",
+      "role": "Relevant Authority",
+      "question": "Which organization must receive incident information after the event?",
+      "choices": [
+        "National Center for Emergency and Health Crisis Management",
+        "Parking Control Office",
+        "Food Services Department",
+        "General Reception"
+      ],
+      "answer_index": 0,
+      "rationale": "The final step is to provide the National Center with the required incident information.",
+      "evidence_chunk_ids": [
+        "UTIL_HAZ_001_C11"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

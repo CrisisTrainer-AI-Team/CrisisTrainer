@@ -1,0 +1,178 @@
+{
+  "scenario_id": "UTIL_FIRE_001",
+  "title": "Assessment Items - Fire Emergency Response (Code Red)",
+  "items": [
+    {
+      "item_id": "UTIL_FIRE_001_Q01",
+      "role": "Security Operations Room",
+      "question": "What is the first required action when a fire or suspected fire is reported?",
+      "choices": [
+        "Rapidly verify the source of the report and the exact incident location.",
+        "Wait for Civil Defense before doing anything.",
+        "Immediately reopen the affected area.",
+        "Skip verification and move directly to reporting."
+      ],
+      "answer_index": 0,
+      "rationale": "The procedure starts with immediate verification of the report source and location.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q02",
+      "role": "Security Operations Room",
+      "question": "How should Code Red be announced inside the facility?",
+      "choices": [
+        "By sending a written memo at the end of the shift.",
+        "Through the internal overhead speaker system only once.",
+        "Through the internal overhead speaker system repeatedly and by wireless communication devices to emergency security teams.",
+        "Only by calling the reception desk."
+      ],
+      "answer_index": 2,
+      "rationale": "The procedure requires repeated Code Red announcement and wireless communication signaling.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C02"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q03",
+      "role": "Security Operations Room",
+      "question": "Which external authority must be contacted directly during the incident?",
+      "choices": [
+        "Civil Defense",
+        "Supply Contractor",
+        "Outpatient Registration",
+        "Visitor Services"
+      ],
+      "answer_index": 0,
+      "rationale": "The procedure explicitly requires direct communication with Civil Defense.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C03"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q04",
+      "role": "Nearest Security Staff",
+      "question": "What support is expected from the nearest security staff at the incident location?",
+      "choices": [
+        "Only observe the situation from a distance.",
+        "Assist with response, open emergency exits, and support medical staff in evacuation operations.",
+        "Wait until the incident is completely over.",
+        "Prepare the final report before responding."
+      ],
+      "answer_index": 1,
+      "rationale": "Immediate operational support and evacuation assistance are part of the nearest security staff duties.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C04"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q05",
+      "role": "Security Team",
+      "question": "What is required regarding specialists and emergency personnel?",
+      "choices": [
+        "Delay their access until normal operations resume.",
+        "Facilitate their entry to the incident site.",
+        "Prevent all personnel from entering under any circumstance.",
+        "Send them to another department."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure states that security facilitates entry of specialists to the incident site.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C05"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q06",
+      "role": "Security Team",
+      "question": "What should security do regarding the incident area?",
+      "choices": [
+        "Leave the area open for unrestricted movement.",
+        "Secure the incident zone and control access to maintain safety.",
+        "Transfer all decisions to visitors.",
+        "Allow activity to resume immediately."
+      ],
+      "answer_index": 1,
+      "rationale": "The affected area must be secured and access controlled.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C06"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q07",
+      "role": "Security Team",
+      "question": "Whose instructions must the security team follow during the event?",
+      "choices": [
+        "Any bystander near the area.",
+        "Incident command and facility leadership instructions.",
+        "Only the maintenance department.",
+        "Only the first reporter of the fire."
+      ],
+      "answer_index": 1,
+      "rationale": "Security staff are required to comply with directions issued by incident command and leadership.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C07"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q08",
+      "role": "Incident Command / Relevant Authorities",
+      "question": "When can activity return to the affected site?",
+      "choices": [
+        "Immediately after the alarm stops.",
+        "After recovery is completed, debris is removed, the site is prepared, and approval is obtained from Civil Defense and relevant facility authorities.",
+        "As soon as staff request it.",
+        "Before the area is inspected."
+      ],
+      "answer_index": 1,
+      "rationale": "Resumption of activity is conditional on recovery completion and formal approval.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C08"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q09",
+      "role": "Relevant Authorities / Facility Leadership",
+      "question": "What documentation is required after the incident?",
+      "choices": [
+        "No documentation is necessary if the fire is controlled.",
+        "A joint incident report with relevant specialists in the facility and Civil Defense submitted to facility leadership.",
+        "Only a verbal update to the reception desk.",
+        "A patient billing summary."
+      ],
+      "answer_index": 1,
+      "rationale": "The process requires a joint incident report after the event.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C09"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_FIRE_001_Q10",
+      "role": "Relevant Authority",
+      "question": "Which organization must receive incident information after the event?",
+      "choices": [
+        "National Center for Emergency and Health Crisis Management",
+        "Food Services Department",
+        "Parking Office",
+        "Outpatient Pharmacy"
+      ],
+      "answer_index": 0,
+      "rationale": "The final step is to provide the National Center with the required incident information.",
+      "evidence_chunk_ids": [
+        "UTIL_FIRE_001_C10"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

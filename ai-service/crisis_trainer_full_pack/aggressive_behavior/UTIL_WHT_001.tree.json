@@ -1,0 +1,464 @@
+{
+  "scenario_id": "UTIL_WHT_001",
+  "title": "Decision Tree - Aggressive / Violent Behavior Response (Code White)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Team",
+      "prompt": "Step 1: A violence situation or behavior likely to lead to violence is observed. What should be done first?",
+      "options": [
+        {
+          "text": "Immediately notify the Security Operations Room, Security Supervisor, Security Manager, and shift manager.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C01"
+          ]
+        },
+        {
+          "text": "Wait to see whether the situation becomes physical before notifying anyone.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Immediate notification of the internal security chain is required."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Operations Room",
+      "prompt": "Step 2: After receiving the report, what is the first operational action?",
+      "options": [
+        {
+          "text": "Rapidly verify the source of the report and the exact incident location.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C02"
+          ]
+        },
+        {
+          "text": "Delay verification until leadership arrives.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Rapid verification of source and location is required immediately."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Security Team",
+      "prompt": "Step 3: How should security deal with persons showing behavioral or emotional disturbance?",
+      "options": [
+        {
+          "text": "Exercise caution and monitor their movements closely.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C03"
+          ]
+        },
+        {
+          "text": "Ignore them unless an injury occurs.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The policy requires caution and active monitoring of movements."
+        }
+      ]
+    },
+    "N3": {
+      "role": "Security Team",
+      "prompt": "Step 4: What information action is required?",
+      "options": [
+        {
+          "text": "Collect available relevant information and report it to the Security Operations Room or Security Supervisor.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C04"
+          ]
+        },
+        {
+          "text": "Avoid collecting information until the case closes.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Available information should be collected and reported through the proper chain."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Security Operations Room / Security Leadership",
+      "prompt": "Step 5: When should additional security support be requested?",
+      "options": [
+        {
+          "text": "Whenever the assessed situation requires additional support.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C05"
+          ]
+        },
+        {
+          "text": "Only after the incident is fully over.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security reinforcement should be requested whenever the incident requires it."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Operations Room",
+      "prompt": "Step 6: How should Code White be activated?",
+      "options": [
+        {
+          "text": "Announce Code White through the overhead speaker system and signal the response teams through wireless communication devices.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C06"
+          ]
+        },
+        {
+          "text": "Inform one guard only and avoid wider activation.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Formal internal announcement and signaling of response teams are required."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Leadership",
+      "prompt": "Step 7: What staffing response is required after Code White activation?",
+      "options": [
+        {
+          "text": "Provide additional security support according to the type and severity of the aggression.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C07"
+          ]
+        },
+        {
+          "text": "Reduce visible staffing to avoid attention.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security support should be increased according to severity and type."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Security Operations Room",
+      "prompt": "Step 8: When should specialized authorities be contacted?",
+      "options": [
+        {
+          "text": "Immediately, depending on the type of aggression and the extent to which the incident can be controlled internally.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C08"
+          ]
+        },
+        {
+          "text": "Only after the aggressor is fully controlled internally.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Specialized authorities may need to be contacted immediately based on incident type and controllability."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Security Operations Room",
+      "prompt": "Step 9: What is required regarding facility leadership?",
+      "options": [
+        {
+          "text": "Notify facility leadership immediately and provide continuous updates on developments.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C09"
+          ]
+        },
+        {
+          "text": "Notify leadership after final paperwork only.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Leadership must be informed immediately and kept updated."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Security Team",
+      "prompt": "Step 10: What protective action is required in the incident area?",
+      "options": [
+        {
+          "text": "Protect workers, isolate them from the aggressor when possible, and prevent crowd gathering around the site.",
+          "next": "N10",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C10"
+          ]
+        },
+        {
+          "text": "Allow companions and bystanders to gather nearby so they can help.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Workers must be protected and crowd gathering must be prevented."
+        }
+      ]
+    },
+    "N10": {
+      "role": "Security Team / Medical Staff",
+      "prompt": "Step 11: What should be done regarding injured persons?",
+      "options": [
+        {
+          "text": "Attempt to reach injured persons with medical staff for safe transfer while maintaining high safety standards.",
+          "next": "N11",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C11"
+          ]
+        },
+        {
+          "text": "Delay all medical access until all reporting is complete.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Safe access to injured persons should be attempted with medical staff when conditions permit."
+        }
+      ]
+    },
+    "N11": {
+      "role": "Security Team",
+      "prompt": "Step 12: If dialogue with the aggressor is possible, how should it be handled?",
+      "options": [
+        {
+          "text": "Engage only when appropriate, aiming to calm and de-escalate the situation while avoiding provocation.",
+          "next": "N12",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C12"
+          ]
+        },
+        {
+          "text": "Use strong confrontational language to force a quick reaction.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Dialogue is used for de-escalation, not provocation."
+        }
+      ]
+    },
+    "N12": {
+      "role": "Security Team",
+      "prompt": "Step 13: When should female security staff be requested?",
+      "options": [
+        {
+          "text": "If the nature of the situation or the persons involved requires it.",
+          "next": "N13",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C13"
+          ]
+        },
+        {
+          "text": "Only after the case is officially closed.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Female security support may be needed during the active response."
+        }
+      ]
+    },
+    "N13": {
+      "role": "Security Team / Social Work Department",
+      "prompt": "Step 14: What environmental and support measures are required in the incident area?",
+      "options": [
+        {
+          "text": "Remove hazardous objects when safe and seek support from Social Work in communication and control.",
+          "next": "N14",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C14"
+          ]
+        },
+        {
+          "text": "Leave all objects in place and avoid coordination with other departments.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Potential violence tools should be removed when safe, and Social Work support may assist with control."
+        }
+      ]
+    },
+    "N14": {
+      "role": "Security Team",
+      "prompt": "Step 15: If the violence escalates into direct assault, what should security do?",
+      "options": [
+        {
+          "text": "Intervene to control the aggressor, and if the aggressor has a bladed weapon or firearm, deal cautiously and calmly until specialized authorities arrive.",
+          "next": "N15",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C15"
+          ]
+        },
+        {
+          "text": "Withdraw all support immediately and stop monitoring the incident.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Escalation requires intervention to control the aggressor, with extra caution if weapons are involved."
+        }
+      ]
+    },
+    "N15": {
+      "role": "Security Team / Security Leadership",
+      "prompt": "Step 16: What is the correct action after attempting control of the aggressor?",
+      "options": [
+        {
+          "text": "If controlled without resistance, complete formal procedures; if not controlled, request support, protect people present, and wait for reinforcement and specialized authorities.",
+          "next": "N16",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C16"
+          ]
+        },
+        {
+          "text": "End the response immediately whether or not the aggressor is controlled.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The next step depends on whether the aggressor is successfully controlled."
+        }
+      ]
+    },
+    "N16": {
+      "role": "Security Leadership",
+      "prompt": "Step 17: What should be done if the incident moves beyond control?",
+      "options": [
+        {
+          "text": "Establish a security perimeter and allow only trained personnel to perform any necessary force in accordance with approved procedures and regulations.",
+          "next": "N17",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C17"
+          ]
+        },
+        {
+          "text": "Allow any available person to help restrain the aggressor.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Escalated incidents require perimeter control and only trained lawful intervention."
+        }
+      ]
+    },
+    "N17": {
+      "role": "Security Team",
+      "prompt": "Step 18: How should people present in the incident area be managed?",
+      "options": [
+        {
+          "text": "Keep them calm, guide them to safe places and emergency exits away from danger, and close main entrances except for specialized authorities.",
+          "next": "N18",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C18"
+          ]
+        },
+        {
+          "text": "Allow everyone to move freely without direction.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "People present should be guided calmly toward safety and access should be controlled."
+        }
+      ]
+    },
+    "N18": {
+      "role": "CCTV Monitoring Team",
+      "prompt": "Step 19: What is the CCTV team expected to do during the incident?",
+      "options": [
+        {
+          "text": "Monitor the incident, track the aggressor’s movements, and direct relevant response personnel based on developments.",
+          "next": "N19",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C19"
+          ]
+        },
+        {
+          "text": "Stop monitoring until the incident is over.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "CCTV monitoring continues during the incident to support response coordination."
+        }
+      ]
+    },
+    "N19": {
+      "role": "Security Team / Relevant Facility Authorities",
+      "prompt": "Step 20: What documentation is required after the incident?",
+      "options": [
+        {
+          "text": "Prepare an incident registration report and a joint internal incident record involving the required departments, then submit them to facility leadership.",
+          "next": "N20",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C20"
+          ]
+        },
+        {
+          "text": "Document the case verbally only if someone asks later.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Formal written reporting and a joint incident record are required."
+        }
+      ]
+    },
+    "N20": {
+      "role": "Relevant Authorities",
+      "prompt": "Step 21: What should be obtained after the specialized authorities complete the investigation and close the case?",
+      "options": [
+        {
+          "text": "A copy of the final report including observations and recommendations.",
+          "next": "N21",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C21"
+          ]
+        },
+        {
+          "text": "No follow-up documentation is needed after case closure.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A final report copy should be obtained after the investigation is closed."
+        }
+      ]
+    },
+    "N21": {
+      "role": "Relevant Authority",
+      "prompt": "Step 22: What is the final external communication requirement?",
+      "options": [
+        {
+          "text": "Provide the National Center for Emergency and Health Crisis Management with all required incident information through the responsible facility authority.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_WHT_001_C22"
+          ]
+        },
+        {
+          "text": "Close the incident once the internal record is submitted, with no further communication.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The National Center must receive the required final incident information."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

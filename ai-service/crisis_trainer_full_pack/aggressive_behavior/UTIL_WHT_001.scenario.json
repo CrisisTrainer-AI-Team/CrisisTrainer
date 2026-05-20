@@ -1,0 +1,309 @@
+{
+  "scenario_id": "UTIL_WHT_001",
+  "title": "Aggressive / Violent Behavior Response (Code White)",
+  "source_document": {
+    "file_name": "MOH Security Manual.pdf",
+    "standard_no": "Security Procedures",
+    "sub_standard": "Aggressive / Violent Behavior - Code White"
+  },
+  "domain": "hospital_security",
+  "facility": "Healthcare Facility",
+  "language": "en",
+  "utility_type": "aggressive_behavior",
+  "code_activation": {
+    "code": "Code White"
+  },
+  "contact_extensions": {
+    "overhead_speaker": "Internal announcement network",
+    "security_operations_room": "Security Operations Room",
+    "security_supervisor": "Security Supervisor",
+    "security_manager": "Security Manager",
+    "specialized_authorities": "911 / 999",
+    "facility_leadership": "Facility Leadership",
+    "cctv_room": "CCTV Monitoring Room",
+    "national_center": "National Center for Emergency and Health Crisis Management"
+  },
+  "roles_involved": [
+    "Security Operations Room",
+    "Security Team",
+    "Security Supervisor",
+    "Security Manager",
+    "Shift Manager",
+    "Security Leadership",
+    "Medical Staff",
+    "Nursing Department",
+    "Female Security Staff",
+    "Social Work Department",
+    "Patient Experience Department",
+    "Department Head",
+    "Specialized Security Authorities",
+    "Relevant Facility Authorities",
+    "CCTV Monitoring Team",
+    "Facility Leadership",
+    "National Center Representative"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "Security Team",
+      "action": "Immediately notify the Security Operations Room, Security Supervisor, Security Manager, and the shift manager when a violence situation, suspicion of violence, or behavior that may lead to one of the mentioned incidents is observed.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 2,
+      "responsible": "Security Operations Room",
+      "action": "When the security operations room receives a report of verbal aggression, physical aggression, or behavior that violates public order inside the healthcare facility, it must rapidly verify the source of the report and the exact incident location.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 3,
+      "responsible": "Security Team",
+      "action": "Exercise caution when dealing with persons showing behavioral or emotional disturbance and monitor their movements closely.",
+      "expected_time": "Immediate and continuous"
+    },
+    {
+      "step": 4,
+      "responsible": "Security Team",
+      "action": "Collect available information regarding persons with behavioral or emotional disturbance and report the information to the Security Operations Room or the Security Supervisor.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 5,
+      "responsible": "Security Operations Room / Security Leadership",
+      "action": "Assess the situation and request an increase in security personnel from the Security Operations Room or the Security Supervisor whenever the incident requires additional support.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 6,
+      "responsible": "Security Operations Room",
+      "action": "Announce Code White through the internal overhead speaker system and send a signal through wireless communication devices to the security teams assigned for emergency response.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 7,
+      "responsible": "Security Leadership",
+      "action": "Provide additional security support required to handle the incident according to the type and severity of the aggression.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 8,
+      "responsible": "Security Operations Room",
+      "action": "Immediately notify the relevant specialized authorities through the approved emergency numbers depending on the type of aggression and the extent to which the incident can be controlled internally. If a police security point exists in the facility, notify it immediately or contact the specialized security authorities directly.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 9,
+      "responsible": "Security Operations Room",
+      "action": "Notify facility leadership immediately and provide continuous updates about the incident and its developments.",
+      "expected_time": "Immediate and continuous"
+    },
+    {
+      "step": 10,
+      "responsible": "Security Team",
+      "action": "Protect workers in the incident area, isolate them from the aggressor when possible, and prevent crowd gathering around the incident site.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 11,
+      "responsible": "Security Team / Medical Staff",
+      "action": "Attempt to reach injured persons together with medical staff for safe transfer while maintaining the highest standards of protection and safety.",
+      "expected_time": "As conditions permit"
+    },
+    {
+      "step": 12,
+      "responsible": "Security Team",
+      "action": "Engage in dialogue with the aggressor only when the situation allows, with the aim of calming the situation. Use caution, avoid unnecessary confrontation as much as possible, remain calm, and avoid provoking or escalating the aggressor.",
+      "expected_time": "As needed"
+    },
+    {
+      "step": 13,
+      "responsible": "Security Team",
+      "action": "Request assistance from female security staff if the nature of the situation or the persons involved requires it.",
+      "expected_time": "As needed"
+    },
+    {
+      "step": 14,
+      "responsible": "Security Team / Social Work Department",
+      "action": "Ensure that the incident area is free from tools or hazardous objects that may be used as a means of violence, remove such items when it is safe to do so, and seek assistance from the Social Work Department in communicating with the aggressor and helping control the situation.",
+      "expected_time": "Immediate and continuous"
+    },
+    {
+      "step": 15,
+      "responsible": "Security Team",
+      "action": "If the violence escalates into a fight or direct assault, the security team intervenes to control the aggressor. If the aggressor is carrying a bladed weapon or firearm, security personnel must deal cautiously and calmly until the specialized security authorities arrive.",
+      "expected_time": "As required"
+    },
+    {
+      "step": 16,
+      "responsible": "Security Team / Security Leadership",
+      "action": "If the security team is able to control the situation without resistance, complete the required formal procedures according to the approved internal process. If the security team is unable to control the aggressor, request support, protect people present, and wait for the arrival of specialized authorities and reinforcement personnel.",
+      "expected_time": "After control or as required"
+    },
+    {
+      "step": 17,
+      "responsible": "Security Leadership",
+      "action": "If the incident escalates and moves beyond control, establish a security perimeter around the aggression area. If force becomes necessary, it must only be carried out by trained personnel in accordance with approved procedures and applicable regulations.",
+      "expected_time": "As required"
+    },
+    {
+      "step": 18,
+      "responsible": "Security Team",
+      "action": "Instruct persons present in the incident area to remain calm and guide them toward safe places and emergency exits away from the aggressor’s range. Direct staff to close the main facility entrances and allow access only to specialized security authorities to reach the incident area.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 19,
+      "responsible": "CCTV Monitoring Team",
+      "action": "Continue monitoring the incident through the CCTV system inside the facility, track the aggressor’s movements, and direct the relevant response personnel based on the evolving situation.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 20,
+      "responsible": "Security Team / Relevant Facility Authorities",
+      "action": "Prepare an incident registration report and an internal joint incident record involving the Security Department, Patient Experience Department, Nursing Department, Department Head, and Social Work Department, and submit the documentation to facility leadership.",
+      "expected_time": "After incident"
+    },
+    {
+      "step": 21,
+      "responsible": "Relevant Authorities",
+      "action": "After the specialized security authorities complete the investigation and close the case, obtain a copy of the final report including observations and recommendations.",
+      "expected_time": "After incident"
+    },
+    {
+      "step": 22,
+      "responsible": "Relevant Authority",
+      "action": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility.",
+      "expected_time": "After incident"
+    }
+  ],
+  "learning_objectives": [
+    "Verify and escalate aggressive or violent incidents using the correct Code White procedure.",
+    "Detect early warning behaviors, collect relevant information, and request additional security support when needed.",
+    "Protect staff, patients, and bystanders while preventing crowd formation and controlling the environment.",
+    "Apply calm de-escalation, safe communication, and coordinated support from social work, medical staff, and specialized authorities.",
+    "Use perimeter control, movement guidance, CCTV monitoring, and lawful trained intervention when the incident exceeds internal control limits.",
+    "Complete internal documentation, authority coordination, final reporting, and external notification requirements."
+  ],
+  "tags": [
+    "code_white",
+    "aggressive_behavior",
+    "violent_behavior",
+    "hospital_security",
+    "de_escalation",
+    "incident_response"
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_WHT_001_C01",
+      "title": "Step 1",
+      "text": "Immediately notify the Security Operations Room, Security Supervisor, Security Manager, and the shift manager when a violence situation, suspicion of violence, or behavior that may lead to one of the mentioned incidents is observed."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C02",
+      "title": "Step 2",
+      "text": "When the security operations room receives a report of verbal aggression, physical aggression, or behavior that violates public order inside the healthcare facility, it must rapidly verify the source of the report and the exact incident location."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C03",
+      "title": "Step 3",
+      "text": "Exercise caution when dealing with persons showing behavioral or emotional disturbance and monitor their movements closely."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C04",
+      "title": "Step 4",
+      "text": "Collect available information regarding persons with behavioral or emotional disturbance and report the information to the Security Operations Room or the Security Supervisor."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C05",
+      "title": "Step 5",
+      "text": "Assess the situation and request an increase in security personnel from the Security Operations Room or the Security Supervisor whenever the incident requires additional support."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C06",
+      "title": "Step 6",
+      "text": "Announce Code White through the internal overhead speaker system and send a signal through wireless communication devices to the security teams assigned for emergency response."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C07",
+      "title": "Step 7",
+      "text": "Provide additional security support required to handle the incident according to the type and severity of the aggression."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C08",
+      "title": "Step 8",
+      "text": "Immediately notify the relevant specialized authorities through the approved emergency numbers depending on the type of aggression and the extent to which the incident can be controlled internally. If a police security point exists in the facility, notify it immediately or contact the specialized security authorities directly."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C09",
+      "title": "Step 9",
+      "text": "Notify facility leadership immediately and provide continuous updates about the incident and its developments."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C10",
+      "title": "Step 10",
+      "text": "Protect workers in the incident area, isolate them from the aggressor when possible, and prevent crowd gathering around the incident site."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C11",
+      "title": "Step 11",
+      "text": "Attempt to reach injured persons together with medical staff for safe transfer while maintaining the highest standards of protection and safety."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C12",
+      "title": "Step 12",
+      "text": "Engage in dialogue with the aggressor only when the situation allows, with the aim of calming the situation. Use caution, avoid unnecessary confrontation as much as possible, remain calm, and avoid provoking or escalating the aggressor."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C13",
+      "title": "Step 13",
+      "text": "Request assistance from female security staff if the nature of the situation or the persons involved requires it."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C14",
+      "title": "Step 14",
+      "text": "Ensure that the incident area is free from tools or hazardous objects that may be used as a means of violence, remove such items when it is safe to do so, and seek assistance from the Social Work Department in communicating with the aggressor and helping control the situation."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C15",
+      "title": "Step 15",
+      "text": "If the violence escalates into a fight or direct assault, the security team intervenes to control the aggressor. If the aggressor is carrying a bladed weapon or firearm, security personnel must deal cautiously and calmly until the specialized security authorities arrive."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C16",
+      "title": "Step 16",
+      "text": "If the security team is able to control the situation without resistance, complete the required formal procedures according to the approved internal process. If the security team is unable to control the aggressor, request support, protect people present, and wait for the arrival of specialized authorities and reinforcement personnel."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C17",
+      "title": "Step 17",
+      "text": "If the incident escalates and moves beyond control, establish a security perimeter around the aggression area. If force becomes necessary, it must only be carried out by trained personnel in accordance with approved procedures and applicable regulations."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C18",
+      "title": "Step 18",
+      "text": "Instruct persons present in the incident area to remain calm and guide them toward safe places and emergency exits away from the aggressor’s range. Direct staff to close the main facility entrances and allow access only to specialized security authorities to reach the incident area."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C19",
+      "title": "Step 19",
+      "text": "Continue monitoring the incident through the CCTV system inside the facility, track the aggressor’s movements, and direct the relevant response personnel based on the evolving situation."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C20",
+      "title": "Step 20",
+      "text": "Prepare an incident registration report and an internal joint incident record involving the Security Department, Patient Experience Department, Nursing Department, Department Head, and Social Work Department, and submit the documentation to facility leadership."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C21",
+      "title": "Step 21",
+      "text": "After the specialized security authorities complete the investigation and close the case, obtain a copy of the final report including observations and recommendations."
+    },
+    {
+      "chunk_id": "UTIL_WHT_001_C22",
+      "title": "Step 22",
+      "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility."
+    }
+  ]
+}

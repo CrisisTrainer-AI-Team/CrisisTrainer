@@ -1,0 +1,199 @@
+{
+  "scenario_id": "UTIL_BMB_001",
+  "title": "Bomb Threat Response (Code Black)",
+  "source_document": {
+    "file_name": "MOH Security Manual.pdf",
+    "standard_no": "Security Procedures",
+    "sub_standard": "Bomb Threat - Code Black"
+  },
+  "domain": "hospital_emergency",
+  "facility": "Healthcare Facility",
+  "language": "en",
+  "utility_type": "bomb_threat",
+  "code_activation": {
+    "code": "Code Black"
+  },
+  "contact_extensions": {
+    "overhead_speaker": "Internal announcement network",
+    "security_operations_room": "Security Operations Room",
+    "specialized_authorities": "911 / 999",
+    "facility_leadership": "Facility Leadership",
+    "national_center": "National Center for Emergency and Health Crisis Management"
+  },
+  "roles_involved": [
+    "Security Operations Room",
+    "Security Team",
+    "Specialized Security Authorities",
+    "Facility Leadership",
+    "Incident Command",
+    "CCTV Monitoring Team",
+    "Medical Staff",
+    "Facility Staff",
+    "Relevant Specialists",
+    "National Center Representative"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "Security Operations Room",
+      "action": "When the security operations room receives a report of a bomb threat, it must rapidly verify the source of the report and collect the initial available information related to the threat.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 2,
+      "responsible": "Security Operations Room",
+      "action": "Immediately notify the relevant specialized authorities through the approved emergency numbers and communicate with facility leadership to determine activation of Code Black through the internal overhead speaker system.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 3,
+      "responsible": "Security Team",
+      "action": "Strictly follow all directions and technical guidance issued by specialists responsible for this type of incident in order to reduce potential risks.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 4,
+      "responsible": "CCTV Monitoring Team",
+      "action": "Monitor all possible locations related to the reported threat according to the initial information available, using the closed-circuit television monitoring system.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 5,
+      "responsible": "Security Team",
+      "action": "Ensure that security personnel moving toward the suspected site do not use wired or wireless communication devices in order to avoid triggering potential risks.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 6,
+      "responsible": "Security Team",
+      "action": "Warn all security personnel not to attempt moving, examining, opening, or approaching suspicious objects until specialists arrive and assess the scene.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 7,
+      "responsible": "Security Team",
+      "action": "Establish a perimeter around the suspected area, prevent persons from entering it, and maintain site isolation until specialists begin their direct tasks.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 8,
+      "responsible": "Incident Command / Facility Leadership",
+      "action": "Execute evacuation of patients, staff, and others in the facility when directed by incident command and according to the severity and location of the threat.",
+      "expected_time": "As directed"
+    },
+    {
+      "step": 9,
+      "responsible": "Security Team",
+      "action": "Coordinate and cooperate with specialized authorities to facilitate incident handling procedures in accordance with the approved protocol.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 10,
+      "responsible": "Security Operations Room",
+      "action": "Continue tracking security updates, operational information, and all incident developments and relay them to the relevant leadership and response authorities.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 11,
+      "responsible": "Incident Command / Relevant Authorities",
+      "action": "Permit the resumption of activity in the incident area only after the event has ended and formal approval has been issued by the relevant specialists.",
+      "expected_time": "Post-incident"
+    },
+    {
+      "step": 12,
+      "responsible": "Relevant Authorities / Facility Leadership",
+      "action": "Prepare and submit a joint incident report with the relevant specialists in the facility and the specialized security authorities to facility leadership.",
+      "expected_time": "After incident"
+    },
+    {
+      "step": 13,
+      "responsible": "Relevant Authority",
+      "action": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility.",
+      "expected_time": "After incident"
+    }
+  ],
+  "learning_objectives": [
+    "Verify and escalate a bomb threat using the correct Code Black procedure.",
+    "Coordinate communication with specialized authorities and facility leadership while applying communication restrictions near the suspected area.",
+    "Use monitoring, perimeter control, and suspicious object safety rules to reduce risk.",
+    "Support evacuation decisions and operational coordination with specialists during the incident.",
+    "Complete tracking, reporting, and external notification requirements after the event."
+  ],
+  "tags": [
+    "bomb_threat",
+    "code_black",
+    "hospital_security",
+    "evacuation",
+    "suspicious_object",
+    "security_response"
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_BMB_001_C01",
+      "title": "Step 1",
+      "text": "When the security operations room receives a report of a bomb threat, it must rapidly verify the source of the report and collect the initial available information related to the threat."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C02",
+      "title": "Step 2",
+      "text": "Immediately notify the relevant specialized authorities through the approved emergency numbers and communicate with facility leadership to determine activation of Code Black through the internal overhead speaker system."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C03",
+      "title": "Step 3",
+      "text": "Strictly follow all directions and technical guidance issued by specialists responsible for this type of incident in order to reduce potential risks."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C04",
+      "title": "Step 4",
+      "text": "Monitor all possible locations related to the reported threat according to the initial information available, using the closed-circuit television monitoring system."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C05",
+      "title": "Step 5",
+      "text": "Ensure that security personnel moving toward the suspected site do not use wired or wireless communication devices in order to avoid triggering potential risks."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C06",
+      "title": "Step 6",
+      "text": "Warn all security personnel not to attempt moving, examining, opening, or approaching suspicious objects until specialists arrive and assess the scene."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C07",
+      "title": "Step 7",
+      "text": "Establish a perimeter around the suspected area, prevent persons from entering it, and maintain site isolation until specialists begin their direct tasks."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C08",
+      "title": "Step 8",
+      "text": "Execute evacuation of patients, staff, and others in the facility when directed by incident command and according to the severity and location of the threat."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C09",
+      "title": "Step 9",
+      "text": "Coordinate and cooperate with specialized authorities to facilitate incident handling procedures in accordance with the approved protocol."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C10",
+      "title": "Step 10",
+      "text": "Continue tracking security updates, operational information, and all incident developments and relay them to the relevant leadership and response authorities."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C11",
+      "title": "Step 11",
+      "text": "Permit the resumption of activity in the incident area only after the event has ended and formal approval has been issued by the relevant specialists."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C12",
+      "title": "Step 12",
+      "text": "Prepare and submit a joint incident report with the relevant specialists in the facility and the specialized security authorities to facility leadership."
+    },
+    {
+      "chunk_id": "UTIL_BMB_001_C13",
+      "title": "Step 13",
+      "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility."
+    }
+  ]
+}

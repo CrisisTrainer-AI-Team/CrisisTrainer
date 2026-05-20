@@ -1,0 +1,264 @@
+{
+  "scenario_id": "UTIL_SLV_001",
+  "title": "Decision Tree - Active Shooter Response (Code Silver)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Operations Room",
+      "prompt": "Step 1: What should be done first after receiving a report of an armed person inside the healthcare facility?",
+      "options": [
+        {
+          "text": "Rapidly verify the source of the report and the exact location of the armed person.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C01"
+          ]
+        },
+        {
+          "text": "Wait until several witnesses gather before doing anything.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The first action is immediate verification of the report source and location."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Operations Room",
+      "prompt": "Step 2: What information should be collected about the armed person?",
+      "options": [
+        {
+          "text": "Collect all available security information, including gender, age, appearance, clothing description, type of weapon, and the number of injured or hostages if present.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C02"
+          ]
+        },
+        {
+          "text": "Collect only the estimated time of arrival of police.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Critical identifying and incident information must be collected immediately."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Security Operations Room",
+      "prompt": "Step 3: Who must be notified immediately after the threat information is collected?",
+      "options": [
+        {
+          "text": "Notify the relevant specialized authorities through the approved emergency channels.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C03"
+          ]
+        },
+        {
+          "text": "Wait until facility leadership finishes its internal meeting.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Specialized authorities must be notified immediately."
+        }
+      ]
+    },
+    "N3": {
+      "role": "Security Operations Room",
+      "prompt": "Step 4: How should Code Silver be activated inside the facility?",
+      "options": [
+        {
+          "text": "Announce Code Silver through the internal overhead speaker system repeatedly and signal emergency security teams through wireless communication devices.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C04"
+          ]
+        },
+        {
+          "text": "Keep the code internal and notify only one department quietly.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The procedure requires repeated internal announcement and emergency team signaling."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Security Operations Room",
+      "prompt": "Step 5: What is required regarding facility leadership?",
+      "options": [
+        {
+          "text": "Notify facility leadership immediately and provide continuous updates on incident developments.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C05"
+          ]
+        },
+        {
+          "text": "Inform leadership only after external teams arrive.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Leadership must be notified immediately and kept updated."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Team",
+      "prompt": "Step 6: What access-control action should security apply near the armed person's location?",
+      "options": [
+        {
+          "text": "Prevent patients, staff, and visitors from approaching or entering the location where the armed person is present.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C06"
+          ]
+        },
+        {
+          "text": "Allow controlled visitor access if they move quickly.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The danger area must be protected from approach or entry."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Team",
+      "prompt": "Step 7: If communication with the armed person becomes necessary, how should it be handled?",
+      "options": [
+        {
+          "text": "Communicate cautiously and carefully, without direct confrontation unless directed by the competent authorities.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C07"
+          ]
+        },
+        {
+          "text": "Use direct confrontation to end the event quickly.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Communication must be cautious and should avoid direct confrontation unless directed by authorities."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Security Team / Medical Staff",
+      "prompt": "Step 8: What should be done regarding injured persons when conditions allow?",
+      "options": [
+        {
+          "text": "Attempt to reach injured persons together with medical staff for safe transfer while maintaining the highest standards of protection and safety.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C08"
+          ]
+        },
+        {
+          "text": "Move injured persons alone without medical coordination.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Safe access and transfer should be attempted with medical staff and strong safety controls."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Security Team",
+      "prompt": "Step 9: What is the required route-control action in the incident zone?",
+      "options": [
+        {
+          "text": "Secure exit routes and guide evacuation or protected movement according to the evolving situation.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C09"
+          ]
+        },
+        {
+          "text": "Leave all route decisions to visitors and bystanders.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security must secure routes and guide movement safely."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Security Team",
+      "prompt": "Step 10: What is expected from security while specialized teams are handling the incident?",
+      "options": [
+        {
+          "text": "Coordinate and cooperate with specialized security teams and relevant authorities until the incident is fully concluded.",
+          "next": "N10",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C10"
+          ]
+        },
+        {
+          "text": "Stop participating once external teams arrive.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security must continue coordinated cooperation until the incident is over."
+        }
+      ]
+    },
+    "N10": {
+      "role": "Relevant Authorities / Facility Leadership",
+      "prompt": "Step 11: What documentation action is required after the incident?",
+      "options": [
+        {
+          "text": "Prepare the required reports, document the incident, and submit the information according to the approved procedures.",
+          "next": "N11",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C11"
+          ]
+        },
+        {
+          "text": "No written documentation is required if the suspect leaves.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The incident must be documented and reported according to approved procedures."
+        }
+      ]
+    },
+    "N11": {
+      "role": "Relevant Authority",
+      "prompt": "Step 12: What is the final external communication requirement?",
+      "options": [
+        {
+          "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_SLV_001_C12"
+          ]
+        },
+        {
+          "text": "Close the file after the internal report only.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The National Center must receive the required incident information."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

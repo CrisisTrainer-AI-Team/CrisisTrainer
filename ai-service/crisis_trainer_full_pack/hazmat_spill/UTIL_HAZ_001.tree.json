@@ -1,0 +1,244 @@
+{
+  "scenario_id": "UTIL_HAZ_001",
+  "title": "Decision Tree - Hazardous Material Spill Response (Code Orange)",
+  "start_node": "N0",
+  "nodes": {
+    "N0": {
+      "role": "Security Operations Room",
+      "prompt": "Step 1: What should be done first after receiving a report of a chemical spill or hazardous material leak?",
+      "options": [
+        {
+          "text": "Rapidly verify the source of the report and the exact incident location.",
+          "next": "N1",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C01"
+          ]
+        },
+        {
+          "text": "Wait until several people confirm the spill before acting.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The first action is immediate verification of the report source and location."
+        }
+      ]
+    },
+    "N1": {
+      "role": "Security Operations Room",
+      "prompt": "Step 2: After verification, what is the correct escalation action?",
+      "options": [
+        {
+          "text": "Announce Code Orange through the internal overhead speaker system repeatedly and signal emergency security teams through wireless communication devices.",
+          "next": "N2",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C02"
+          ]
+        },
+        {
+          "text": "Send a written notice after the incident stabilizes.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The procedure requires immediate Code Orange announcement and wireless signaling."
+        }
+      ]
+    },
+    "N2": {
+      "role": "Security Operations Room",
+      "prompt": "Step 3: Who must be contacted directly after Code Orange activation?",
+      "options": [
+        {
+          "text": "Communicate directly with Civil Defense and the Hazmat Response Team.",
+          "next": "N3",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C03"
+          ]
+        },
+        {
+          "text": "Wait until cleanup starts before contacting external teams.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Civil Defense and the Hazmat Response Team must be contacted directly during the incident."
+        }
+      ]
+    },
+    "N3": {
+      "role": "Security Team",
+      "prompt": "Step 4: What warning must security personnel follow regarding the affected area?",
+      "options": [
+        {
+          "text": "Avoid direct exposure to toxic emissions or dangerous substances and avoid remaining for long periods in the affected area, with staff rotation when needed.",
+          "next": "N4",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C04"
+          ]
+        },
+        {
+          "text": "Stay in the area continuously until the scene is cleared.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Personnel must minimize exposure and long stays in the affected zone."
+        }
+      ]
+    },
+    "N4": {
+      "role": "Nearest Security Staff",
+      "prompt": "Step 5: What should the nearest security staff do before approaching the incident?",
+      "options": [
+        {
+          "text": "Take the minimum necessary protective measures required for response, including personal protective equipment.",
+          "next": "N5",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C05"
+          ]
+        },
+        {
+          "text": "Approach immediately without protective measures to save time.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Approach is allowed only after taking the necessary minimum protective measures including PPE."
+        }
+      ]
+    },
+    "N5": {
+      "role": "Security Team",
+      "prompt": "Step 6: What is the required action for the affected zone?",
+      "options": [
+        {
+          "text": "Establish a safety perimeter at an adequate distance and guide staff and nearby persons toward the nearest emergency exit.",
+          "next": "N6",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C06"
+          ]
+        },
+        {
+          "text": "Keep the area open until specialized responders arrive.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The area must be isolated with a safety perimeter and people must be guided away."
+        }
+      ]
+    },
+    "N6": {
+      "role": "Security Team",
+      "prompt": "Step 7: What must be confirmed before specialists are allowed into the incident site?",
+      "options": [
+        {
+          "text": "Ensure they are wearing the designated clothing and protective equipment for chemical spill response.",
+          "next": "N7",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C07"
+          ]
+        },
+        {
+          "text": "Allow entry as soon as they arrive without checking protective compliance.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Specialists should enter only after confirming proper protective clothing and equipment."
+        }
+      ]
+    },
+    "N7": {
+      "role": "Security Team",
+      "prompt": "Step 8: During incident operations, whose instructions must be followed?",
+      "options": [
+        {
+          "text": "Comply with incident command and relevant authorities inside the facility.",
+          "next": "N8",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C08"
+          ]
+        },
+        {
+          "text": "Follow whichever staff member speaks first at the scene.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Security must follow official command instructions and relevant authorities."
+        }
+      ]
+    },
+    "N8": {
+      "role": "Incident Command / Relevant Authorities",
+      "prompt": "Step 9: When can activity return to the affected area?",
+      "options": [
+        {
+          "text": "Only after recovery is completed, decontamination and ventilation are carried out, and approval is obtained from Civil Defense and the relevant facility authorities.",
+          "next": "N9",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C09"
+          ]
+        },
+        {
+          "text": "As soon as visible contamination is reduced.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "Resumption requires recovery completion, decontamination, ventilation, and formal approval."
+        }
+      ]
+    },
+    "N9": {
+      "role": "Relevant Authorities / Facility Leadership",
+      "prompt": "Step 10: What reporting action is required after the incident?",
+      "options": [
+        {
+          "text": "Prepare and submit a joint incident report with facility specialists and Civil Defense to facility leadership.",
+          "next": "N10",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C10"
+          ]
+        },
+        {
+          "text": "Close the case without documentation if there are no injuries.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "A joint incident report is required after the event."
+        }
+      ]
+    },
+    "N10": {
+      "role": "Relevant Authority",
+      "prompt": "Step 11: What is the final external communication requirement?",
+      "options": [
+        {
+          "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident.",
+          "next": "END",
+          "is_correct": true,
+          "evidence_chunk_ids": [
+            "UTIL_HAZ_001_C11"
+          ]
+        },
+        {
+          "text": "No further communication is required once the area is reopened.",
+          "next": "N_bad",
+          "is_correct": false,
+          "feedback": "The National Center must receive the required incident information."
+        }
+      ]
+    },
+    "N_bad": {
+      "role": "system",
+      "prompt": "Incorrect. Restart.",
+      "options": [
+        {
+          "text": "Restart",
+          "next": "N0"
+        }
+      ]
+    },
+    "END": {
+      "role": "system",
+      "prompt": "Scenario completed.",
+      "options": []
+    }
+  },
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

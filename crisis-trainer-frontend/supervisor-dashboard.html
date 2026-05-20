@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrisisTrainer — Supervisor Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Supervisor-specific overrides */
+    .modal { max-width: 720px; }
+
+    .preview-section {
+      max-height: 520px;
+      overflow-y: auto;
+    }
+
+    .preview-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.2rem;
+      background: rgba(1,79,134,0.05);
+      border: 1.5px solid rgba(1,79,134,0.15);
+      border-radius: var(--radius-sm);
+      margin-top: 1rem;
+    }
+
+    .quick-nav {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .quick-nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .quick-nav a:hover {
+      border-color: var(--c-soft);
+      color: var(--c-accent);
+      transform: translateY(-1px);
+    }
+
+    /* Editable generated questions */
+    .edit-note {
+      padding: 0.8rem 1rem;
+      background: rgba(1,79,134,0.06);
+      border: 1px solid rgba(1,79,134,0.16);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .question-editor {
+      width: 100%;
+      min-height: 90px;
+      resize: vertical;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.9rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      background: white;
+      color: var(--text);
+    }
+
+    .editable-choice {
+      margin-bottom: 0.7rem;
+    }
+
+    .choice-edit-row {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      width: 100%;
+    }
+
+    .choice-input {
+      flex: 1;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.7rem;
+      font-size: 0.9rem;
+      background: white;
+      color: var(--text);
+    }
+
+    .choice-letter {
+      font-weight: 700;
+      min-width: 24px;
+      color: var(--c-accent);
+    }
+
+    .correct-answer-radio {
+      transform: scale(1.15);
+      cursor: pointer;
+    }
+
+    .correct-answer-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <div class="navbar-logo">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <span class="navbar-name">CrisisTrainer</span>
+  </div>
+
+  <div class="navbar-right">
+    <div class="user-info">
+      <span class="user-name" id="userName"></span>
+      <span class="badge badge-supervisor">Supervisor</span>
+    </div>
+    <button class="btn-logout" id="logoutBtn">Logout</button>
+  </div>
+</nav>
+
+<div class="main-content">
+
+  <div class="welcome-card">
+    <h2>Welcome back, <span id="welcomeName"></span> 👋</h2>
+    <p>Manage crisis training scenarios and monitor employee progress from this dashboard.</p>
+  </div>
+
+  <div class="quick-nav">
+    <a href="live-monitor.html">📊 Live Monitor</a>
+    <a href="employee-dashboard.html">👤 Employee View</a>
+  </div>
+
+  <div class="section-header">
+    <h2 class="page-title">Training Management</h2>
+    <button class="btn btn-primary btn-lg" id="openGenerateBtn">
+      ＋ Generate &amp; Assign Scenario
+    </button>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card blue">
+      <div class="stat-icon blue">📋</div>
+      <div class="stat-value" id="supTotalAssignments">—</div>
+      <div class="stat-label">Total Trainings</div>
+    </div>
+
+    <div class="stat-card green">
+      <div class="stat-icon green">✅</div>
+      <div class="stat-value" id="supCompleted">—</div>
+      <div class="stat-label">Completed Attempts</div>
+    </div>
+
+    <div class="stat-card orange">
+      <div class="stat-icon orange">⏳</div>
+      <div class="stat-value" id="supPending">—</div>
+      <div class="stat-label">Pending Attempts</div>
+    </div>
+
+    <div class="stat-card red">
+      <div class="stat-icon red">⚠️</div>
+      <div class="stat-value" id="supAtRisk">—</div>
+      <div class="stat-label">At Risk Employees</div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <div class="table-header">
+      <h3 class="section-title" style="margin:0;">Recent Assignments</h3>
+      <a href="live-monitor.html" class="btn btn-ghost btn-sm">View All →</a>
+    </div>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Assigned To</th>
+        <th>Department</th>
+        <th>Scenario</th>
+        <th>Difficulty</th>
+        <th>Questions</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody id="supervisorRecentTbody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="modal-overlay" id="generateModal">
+  <div class="modal">
+
+    <div class="modal-header">
+      <span class="modal-title">🧩 Generate & Assign Training Scenario</span>
+      <button class="modal-close" data-close-modal="generateModal">✕</button>
+    </div>
+
+    <div class="modal-body" style="max-height:70vh;overflow-y:auto;">
+
+      <div id="modalNotice" class="alert" style="display:none;"></div>
+
+      <p class="label mb-1">1 · Scenario Configuration</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="scenarioSelect">Scenario</label>
+          <select id="scenarioSelect" class="form-control">
+            <option value="">Loading...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="roleSelect">Role</label>
+          <select id="roleSelect" class="form-control">
+            <option value="">Select scenario first</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="difficultySelect">Difficulty</label>
+          <select id="difficultySelect" class="form-control">
+            <option value="easy">Easy</option>
+            <option value="mixed" selected>Mixed</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="languageSelect">Language</label>
+          <select id="languageSelect" class="form-control">
+            <option value="en">English</option>
+            <option value="ar">Arabic (عربي)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="questionsInput">Questions per Scenario</label>
+        <input type="number" id="questionsInput" class="form-control"
+               value="5" min="1" max="20" placeholder="e.g. 5" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="durationInput">Training Time (minutes)</label>
+        <input type="number" id="durationInput" class="form-control"
+               value="10" min="1" max="120" placeholder="e.g. 10" />
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="label mb-1">2 · Assign To</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="assignType">Assignment Target</label>
+          <select id="assignType" class="form-control">
+            <option value="all">All Employees</option>
+            <option value="department">Department</option>
+            <option value="employee">Individual Employee</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="departmentRow" style="display:none;">
+          <label class="form-label" for="deptSelect">Department</label>
+          <select id="deptSelect" class="form-control">
+            <option value="1">Nursing</option>
+            <option value="2">Security</option>
+            <option value="3">Maintenance</option>
+            <option value="4">Administration</option>
+            <option value="5">Medical Staff</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="employeeRow" style="display:none;">
+          <label class="form-label" for="employeeIdInput">Employee ID</label>
+          <input type="number" id="employeeIdInput" class="form-control"
+                 placeholder="e.g. 12" />
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="btn btn-primary btn-lg w-100" id="generateBtn">
+        ⚡ Generate Scenario
+      </button>
+
+      <div id="previewSection" style="display:none;">
+        <div class="divider"></div>
+
+        <p class="label mb-1">3 · Preview & Edit Generated Scenario</p>
+
+        <div class="edit-note">
+          You can edit the question, choices, and select the correct answer before assigning the training.
+        </div>
+
+        <div class="preview-section" id="previewContent">
+          <!-- Rendered by supervisor.js -->
+        </div>
+
+        <div class="preview-actions">
+          <span class="text-sm text-muted">Review and edit the scenario above, then assign it.</span>
+          <button class="btn btn-success" id="saveAssignBtn">
+            💾 Save &amp; Assign Training
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost" data-close-modal="generateModal">Cancel</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/supervisor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+{
+  "scenario_id": "UTIL_SLV_001",
+  "title": "Active Shooter Response (Code Silver)",
+  "source_document": {
+    "file_name": "MOH Security Manual.pdf",
+    "standard_no": "Security Procedures",
+    "sub_standard": "Active Shooter - Code Silver"
+  },
+  "domain": "hospital_emergency",
+  "facility": "Healthcare Facility",
+  "language": "en",
+  "utility_type": "active_shooter",
+  "code_activation": {
+    "code": "Code Silver"
+  },
+  "contact_extensions": {
+    "overhead_speaker": "Internal announcement network",
+    "security_operations_room": "Security Operations Room",
+    "specialized_authorities": "911 / 999",
+    "facility_leadership": "Facility Leadership",
+    "national_center": "National Center for Emergency and Health Crisis Management"
+  },
+  "roles_involved": [
+    "Security Operations Room",
+    "Security Team",
+    "Specialized Security Authorities",
+    "Facility Leadership",
+    "Incident Command",
+    "Medical Staff",
+    "Hospital Staff",
+    "Visitors",
+    "Relevant Specialists",
+    "National Center Representative"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "Security Operations Room",
+      "action": "When the security operations room receives a report of an armed person inside the healthcare facility, it must rapidly verify the source of the report and the exact location of the armed person.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 2,
+      "responsible": "Security Operations Room",
+      "action": "Collect all available security information regarding the armed person, including gender, age, appearance, clothing description, type of weapon, and the number of injured or hostages if present.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 3,
+      "responsible": "Security Operations Room",
+      "action": "Immediately notify the relevant specialized authorities through the approved emergency channels.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 4,
+      "responsible": "Security Operations Room",
+      "action": "Announce Code Silver through the internal overhead speaker system and repeat the announcement several times, while also sending a signal through wireless communication devices to the security teams assigned for emergency response.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 5,
+      "responsible": "Security Operations Room",
+      "action": "Notify facility leadership immediately and provide continuous updates on incident developments.",
+      "expected_time": "Immediate and continuous"
+    },
+    {
+      "step": 6,
+      "responsible": "Security Team",
+      "action": "Prevent patients, staff, and visitors from approaching or entering the location where the armed person is present.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 7,
+      "responsible": "Security Team",
+      "action": "Communicate with the armed person cautiously and carefully when required, without direct confrontation unless directed by the competent authorities.",
+      "expected_time": "As needed"
+    },
+    {
+      "step": 8,
+      "responsible": "Security Team / Medical Staff",
+      "action": "Attempt to reach injured persons together with medical staff for safe transfer while maintaining the highest standards of protection and safety.",
+      "expected_time": "As conditions permit"
+    },
+    {
+      "step": 9,
+      "responsible": "Security Team",
+      "action": "Secure exit routes for persons present in the incident zone and guide evacuation or protected movement according to the evolving situation.",
+      "expected_time": "Immediate and continuous"
+    },
+    {
+      "step": 10,
+      "responsible": "Security Team",
+      "action": "Coordinate and cooperate with specialized security teams and relevant authorities until the incident is fully concluded.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 11,
+      "responsible": "Relevant Authorities / Facility Leadership",
+      "action": "Prepare the required reports, document the incident, and submit the information according to the approved procedures.",
+      "expected_time": "After incident"
+    },
+    {
+      "step": 12,
+      "responsible": "Relevant Authority",
+      "action": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility.",
+      "expected_time": "After incident"
+    }
+  ],
+  "learning_objectives": [
+    "Verify and escalate an armed-person incident using the correct Code Silver procedure.",
+    "Collect critical suspect and scene information and relay it to specialized authorities and facility leadership.",
+    "Control access to the danger area and protect patients, staff, and visitors from unnecessary exposure.",
+    "Support safe access to injured persons and maintain protected movement routes when conditions allow.",
+    "Coordinate with specialized authorities and complete reporting and external notification requirements after the incident."
+  ],
+  "tags": [
+    "active_shooter",
+    "code_silver",
+    "hospital_security",
+    "armed_person",
+    "incident_response",
+    "evacuation"
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_SLV_001_C01",
+      "title": "Step 1",
+      "text": "When the security operations room receives a report of an armed person inside the healthcare facility, it must rapidly verify the source of the report and the exact location of the armed person."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C02",
+      "title": "Step 2",
+      "text": "Collect all available security information regarding the armed person, including gender, age, appearance, clothing description, type of weapon, and the number of injured or hostages if present."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C03",
+      "title": "Step 3",
+      "text": "Immediately notify the relevant specialized authorities through the approved emergency channels."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C04",
+      "title": "Step 4",
+      "text": "Announce Code Silver through the internal overhead speaker system and repeat the announcement several times, while also sending a signal through wireless communication devices to the security teams assigned for emergency response."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C05",
+      "title": "Step 5",
+      "text": "Notify facility leadership immediately and provide continuous updates on incident developments."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C06",
+      "title": "Step 6",
+      "text": "Prevent patients, staff, and visitors from approaching or entering the location where the armed person is present."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C07",
+      "title": "Step 7",
+      "text": "Communicate with the armed person cautiously and carefully when required, without direct confrontation unless directed by the competent authorities."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C08",
+      "title": "Step 8",
+      "text": "Attempt to reach injured persons together with medical staff for safe transfer while maintaining the highest standards of protection and safety."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C09",
+      "title": "Step 9",
+      "text": "Secure exit routes for persons present in the incident zone and guide evacuation or protected movement according to the evolving situation."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C10",
+      "title": "Step 10",
+      "text": "Coordinate and cooperate with specialized security teams and relevant authorities until the incident is fully concluded."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C11",
+      "title": "Step 11",
+      "text": "Prepare the required reports, document the incident, and submit the information according to the approved procedures."
+    },
+    {
+      "chunk_id": "UTIL_SLV_001_C12",
+      "title": "Step 12",
+      "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility."
+    }
+  ]
+}

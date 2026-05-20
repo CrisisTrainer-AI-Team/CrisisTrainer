@@ -1,0 +1,212 @@
+{
+  "scenario_id": "UTIL_CROWD_001",
+  "title": "Assessment Items - Crowd Gathering Control and Management",
+  "items": [
+    {
+      "item_id": "UTIL_CROWD_001_Q01",
+      "role": "Security Team",
+      "question": "What is the first required action when a crowd gathers at the healthcare facility?",
+      "choices": [
+        "Allow them to enter until leadership arrives.",
+        "Prevent unauthorized entry into the facility and associated premises unless official instructions are received.",
+        "Immediately disperse the crowd by force.",
+        "Ignore the situation if no damage is visible."
+      ],
+      "answer_index": 1,
+      "rationale": "The first procedure is to prevent the crowd from entering unless instructions authorize otherwise.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q02",
+      "role": "Security Team",
+      "question": "After controlling initial access, what should security determine next?",
+      "choices": [
+        "The financial cost of the incident.",
+        "The exact reason behind the gathering and whether it may escalate.",
+        "Which media outlet arrived first.",
+        "Which department is most crowded inside the hospital."
+      ],
+      "answer_index": 1,
+      "rationale": "Security must investigate the causes of the gathering to understand the situation and its risk level.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C02"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q03",
+      "role": "Security Leadership",
+      "question": "What is required regarding staffing during a crowd incident?",
+      "choices": [
+        "Reduce the number of security staff to avoid attention.",
+        "Deploy sufficient security personnel and establish security perimeters if required.",
+        "Send all staff inside the building and close the gates.",
+        "Wait until the crowd increases before taking action."
+      ],
+      "answer_index": 1,
+      "rationale": "Adequate staffing and perimeter formation are part of the official response.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C03"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q04",
+      "role": "Security Leadership",
+      "question": "Who must be informed during the incident?",
+      "choices": [
+        "Only the reception desk.",
+        "Only maintenance services.",
+        "Facility leadership and specialized security authorities through approved channels.",
+        "Patients' relatives first."
+      ],
+      "answer_index": 2,
+      "rationale": "Leadership and specialized authorities must be notified without delay.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C04"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q05",
+      "role": "Security Team",
+      "question": "What restriction applies to members of the gathering around the facility?",
+      "choices": [
+        "They may photograph freely if they stay outside.",
+        "They may raise banners if they remain peaceful.",
+        "They should not be allowed to photograph or raise banners in the facility surroundings.",
+        "They may do anything as long as they do not enter the building."
+      ],
+      "answer_index": 2,
+      "rationale": "Photography and banner display are not allowed around the facility in this situation.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C05"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q06",
+      "role": "Security Team",
+      "question": "How should security coordinate with specialized authorities during the event?",
+      "choices": [
+        "Only contact them once at the beginning.",
+        "Maintain continuous communication and coordination throughout the incident.",
+        "Wait until the crowd disperses before updating them.",
+        "Use informal messages only if needed."
+      ],
+      "answer_index": 1,
+      "rationale": "Continuous communication is explicitly required during the incident.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C06"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q07",
+      "role": "Security Team",
+      "question": "What information must security document about the crowd?",
+      "choices": [
+        "Only the names of hospital staff nearby.",
+        "The number of individuals, their classification, and the findings reported to security administration.",
+        "Only video footage from mobile phones.",
+        "Only the time of day."
+      ],
+      "answer_index": 1,
+      "rationale": "The procedure requires counting, classification, and reporting.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C07"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q08",
+      "role": "Security Team",
+      "question": "What should happen if some individuals are allowed entry to meet responsible officials?",
+      "choices": [
+        "They enter without any supervision.",
+        "An adequate number of security staff should accompany them under controlled access.",
+        "They should be redirected to public waiting areas without notice.",
+        "All crowd members should be allowed in together."
+      ],
+      "answer_index": 1,
+      "rationale": "Authorized entry must remain controlled and accompanied by security personnel.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C08"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q09",
+      "role": "Security Team",
+      "question": "What is the correct rule regarding the use of force?",
+      "choices": [
+        "Force should be used early to end the gathering quickly.",
+        "Force may be used freely if the crowd is loud.",
+        "Force should be avoided except in very limited cases permitted by law.",
+        "Force is required whenever photography occurs."
+      ],
+      "answer_index": 2,
+      "rationale": "The policy restricts force to narrow lawful situations only.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C09"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q10",
+      "role": "Security Team",
+      "question": "When does monitoring of the crowd situation end?",
+      "choices": [
+        "As soon as the crowd stops speaking loudly.",
+        "After one warning is issued.",
+        "Only when the situation is fully resolved and the crowd has dispersed from the surrounding area.",
+        "Immediately after leadership is informed."
+      ],
+      "answer_index": 2,
+      "rationale": "Monitoring continues until the situation is over and dispersal is completed.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C10"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q11",
+      "role": "Security Leadership",
+      "question": "What post-incident documentation is required?",
+      "choices": [
+        "No report is needed if the crowd leaves peacefully.",
+        "A joint report with specialized security authorities submitted to facility leadership.",
+        "A short verbal summary only.",
+        "A maintenance request form."
+      ],
+      "answer_index": 1,
+      "rationale": "A joint report is required after the incident concludes.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C11"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_CROWD_001_Q12",
+      "role": "Security Team",
+      "question": "Which communication style is most appropriate when dealing with a gathering?",
+      "choices": [
+        "Use provocative language to pressure the crowd.",
+        "Refer to past incidents to create fear and gain compliance.",
+        "Demonstrate patience and calmness, show good conduct, and avoid provocative verbal or physical expressions.",
+        "Use threatening body language to establish authority."
+      ],
+      "answer_index": 2,
+      "rationale": "The guidance emphasizes patience, calmness, respectful conduct, and avoiding provocation or fear.",
+      "evidence_chunk_ids": [
+        "UTIL_CROWD_001_C12"
+      ],
+      "difficulty": "easy"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

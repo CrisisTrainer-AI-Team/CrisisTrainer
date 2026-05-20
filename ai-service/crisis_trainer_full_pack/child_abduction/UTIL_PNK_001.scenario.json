@@ -1,0 +1,234 @@
+{
+  "scenario_id": "UTIL_PNK_001",
+  "title": "Child Abduction / Missing Infant Response (Code Pink)",
+  "source_document": {
+    "file_name": "MOH Security Manual.pdf",
+    "standard_no": "Security Procedures",
+    "sub_standard": "Child Abduction / Missing Infant - Code Pink"
+  },
+  "domain": "hospital_emergency",
+  "facility": "Healthcare Facility",
+  "language": "en",
+  "utility_type": "child_abduction",
+  "code_activation": {
+    "code": "Code Pink"
+  },
+  "contact_extensions": {
+    "overhead_speaker": "Internal announcement network",
+    "security_operations_room": "Security Operations Room",
+    "specialized_authorities": "911 / 999",
+    "cctv_room": "CCTV Monitoring Room",
+    "national_center": "National Center for Emergency and Health Crisis Management"
+  },
+  "roles_involved": [
+    "Security Operations Room",
+    "Security Team",
+    "Nursing Staff",
+    "Hospital Staff",
+    "Female Security Staff",
+    "CCTV Monitoring Team",
+    "Specialized Security Authorities",
+    "Facility Leadership",
+    "Quality Department",
+    "Patient Experience Department",
+    "Relevant Specialists",
+    "National Center Representative"
+  ],
+  "plan_procedures": [
+    {
+      "step": 1,
+      "responsible": "Security Operations Room",
+      "action": "When the security operations room receives a report of a missing or abducted child or infant, the exact location of the incident must first be identified and an immediate response must begin.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 2,
+      "responsible": "Security Team / Nursing Staff",
+      "action": "Direct nursing staff and security personnel to search carefully for the child or infant throughout the building, while observing the behavior of visitors and any suspicious movement.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 3,
+      "responsible": "Security Operations Room",
+      "action": "Issue immediate instructions to close all exits, main entrances, emergency exits, and elevators, except for access authorized by the responsible authorities.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 4,
+      "responsible": "CCTV Monitoring Team",
+      "action": "Enhance surveillance through the CCTV system and track movement in all relevant internal areas based on available incident information.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 5,
+      "responsible": "Security Operations Room",
+      "action": "Announce Code Pink through the internal overhead speaker system and repeat the announcement in order to alert staff throughout the facility.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 6,
+      "responsible": "Security Operations Room",
+      "action": "Communicate directly with the specialized security authorities through the approved emergency numbers to report the incident without delay.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 7,
+      "responsible": "Security Team",
+      "action": "Request assistance from female security staff in the facility when inspection of female companions or visitors is required as part of the search process.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 8,
+      "responsible": "Security Team",
+      "action": "If the child is found with a suspicious person, security personnel must stop the person, verify their identity, and keep them under control until the specialized security authorities arrive.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 9,
+      "responsible": "Security Team / Specialized Authorities",
+      "action": "If the child is not found inside the facility after the initial search, the search must be expanded to the outside surroundings of the building, and the security authorities must be provided with all incident details and actions already taken.",
+      "expected_time": "As needed"
+    },
+    {
+      "step": 10,
+      "responsible": "Facility Leadership",
+      "action": "Nominate a member or coordinator from the security team to participate and communicate directly with the specialized security authorities throughout the incident.",
+      "expected_time": "Immediate"
+    },
+    {
+      "step": 11,
+      "responsible": "Security Team / Relevant Specialists",
+      "action": "Coordinate with specialists and the competent security authorities to access information related to persons involved and to review available CCTV recordings and other supporting records.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 12,
+      "responsible": "Security Team",
+      "action": "Maintain an intensified security presence inside and outside the facility, as the investigation may take time and there remains a possibility that the offender may return to the scene of the incident.",
+      "expected_time": "Continuous"
+    },
+    {
+      "step": 13,
+      "responsible": "Facility Departments",
+      "action": "Prepare a joint incident record involving the Security Department, Patient Experience Department, Nursing Department, and Quality Department, and submit it to facility leadership.",
+      "expected_time": "After incident"
+    },
+    {
+      "step": 14,
+      "responsible": "Relevant Authorities",
+      "action": "After the specialized security authorities complete the investigation and close the case, obtain a copy of the final report including observations and recommendations.",
+      "expected_time": "After incident"
+    },
+    {
+      "step": 15,
+      "responsible": "Facility Leadership / Quality Department",
+      "action": "Study and analyze the incident and work on implementing the recommendations that would reduce the possibility of recurrence.",
+      "expected_time": "Post-incident"
+    },
+    {
+      "step": 16,
+      "responsible": "Relevant Authority",
+      "action": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility.",
+      "expected_time": "After incident"
+    }
+  ],
+  "learning_objectives": [
+    "Verify and escalate a missing child or infant incident using the correct Code Pink procedure.",
+    "Control exits, entrances, elevators, and internal movement rapidly to support immediate containment.",
+    "Coordinate search efforts between security staff, nursing staff, CCTV monitoring, and specialized authorities.",
+    "Apply controlled detention procedures if a suspicious person is found with the child.",
+    "Support extended search, investigation, reporting, and post-incident corrective actions."
+  ],
+  "tags": [
+    "code_pink",
+    "child_abduction",
+    "missing_infant",
+    "hospital_security",
+    "search_and_containment",
+    "incident_response"
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z",
+  "policy_chunks": [
+    {
+      "chunk_id": "UTIL_PNK_001_C01",
+      "title": "Step 1",
+      "text": "When the security operations room receives a report of a missing or abducted child or infant, the exact location of the incident must first be identified and an immediate response must begin."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C02",
+      "title": "Step 2",
+      "text": "Direct nursing staff and security personnel to search carefully for the child or infant throughout the building, while observing the behavior of visitors and any suspicious movement."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C03",
+      "title": "Step 3",
+      "text": "Issue immediate instructions to close all exits, main entrances, emergency exits, and elevators, except for access authorized by the responsible authorities."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C04",
+      "title": "Step 4",
+      "text": "Enhance surveillance through the CCTV system and track movement in all relevant internal areas based on available incident information."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C05",
+      "title": "Step 5",
+      "text": "Announce Code Pink through the internal overhead speaker system and repeat the announcement in order to alert staff throughout the facility."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C06",
+      "title": "Step 6",
+      "text": "Communicate directly with the specialized security authorities through the approved emergency numbers to report the incident without delay."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C07",
+      "title": "Step 7",
+      "text": "Request assistance from female security staff in the facility when inspection of female companions or visitors is required as part of the search process."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C08",
+      "title": "Step 8",
+      "text": "If the child is found with a suspicious person, security personnel must stop the person, verify their identity, and keep them under control until the specialized security authorities arrive."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C09",
+      "title": "Step 9",
+      "text": "If the child is not found inside the facility after the initial search, the search must be expanded to the outside surroundings of the building, and the security authorities must be provided with all incident details and actions already taken."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C10",
+      "title": "Step 10",
+      "text": "Nominate a member or coordinator from the security team to participate and communicate directly with the specialized security authorities throughout the incident."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C11",
+      "title": "Step 11",
+      "text": "Coordinate with specialists and the competent security authorities to access information related to persons involved and to review available CCTV recordings and other supporting records."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C12",
+      "title": "Step 12",
+      "text": "Maintain an intensified security presence inside and outside the facility, as the investigation may take time and there remains a possibility that the offender may return to the scene of the incident."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C13",
+      "title": "Step 13",
+      "text": "Prepare a joint incident record involving the Security Department, Patient Experience Department, Nursing Department, and Quality Department, and submit it to facility leadership."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C14",
+      "title": "Step 14",
+      "text": "After the specialized security authorities complete the investigation and close the case, obtain a copy of the final report including observations and recommendations."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C15",
+      "title": "Step 15",
+      "text": "Study and analyze the incident and work on implementing the recommendations that would reduce the possibility of recurrence."
+    },
+    {
+      "chunk_id": "UTIL_PNK_001_C16",
+      "title": "Step 16",
+      "text": "Provide the National Center for Emergency and Health Crisis Management with all required information related to the incident through the responsible authority in the facility."
+    }
+  ]
+}

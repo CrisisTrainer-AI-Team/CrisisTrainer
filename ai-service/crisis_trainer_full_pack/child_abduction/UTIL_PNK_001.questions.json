@@ -1,0 +1,280 @@
+{
+  "scenario_id": "UTIL_PNK_001",
+  "title": "Assessment Items - Child Abduction / Missing Infant Response (Code Pink)",
+  "items": [
+    {
+      "item_id": "UTIL_PNK_001_Q01",
+      "role": "Security Operations Room",
+      "question": "What is the first required action when a report of a missing or abducted child or infant is received?",
+      "choices": [
+        "Wait for a second report from another department before acting.",
+        "Identify the exact incident location and begin immediate response.",
+        "Delay action until external authorities arrive.",
+        "Start documenting the report without initiating any search."
+      ],
+      "answer_index": 1,
+      "rationale": "The first step is to determine the exact location and begin immediate response.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C01"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q02",
+      "role": "Security Team / Nursing Staff",
+      "question": "How should the initial internal search be conducted?",
+      "choices": [
+        "Search only the room where the child was last seen.",
+        "Direct nursing staff and security personnel to search carefully throughout the building while observing suspicious behavior.",
+        "Wait until CCTV footage is reviewed before starting any search.",
+        "Search only public waiting areas."
+      ],
+      "answer_index": 1,
+      "rationale": "The internal search must be careful, wide, and coordinated with observation of suspicious behavior.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C02"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q03",
+      "role": "Security Operations Room",
+      "question": "What access-control measure must be applied immediately?",
+      "choices": [
+        "Close all exits, main entrances, emergency exits, and elevators except for authorized access.",
+        "Close only the main gate and leave elevators operating normally.",
+        "Allow unrestricted movement until the child is confirmed missing.",
+        "Shut down CCTV instead of controlling exits."
+      ],
+      "answer_index": 0,
+      "rationale": "The procedure requires immediate control of exits, entrances, emergency exits, and elevators.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C03"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q04",
+      "role": "CCTV Monitoring Team",
+      "question": "What is the role of the CCTV team during Code Pink?",
+      "choices": [
+        "Archive previous footage only after the incident is closed.",
+        "Enhance surveillance and track movement in all relevant internal areas based on available information.",
+        "Monitor only the nursery area.",
+        "Use CCTV only if the child is not found after 24 hours."
+      ],
+      "answer_index": 1,
+      "rationale": "The CCTV team must intensify surveillance immediately and track movement based on incident information.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C04"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q05",
+      "role": "Security Operations Room",
+      "question": "How should Code Pink be announced inside the facility?",
+      "choices": [
+        "By sending a private email to department heads only.",
+        "Through the internal overhead speaker system with repeated announcements.",
+        "Through verbal communication to reception only.",
+        "No announcement is needed until police arrive."
+      ],
+      "answer_index": 1,
+      "rationale": "The code must be announced through the overhead speaker system and repeated to alert all staff.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C05"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q06",
+      "role": "Security Operations Room",
+      "question": "When must specialized security authorities be contacted?",
+      "choices": [
+        "Only if the child is not found after the first hour.",
+        "Immediately through the approved emergency numbers.",
+        "After all internal documentation is complete.",
+        "Only after facility leadership gives written approval."
+      ],
+      "answer_index": 1,
+      "rationale": "The specialized security authorities must be contacted without delay.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C06"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q07",
+      "role": "Security Team",
+      "question": "Why may female security staff be specifically requested during the search process?",
+      "choices": [
+        "To replace all other security staff in the facility.",
+        "To inspect female companions or visitors when required as part of the search process.",
+        "To prepare the final quality report.",
+        "To manage CCTV equipment."
+      ],
+      "answer_index": 1,
+      "rationale": "Female security staff may be needed for proper inspection of female companions or visitors.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C07"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q08",
+      "role": "Security Team",
+      "question": "What should security do if the child is found with a suspicious person?",
+      "choices": [
+        "Allow the person to leave if they claim to be a relative.",
+        "Stop the person, verify identity, and keep them under control until specialized authorities arrive.",
+        "Take a photo and continue searching elsewhere.",
+        "Release the child and ignore the adult."
+      ],
+      "answer_index": 1,
+      "rationale": "The suspicious person must be stopped, identified, and controlled until authorities arrive.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C08"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q09",
+      "role": "Security Team / Specialized Authorities",
+      "question": "What is required if the child is not found during the initial internal search?",
+      "choices": [
+        "Close the case and reopen normal operations.",
+        "Expand the search outside the facility and provide the authorities with all incident details and actions already taken.",
+        "Stop all communication until new evidence appears.",
+        "Limit the search to parking areas only."
+      ],
+      "answer_index": 1,
+      "rationale": "If the child is not found internally, the search must expand externally and authorities must receive full details.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C09"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q10",
+      "role": "Facility Leadership",
+      "question": "What coordination measure should facility leadership take during the incident?",
+      "choices": [
+        "Nominate a security coordinator to communicate directly with specialized security authorities.",
+        "Transfer all communication to visitors.",
+        "Stop coordination until police complete the investigation.",
+        "Assign the role to any available volunteer."
+      ],
+      "answer_index": 0,
+      "rationale": "A member or coordinator from the security team should be nominated to coordinate with specialized authorities.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C10"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q11",
+      "role": "Security Team / Relevant Specialists",
+      "question": "What information-support action is required during the investigation?",
+      "choices": [
+        "Coordinate with specialists to access person-related information and review CCTV recordings and supporting records.",
+        "Delete CCTV footage after review to protect privacy.",
+        "Restrict all information to one department only.",
+        "Avoid using supporting records until after the case is closed."
+      ],
+      "answer_index": 0,
+      "rationale": "The investigation requires coordinated access to relevant information, CCTV, and supporting records.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C11"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q12",
+      "role": "Security Team",
+      "question": "Why must security presence remain intensified inside and outside the facility during the incident?",
+      "choices": [
+        "Because media coverage requires visible staffing.",
+        "Because the investigation may take time and the offender may return to the scene.",
+        "Because all staff must be reassigned to security duties.",
+        "Because visitor services must remain suspended for a week."
+      ],
+      "answer_index": 1,
+      "rationale": "Security presence remains intensified due to the possibility of return and the extended duration of the investigation.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C12"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q13",
+      "role": "Facility Departments",
+      "question": "Which departments must contribute to the joint incident record?",
+      "choices": [
+        "Security, Patient Experience, Nursing, and Quality.",
+        "Only Security and Maintenance.",
+        "Only Nursing and Reception.",
+        "Only the emergency department."
+      ],
+      "answer_index": 0,
+      "rationale": "The joint incident record includes Security, Patient Experience, Nursing, and Quality.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C13"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q14",
+      "role": "Relevant Authorities",
+      "question": "What should be obtained after the specialized authorities complete the investigation and close the case?",
+      "choices": [
+        "A copy of the final report including observations and recommendations.",
+        "Only a verbal summary from the shift supervisor.",
+        "A patient discharge report.",
+        "No records are needed once the case is closed."
+      ],
+      "answer_index": 0,
+      "rationale": "A final report with observations and recommendations should be obtained after investigation closure.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C14"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q15",
+      "role": "Facility Leadership / Quality Department",
+      "question": "What is the correct post-incident improvement action?",
+      "choices": [
+        "Archive the event without analysis.",
+        "Study and analyze the incident and implement recommendations to reduce recurrence.",
+        "Avoid discussing the case internally.",
+        "Reopen all exits immediately without review."
+      ],
+      "answer_index": 1,
+      "rationale": "The facility should analyze the incident and implement recommendations to reduce the chance of recurrence.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C15"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "item_id": "UTIL_PNK_001_Q16",
+      "role": "Relevant Authority",
+      "question": "Which organization must receive the required final incident information?",
+      "choices": [
+        "National Center for Emergency and Health Crisis Management.",
+        "Parking Department.",
+        "Food Services Department.",
+        "Front Desk Reception."
+      ],
+      "answer_index": 0,
+      "rationale": "The final step is to provide the National Center with the required incident information.",
+      "evidence_chunk_ids": [
+        "UTIL_PNK_001_C16"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "version": "1.0",
+  "created_at": "2026-04-11T20:00:00Z"
+}

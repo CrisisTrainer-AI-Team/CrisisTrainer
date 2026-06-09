@@ -904,79 +904,84 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
   .assignments-grid { grid-template-columns: 1fr; }
 }
 /* =====================================================
-   MOBILE RESPONSIVE (ULTIMATE FIX - CHARTS & TABLES)
+   MOBILE RESPONSIVE (ULTIMATE FIX V2)
 ===================================================== */
 @media (max-width: 768px) {
-  /* 1. ترتيب المسافات */
+  /* 1. الترتيب العام */
   .main-content { padding: 1rem; overflow-x: hidden; }
   .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .section-header .btn { width: 100%; justify-content: center; }
 
-  /* 2. إجبار الرسوم البيانية والكروت تنزل تحت بعض وتاخذ الشاشة كاملة */
-  .main-content .card, 
-  .main-content .preview-scenario {
+  /* 2. إجبار *جميع* الرسوم البيانية تنزل تحت بعض (بما فيها أول رسمتين) */
+  /* استهداف الـ container اللي يحمل الرسمتين ليكون عمودي */
+  .main-content > .d-flex { 
+    flex-direction: column; 
+    gap: 1rem; 
+  }
+  .main-content .card {
     width: 100% !important;
     max-width: 100% !important;
+    margin-bottom: 1rem;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    display: block !important;
-    margin-bottom: 1rem;
   }
   
-  /* 3. حماية كروت الإحصائيات الأربعة (عشان تبقى 2x2 مرتبة) */
+  /* 3. كروت الإحصائيات الأربعة (تبقى 2x2) */
   .stats-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 0.8rem; }
   .stats-grid .card { width: auto !important; margin-bottom: 0; padding: 1rem; }
   .stat-value { font-size: 1.4rem; }
   .stat-icon { width: 32px; height: 32px; margin-bottom: 0.5rem; }
 
-  /* 🔴 4. السحر: تحويل الجدول المزعج إلى كروت أنيقة (بدون سحب) 🔴 */
-  .table-wrap {
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-  }
+  /* 🔴 4. الجدول: إظهار أسماء الأعمدة (Labels) جنب القيم 🔴 */
+  .table-wrap { border: none !important; box-shadow: none !important; background: transparent !important; }
+  table, thead, tbody, th, td, tr { display: block; width: 100%; }
   
-  table, thead, tbody, th, td, tr {
-    display: block;
-    width: 100%;
-  }
-  
-  thead tr {
-    display: none; /* إخفاء صف العناوين العلوية في الجوال */
+  thead tr { 
+    display: none; /* نخفي الـ Header الأساسي */
   }
   
   tr {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    margin-bottom: 1.2rem;
-    padding: 0.5rem 1rem;
-    box-shadow: var(--shadow);
+    background: white; border: 1px solid var(--border); border-radius: var(--radius);
+    margin-bottom: 1.2rem; padding: 1rem; box-shadow: var(--shadow);
   }
   
   td {
     display: flex;
+    justify-content: space-between; /* يخلي الاسم يسار والقيمة يمين */
     align-items: center;
     padding: 0.6rem 0 !important;
     border-bottom: 1px dashed var(--border) !important;
     font-size: 0.9rem;
+    position: relative;
+    text-align: right; /* يخلي القيم على اليمين */
   }
   
-  td:last-child {
-    border-bottom: none !important;
-  }
+  td:last-child { border-bottom: none !important; }
   
-  /* إبراز أول خلية (اسم القسم أو الموظف) لتكون كأنها عنوان الكرت */
+  /* إبراز أول خلية (العنوان الرئيسي للكرت) بدون label */
   td:first-child {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--c-primary);
-    border-bottom: 2px solid var(--c-soft) !important;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.8rem !important;
     justify-content: center;
-    background: rgba(1, 79, 134, 0.05); /* لون خلفية خفيف يبرز الاسم */
-    border-radius: var(--radius-sm);
-    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem; font-weight: 800; color: var(--c-primary);
+    border-bottom: 2px solid var(--c-soft) !important;
+    background: rgba(1, 79, 134, 0.05); border-radius: var(--radius-sm);
+    padding: 0.8rem !important; margin-bottom: 0.5rem;
+  }
+  
+  td:first-child::before { content: none !important; } /* نمنع ظهور الـ label في العنوان الرئيسي */
+
+  /* 
+     استخدام خاصية attr(data-label) لسحب اسم العمود من الـ HTML
+     ملاحظة: تحتاجين تضيفين data-label في ملف الـ HTML (مشروحة تحت) 
+  */
+  td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    text-align: left;
+    margin-right: 1rem;
+    flex-shrink: 0;
   }
 }

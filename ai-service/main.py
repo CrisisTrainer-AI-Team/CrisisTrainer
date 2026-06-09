@@ -930,6 +930,13 @@ def supervisor_analytics(supervisor_id: int, db: Session = Depends(get_db)):
     employees = db.query(User).filter(User.user_type == "employee").all()
     departments = db.query(Department).all()
 
+    if not departments:
+        for name in ["Nursing", "Security", "Maintenance", "Administration", "Medical Staff"]:
+            db.add(Department(name=name))
+
+        db.commit()
+        departments = db.query(Department).all()
+
     trainings = (
         db.query(Training)
         .filter(Training.created_by == supervisor_id)

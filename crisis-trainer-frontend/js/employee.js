@@ -219,10 +219,19 @@ async function startQuiz(trainingId) {
       return;
     }
 
-    document.getElementById("quizTitle").textContent = assignment.title;
-    renderQuestion();
-    openModal("quizModal");
-    startTimer();
+document.getElementById("quizTitle").textContent = assignment.title;
+
+const narrativeBox = document.getElementById("scenarioNarrative");
+
+if (narrativeBox) {
+  const scenarioText = res.training?.scenario_text || "";
+  narrativeBox.textContent = scenarioText;
+  narrativeBox.style.display = scenarioText ? "block" : "none";
+}
+
+renderQuestion();
+openModal("quizModal");
+startTimer();
 
   } catch (err) {
     alert("Failed to load questions: " + err.message);
@@ -368,7 +377,6 @@ function submitQuiz(autoSubmit = false) {
   };
   console.log("Submit payload:", submitPayload);
 
-      apiSubmitAttempt(submitPayload)
     document.getElementById("quizBody").style.display = "none";
     document.getElementById("quizFooter").style.display = "none";
 
@@ -469,6 +477,11 @@ function closeModal(id) {
   const el = document.getElementById(id);
   if (!el) return;
 
+  if (id === "quizModal" && activeQuiz?.timerInterval) {
+    clearInterval(activeQuiz.timerInterval);
+    activeQuiz.timerInterval = null;
+  }
+
   el.classList.remove("active");
   document.body.style.overflow = "";
 }
@@ -507,6 +520,11 @@ function formatDate(dateStr) {
 
 function startTimer() {
   if (!activeQuiz) return;
+
+  if (activeQuiz.timerInterval) {
+    clearInterval(activeQuiz.timerInterval);
+    activeQuiz.timerInterval = null;
+  }
 
   updateTimerText();
 

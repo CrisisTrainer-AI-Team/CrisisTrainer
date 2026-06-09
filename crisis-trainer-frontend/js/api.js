@@ -4,7 +4,7 @@
  * Base URL is defined here for easy reconfiguration.
  */
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://crisistrainer.onrender.com";
 
 /**
  * Generic fetch wrapper with error handling.

@@ -224,7 +224,7 @@ document.getElementById("quizTitle").textContent = assignment.title;
 const narrativeBox = document.getElementById("scenarioNarrative");
 
 if (narrativeBox) {
-  const scenarioText = res.training?.scenario_text || "";
+  const scenarioText = res.training?.narrative || "";
   narrativeBox.textContent = scenarioText;
   narrativeBox.style.display = scenarioText ? "block" : "none";
 }
@@ -611,4 +611,3 @@ function showAIFeedback(feedback) {
 
 window.showAIFeedback = showAIFeedback;
 
-data

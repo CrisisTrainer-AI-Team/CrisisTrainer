@@ -1148,26 +1148,47 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
     height: auto;
   }
 }
-/* Force mobile to look like zoomed-out desktop */
+/* =====================================================
+   GLOBAL MOBILE DESKTOP-SCALE VIEW
+   Makes all pages look like zoomed-out desktop on phones
+===================================================== */
+
 @media screen and (max-width: 768px) {
 
-  html, body {
+  html {
     overflow-x: hidden;
-    width: 100%;
   }
 
   body {
-    transform: scale(0.78);
+    width: 1200px;
+    min-width: 1200px;
+    transform: scale(0.32);
     transform-origin: top left;
-    width: 128.2%; /* 100 / 0.78 */
-    min-height: 128vh;
-  }
-
-  .main-content {
-    padding: 1.5rem 2rem !important;
+    overflow-x: hidden;
+    min-height: 312vh;
   }
 
   .navbar {
-    width: 100%;
+    width: 1200px;
+    min-width: 1200px;
+  }
+
+  .main-content,
+  .main-content.full {
+    max-width: 1200px;
+    width: 1200px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    transform: scale(3.125);
+    transform-origin: top left;
+  }
+
+  .modal {
+    max-width: 680px !important;
   }
 }

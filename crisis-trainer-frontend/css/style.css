@@ -985,3 +985,32 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
     flex-shrink: 0;
   }
 }
+/* =====================================================
+   إجبار جميع الرسوم البيانية والكروت على الترتيب العمودي
+===================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. تكسير أي شبكة (Grid) أو صف (Row) يحمل الرسوم البيانية */
+  .main-content .d-flex,
+  .main-content [class*="grid"]:not(.stats-grid),
+  .main-content [class*="row"] {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  /* 2. إجبار الكروت تاخذ عرض الشاشة بالكامل غصب */
+  .main-content .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin: 0 0 1.2rem 0 !important; /* مسافة من تحت فقط */
+    display: block !important;
+  }
+
+  /* 3. إصلاح مشكلة الرسوم البيانية والنص المقصوص تحتها */
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

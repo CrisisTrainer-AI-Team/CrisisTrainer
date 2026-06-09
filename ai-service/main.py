@@ -32,7 +32,10 @@ TOP_K = 6
 client = OpenAI()  # يقرأ OPENAI_API_KEY من البيئة (PowerShell)
 
 app = FastAPI(title="CrisisTrainer", version="1.0")
-
+# --- اضفي هذين السطرين هنا لإنشاء الجداول تلقائياً في SQLite عند الرفع ---
+from database import Base, engine
+Base.metadata.create_all(bind=engine)
+# -----------------------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -1282,3 +1285,8 @@ def create_supervisor_note(payload: SupervisorNoteCreate, db: Session = Depends(
         "message": "Note saved successfully",
         "note_id": note.id
     }
+# اذهبي لآخر الملف وأضيفي هذا السطر في النهاية تماماً:
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)

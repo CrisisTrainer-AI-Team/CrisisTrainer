@@ -962,3 +962,66 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
     font-size: 0.8rem; /* تصغير الخط شوي عشان يقلل الحاجة للسحب */
   }
 }
+/* =====================================================
+   MOBILE RESPONSIVE (PRO DESIGN - FINAL FIX)
+===================================================== */
+@media (max-width: 768px) {
+  /* 1. منع الموقع من التحرك يمين ويسار بشكل عشوائي */
+  .main-content { padding: 1rem; overflow-x: hidden; }
+  
+  /* 2. ترتيب العناوين وزر الإضافة */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .section-header .btn { width: 100%; justify-content: center; }
+
+  /* 3. إبقاء كروت الإحصائيات الصغيرة (2×2) لأنها ممتازة */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  .stat-card { padding: 1rem; }
+  .stat-value { font-size: 1.4rem; }
+  .stat-icon { width: 32px; height: 32px; margin-bottom: 0.5rem; }
+
+  /* 🔴 4. إصلاح الرسوم البيانية (Charts) 🔴 */
+  /* نكسر أي شبكة أو صف إلى عمود واحد عشان الرسوم تاخذ عرض الشاشة بالكامل */
+  .form-row { 
+    grid-template-columns: 1fr !important; 
+  }
+  /* إذا كنت حاط الرسوم داخل d-flex، نجبرها تنزل تحت بعض */
+  .main-content > .d-flex {
+    flex-direction: column;
+  }
+  .card { width: 100%; margin-bottom: 1rem; }
+
+  /* 🔴 5. إصلاح شريط البحث والفلاتر (Search & Filters) 🔴 */
+  /* نجبر الفلتر وشريط البحث ينزلون تحت بعض بشكل أنيق وما يطلعون برا الإطار */
+  .d-flex.justify-between:not(.navbar):not(.modal-header),
+  .table-wrap .d-flex,
+  .info-row {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  /* إجبار الحقول على البقاء داخل الشاشة */
+  .form-control, select.form-control {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* 6. تصميم الجدول (سحب ناعم بدون تخريب الشاشة) */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-sm);
+    width: 100%;
+    border: 1px solid var(--border); /* إرجاع الحد عشان يكون مرتب */
+  }
+  table { min-width: 600px; }
+  thead th, tbody td { padding: 0.75rem 1rem; font-size: 0.8rem; }
+}

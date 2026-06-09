@@ -256,7 +256,11 @@ function renderPreview(data) {
 
     card.innerHTML = `
       <h4>📋 ${escHtml(sc.title || sc.scenario_id)}</h4>
-      <div class="narrative-box">${escHtml(sc.narrative || "")}</div>
+      <textarea class="scenario-editor"
+          data-scenario="${si}"
+          style="width:100%;min-height:120px;margin:1rem 0;padding:1rem;border-radius:12px;border:1px solid #d6e3ef;resize:vertical;font-family:inherit;font-size:0.95rem;line-height:1.7;">
+${escHtml(sc.narrative || "")}
+</textarea>
       ${questionsHTML}
     `;
 
@@ -287,7 +291,13 @@ function applyQuestionEdits() {
 
     scenarios[si].questions[qi].choices[ci] = el.value.trim();
   });
+  document.querySelectorAll(".scenario-editor").forEach(el => {
+  const si = parseInt(el.dataset.scenario);
 
+  if (!scenarios[si]) return;
+
+  scenarios[si].narrative = el.value.trim();
+});
   scenarios.forEach((sc, si) => {
     (sc.questions || []).forEach((q, qi) => {
       const selected = document.querySelector(

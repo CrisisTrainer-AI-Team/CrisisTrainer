@@ -7,7 +7,13 @@
   },
   "domain": "hospital_emergency",
   "language": "en",
-  "applies_to_roles": "all",
+  "roles_involved": [
+    "All Staff",
+    "Nurse",
+    "Doctor",
+    "Security Officer",
+    "Supervisor"
+  ],
   "reference_table": [
     {
       "code": "Code Red",

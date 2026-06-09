@@ -625,7 +625,14 @@ def get_training_questions(training_id: int, db: Session = Depends(get_db)):
         .order_by(TrainingQuestion.question_order.asc())
         .all()
     )
+     ai_payload = json.loads(training.ai_payload) if training.ai_payload else {}
 
+     generated_scenarios = ai_payload.get("generated_scenarios", [])
+
+     scenario_narrative = ""
+
+    if generated_scenarios:
+        scenario_narrative = generated_scenarios[0].get("narrative", "")
     return {
         "training": {
             "id": training.id,
@@ -634,7 +641,8 @@ def get_training_questions(training_id: int, db: Session = Depends(get_db)):
             "role": training.selected_role,
             "difficulty": training.difficulty,
             "language": training.language,
-            "duration_minutes": training.duration_minutes
+            "duration_minutes": training.duration_minutes,
+            "narrative": scenario_narrative
         },
         "questions": [
             {
@@ -954,7 +962,11 @@ def supervisor_analytics(supervisor_id: int, db: Session = Depends(get_db)):
 
     total_trainings = len(trainings)
     total_employees = len(employees)
-    completed_attempts = len(attempts)
+    completed_attempts = len([
+    attempt
+    for attempt, training, employee, dept in attempts
+    if attempt.status in ["graded", "completed", "submitted"]
+   ])
 
     scores = [
         float(attempt.score)
@@ -1091,6 +1103,8 @@ def supervisor_analytics(supervisor_id: int, db: Session = Depends(get_db)):
     scenario_map = {}
 
     for attempt, training, employee, dept in attempts:
+        if attempt.status not in ["graded", "completed", "submitted"]:
+           continue
         key = training.scenario_title
 
         if key not in scenario_map:
@@ -1130,6 +1144,8 @@ def supervisor_analytics(supervisor_id: int, db: Session = Depends(get_db)):
         key=lambda x: x[0].submitted_at or x[0].created_at,
         reverse=True
     )[:10]:
+        if attempt.status not in ["graded", "completed", "submitted"]:
+           continue
         recent_activity.append({
             "employee_name": employee.full_name,
             "department_name": dept.name if dept else "-",

@@ -1149,46 +1149,249 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
   }
 }
 /* =====================================================
-   GLOBAL MOBILE DESKTOP-SCALE VIEW
-   Makes all pages look like zoomed-out desktop on phones
+   MOBILE RESPONSIVE (Phones & Small Tablets)
+   Add this block at the END of style.css
 ===================================================== */
 
 @media screen and (max-width: 768px) {
 
-  html {
+  html, body {
     overflow-x: hidden;
   }
 
   body {
-    width: 1200px;
-    min-width: 1200px;
-    transform: scale(0.32);
-    transform-origin: top left;
-    overflow-x: hidden;
-    min-height: 312vh;
+    font-size: 14px;
   }
+
+  /* ---------- Navbar ---------- */
 
   .navbar {
-    width: 1200px;
-    min-width: 1200px;
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
   }
 
-  .main-content,
-  .main-content.full {
-    max-width: 1200px;
-    width: 1200px;
-    margin-left: 0;
-    margin-right: 0;
+  .navbar-brand {
+    gap: 0.5rem;
   }
+
+  .navbar-name {
+    font-size: 1.4rem;
+  }
+
+  .navbar-right {
+    margin-left: auto;
+    gap: 0.5rem;
+  }
+
+  .user-info {
+    display: none;   /* لإخفاء الاسم الطويل بالجوال */
+  }
+
+  .btn-logout {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Main Layout ---------- */
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .welcome-card {
+    padding: 1.2rem;
+  }
+
+  .welcome-card h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .welcome-card p {
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Section Header ---------- */
+
+  .section-header,
+  .training-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .section-header .btn,
+  .training-header .btn,
+  .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---------- Stats Cards ---------- */
+
+  .stats-grid,
+  .employee-stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .stat-card,
+  .emp-stat {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .stat-card .value,
+  .emp-stat .val {
+    font-size: 2.2rem;
+  }
+
+  /* ---------- Assignment Cards ---------- */
+
+  .assignments-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .assignment-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .assignment-card-top h4 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .assignment-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.7rem;
+  }
+
+  .assignment-card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: stretch;
+    margin-top: 1rem;
+  }
+
+  .assignment-card-bottom button,
+  .assignment-card-bottom .btn {
+    width: 100%;
+  }
+
+  /* ---------- Buttons ---------- */
+
+  .btn,
+  button {
+    min-height: 42px;
+  }
+
+  /* ---------- Modal ---------- */
 
   .modal-overlay {
-    width: 100vw;
-    height: 100vh;
-    transform: scale(3.125);
-    transform-origin: top left;
+    padding: 0.5rem;
   }
 
   .modal {
-    max-width: 680px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 95vh;
+    overflow-y: auto;
+    border-radius: 16px;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* ---------- Quiz ---------- */
+
+  .quiz-progress {
+    margin-bottom: 1rem;
+  }
+
+  .quiz-question {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  #scenarioNarrative {
+    font-size: 0.9rem !important;
+    line-height: 1.7 !important;
+    padding: 0.9rem !important;
+  }
+
+  .quiz-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .choice-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    min-height: auto;
+    font-size: 0.9rem;
+    white-space: normal;
+    line-height: 1.5;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .modal-footer button {
+    width: 100%;
+  }
+
+  /* ---------- Score Screen ---------- */
+
+  .score-screen {
+    padding: 0.5rem;
+  }
+
+  .score-circle {
+    margin: auto;
+  }
+
+  /* ---------- Tables ---------- */
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* ---------- Images ---------- */
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
+
+

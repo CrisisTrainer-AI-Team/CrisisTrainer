@@ -1148,3 +1148,26 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
     height: auto;
   }
 }
+/* Force mobile to look like zoomed-out desktop */
+@media screen and (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    transform: scale(0.78);
+    transform-origin: top left;
+    width: 128.2%; /* 100 / 0.78 */
+    min-height: 128vh;
+  }
+
+  .main-content {
+    padding: 1.5rem 2rem !important;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+}

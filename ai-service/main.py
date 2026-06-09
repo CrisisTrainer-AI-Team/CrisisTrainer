@@ -1116,7 +1116,7 @@ def supervisor_analytics(supervisor_id: int, db: Session = Depends(get_db)):
         if e["risk_level"] == "At Risk"
     ]
 
-    recent_activity = []
+recent_activity = []
 
     for attempt, training, employee, dept in sorted(
         attempts,
@@ -1132,18 +1132,18 @@ def supervisor_analytics(supervisor_id: int, db: Session = Depends(get_db)):
             "submitted_at": str(attempt.submitted_at or attempt.created_at)
         })
 
-        total_assigned_attempts = sum(
-            e["assigned"] for e in employees_analytics
-        )
+    total_assigned_attempts = sum(
+        e["assigned"] for e in employees_analytics
+    )
 
-        completed_attempts_for_assigned = sum(
-            e["completed"] for e in employees_analytics
-        )
+    completed_attempts_for_assigned = sum(
+        e["completed"] for e in employees_analytics
+    )
 
-        pending_attempts = max(
-            total_assigned_attempts - completed_attempts_for_assigned,
-            0
-        )
+    pending_attempts = max(
+        total_assigned_attempts - completed_attempts_for_assigned,
+        0
+    )
 
     return {
         "stats": {

@@ -1014,3 +1014,19 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
     height: auto !important;
   }
 }
+/* =====================================================
+   إصلاح الرسوم البيانية في صفحة (Live Monitor) حصراً
+===================================================== */
+@media (max-width: 768px) {
+  /* استهداف الـ stats-grid الموجود في صفحة المراقبة فقط وإجباره ينزل تحت بعض */
+  .main-content.full .stats-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* إعطاء مساحة للرسوم عشان تاخذ راحتها بالشاشة */
+  .main-content.full .table-wrap {
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+  }
+}

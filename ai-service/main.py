@@ -1116,7 +1116,7 @@ def supervisor_analytics(supervisor_id: int, db: Session = Depends(get_db)):
         if e["risk_level"] == "At Risk"
     ]
 
-recent_activity = []
+    recent_activity = []
 
     for attempt, training, employee, dept in sorted(
         attempts,

@@ -41,7 +41,7 @@
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 16px; scroll-behavior: smooth; }
+html { font-size: 13px; scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
@@ -904,46 +904,23 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
   .assignments-grid { grid-template-columns: 1fr; }
 }
 /* =====================================================
-   GLOBAL MOBILE DESKTOP-SCALE VIEW
-   Makes all pages look like zoomed-out desktop on phones
+   MOBILE RESPONSIVE FIXES
 ===================================================== */
-
-@media screen and (max-width: 768px) {
-
-  html {
-    overflow-x: hidden;
+@media (max-width: 768px) {
+  /* إصلاح الجداول: السماح بالتمرير الأفقي داخل الجدول فقط */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* يخلي السحب ناعم في الجوال */
+    border-radius: var(--radius-sm);
+  }
+  
+  table {
+    min-width: 650px; /* يجبر الجدول يحافظ على عرضه عشان الكلام ما ينعفص */
   }
 
-  body {
-    width: 1200px;
-    min-width: 1200px;
-    transform: scale(0.32);
-    transform-origin: top left;
-    overflow-x: hidden;
-    min-height: 312vh;
-  }
-
-  .navbar {
-    width: 1200px;
-    min-width: 1200px;
-  }
-
-  .main-content,
-  .main-content.full {
-    max-width: 1200px;
-    width: 1200px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .modal-overlay {
-    width: 100vw;
-    height: 100vh;
-    transform: scale(3.125);
-    transform-origin: top left;
-  }
-
-  .modal {
-    max-width: 680px !important;
+  /* ترتيب الكروت العلوية لتصبح كرتين في كل صف */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }

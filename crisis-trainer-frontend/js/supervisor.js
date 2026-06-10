@@ -472,7 +472,7 @@ function renderSupervisorRecent(assignments) {
   tbody.innerHTML = "";
 
   assignments.slice(0, 8).forEach(a => {
-    const isDone = ["graded", "completed", "submitted", "completed"].includes(a.status);
+    const isDone = ["graded", "completed", "submitted"].includes(a.status);
     const isProgress = a.status === "in progress";
     const statusClass = isDone
       ? "status-completed"
@@ -495,17 +495,17 @@ function renderSupervisorRecent(assignments) {
 
     tr.innerHTML = `
       <td>${escHtml(assignedTo)}</td>
-      <td>${escHtml(a.department_name || "-")}</td>
-      <td>${escHtml(a.scenario || "-")}</td>
-      <td>${escHtml(capitalize(a.difficulty || "-"))}</td>
-      <td>${questions}</td>
-      <td>${time}</td>
-      <td>
+      <td data-label="Department">${escHtml(a.department_name || "-")}</td>
+      <td data-label="Scenario">${escHtml(a.scenario || "-")}</td>
+      <td data-label="Difficulty">${escHtml(capitalize(a.difficulty || "-"))}</td>
+      <td data-label="Questions">${questions}</td>
+      <td data-label="Time">${time}</td>
+      <td data-label="Status">
         <span class="status ${statusClass}">
           ${escHtml(capitalize(a.status || "pending"))}
         </span>
       </td>
-      <td>
+      <td data-label="Actions">
         <button class="btn btn-ghost btn-sm" onclick="deleteTraining(${a.training_id})">
           Delete
         </button>

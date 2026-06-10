@@ -400,23 +400,6 @@ async function showDeptDetails(encodedDept, departmentId) {
           </div>
         </div>
 
-        <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); margin:1rem;">
-          <div class="stat-card green">
-            <div class="stat-value">${emp.highest_score !== null ? emp.highest_score + "%" : "—"}</div>
-            <div class="stat-label">Highest Score</div>
-          </div>
-
-          <div class="stat-card orange">
-            <div class="stat-value">${emp.lowest_score !== null ? emp.lowest_score + "%" : "—"}</div>
-            <div class="stat-label">Lowest Score</div>
-          </div>
-
-          <div class="stat-card teal">
-            <div class="stat-value">${emp.completed}/${emp.total_assigned}</div>
-            <div class="stat-label">Completion</div>
-          </div>
-        </div>
-
         <table>
           <thead>
             <tr>

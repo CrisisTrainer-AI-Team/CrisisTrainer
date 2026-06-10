@@ -98,19 +98,19 @@ function renderTable(data) {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td style="font-weight:500;">${escHtml(row.employee || "-")}</td>
-      <td>${escHtml(row.department_name || "-")}</td>
-      <td>${escHtml(row.scenario || "-")}</td>
-      <td>${escHtml(capitalize(row.difficulty || "-"))}</td>
-      <td>
+      <td data-label="Department">${escHtml(row.department_name || "-")}</td>
+      <td data-label="Scenario">${escHtml(row.scenario || "-")}</td>
+      <td data-label="Difficulty">${escHtml(capitalize(row.difficulty || "-"))}</td>
+      <td data-label="Status">
         <span class="status ${statusClass}">
           ${escHtml(capitalize(row.status || "pending"))}
         </span>
       </td>
-      <td>${scoreDisplay}</td>
-      <td style="color:var(--text-muted);font-size:0.85rem;">
+      <td data-label="Score">${scoreDisplay}</td>
+      <td data-label="Date" style="color:var(--text-muted);font-size:0.85rem;">
         ${formatDate(row.created_at)}
       </td>
-      <td>
+      <td data-label="Actions">
         <button class="btn btn-ghost btn-sm" onclick="showDetails(${row.training_id})">
           View
         </button>
@@ -342,10 +342,10 @@ function renderDepartmentStats() {
 
     tr.innerHTML = `
       <td><strong>${escHtml(dept)}</strong></td>
-      <td>${d.total}</td>
-      <td>${d.completed}</td>
-      <td>${avg}%</td>
-      <td>
+      <td data-label="Total">${d.total}</td>
+      <td data-label="Completed">${d.completed}</td>
+      <td data-label="Avg Score">${avg}%</td>
+      <td data-label="Actions">
         <button class="btn btn-ghost btn-sm" onclick="showDeptDetails('${encodeURIComponent(dept)}', ${d.department_id})">
           View Employees
         </button>
@@ -433,12 +433,12 @@ async function showDeptDetails(encodedDept, departmentId) {
             ${emp.details.map(d => `
               <tr>
                 <td>${escHtml(d.scenario || "-")}</td>
-                <td>${escHtml(d.role || "-")}</td>
-                <td>${escHtml(capitalize(d.difficulty || "-"))}</td>
-                <td>${escHtml(capitalize(d.status || "pending"))}</td>
-                <td><strong>${d.score !== null && d.score !== undefined ? d.score + "%" : "—"}</strong></td>
-                <td>${formatDate(d.assigned_at)}</td>
-                <td>
+                <td data-label="Role">${escHtml(d.role || "-")}</td>
+                <td data-label="Difficulty">${escHtml(capitalize(d.difficulty || "-"))}</td>
+                <td data-label="Status">${escHtml(capitalize(d.status || "pending"))}</td>
+                <td data-label="Score"><strong>${d.score !== null && d.score !== undefined ? d.score + "%" : "—"}</strong></td>
+                <td data-label="Date">${formatDate(d.assigned_at)}</td>
+                <td data-label="Notes">
                   <button class="btn btn-ghost btn-sm"
                     onclick="openNoteBox('${escHtml(emp.employee_name)}', ${d.training_id}, ${emp.employee_id})">
                     Add Note
@@ -547,10 +547,10 @@ function renderDepartmentTable(departments) {
     tbody.innerHTML += `
       <tr>
         <td><strong>${escHtml(d.department_name)}</strong></td>
-        <td>${d.assigned}</td>
-        <td>${d.completed}</td>
-        <td>${d.avg_score}%</td>
-        <td>
+        <td data-label="Assignments">${d.assigned}</td>
+        <td data-label="Completed">${d.completed}</td>
+        <td data-label="Avg Score">${d.avg_score}%</td>
+        <td data-label="Actions">
           <button class="btn btn-outline btn-sm"
             onclick="showDeptDetails('${encodeURIComponent(d.department_name)}', ${d.department_id})">
             View Employees
@@ -582,13 +582,13 @@ function renderEmployees(employees) {
     tbody.innerHTML += `
       <tr>
         <td>${escHtml(e.employee_name)}</td>
-        <td>${escHtml(e.department_name)}</td>
-        <td>${e.assigned}</td>
-        <td>${e.completed}</td>
-        <td>${e.avg_score}%</td>
-        <td>${riskBadge(e.risk_level)}</td>
-        <td>${formatDate(lastDate)}</td>
-        <td>
+        <td data-label="Department">${escHtml(e.department_name)}</td>
+        <td data-label="Assigned Trainings">${e.assigned}</td>
+        <td data-label="Completed">${e.completed}</td>
+        <td data-label="Avg Score">${e.avg_score}%</td>
+        <td data-label="Risk Level">${riskBadge(e.risk_level)}</td>
+        <td data-label="Last Activity">${formatDate(lastDate)}</td>
+        <td data-label="Actions">
           <button type="button" class="btn btn-outline btn-sm"
             onclick="showEmployeeProfile(${e.employee_id})">
             View
@@ -661,10 +661,10 @@ function showEmployeeProfile(employeeId) {
           ${emp.details.map(d => `
             <tr>
               <td>${escHtml(d.scenario)}</td>
-              <td>${escHtml(d.role || "-")}</td>
-              <td>${escHtml(d.status)}</td>
-              <td>${d.score !== null ? d.score + "%" : "—"}</td>
-              <td>${d.ai_feedback ? escHtml(d.ai_feedback.summary || "-") : "—"}</td>
+              <td data-label="Role">${escHtml(d.role || "-")}</td>
+              <td data-label="Status">${escHtml(d.status)}</td>
+              <td data-label="Score">${d.score !== null ? d.score + "%" : "—"}</td>
+              <td data-label="AI Feedback">${d.ai_feedback ? escHtml(d.ai_feedback.summary || "-") : "—"}</td>
             </tr>
           `).join("")}
         </tbody>

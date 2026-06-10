@@ -1051,3 +1051,28 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
     height: auto !important;
   }
 }
+/* =====================================================
+   الإصلاح النهائي للرسمة الثالثة (Weakest Scenarios) 
+===================================================== */
+@media (max-width: 768px) {
+  /* إجبار الحاوية تاخذ عرض الشاشة بالكامل */
+  .table-wrap {
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  /* الحاوية المباشرة للرسمة */
+  .table-wrap > div {
+    width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important; /* يعطيها مساحة لو النص طويل جداً */
+  }
+
+  /* إجبار الرسمة (Canvas) تتمدد بالطول والعرض ولا تنعفص */
+  canvas {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important; /* يمنعها تصير نحيفة */
+    min-height: 280px !important; /* يعطيها طول كافي عشان النص اللي تحت يوضح */
+  }
+}

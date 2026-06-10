@@ -1030,3 +1030,24 @@ tbody tr:hover { background: rgba(169,214,229,0.07); }
     margin-bottom: 1.5rem !important;
   }
 }
+@media (max-width: 768px) {
+  /* كسر الشبكة نهائياً في صفحة المراقبة فقط وإلغاء التجاور */
+  .main-content.full .stats-grid {
+    display: block !important;
+  }
+  
+  /* إجبار كل رسمة (كرت) تاخذ سطر كامل لحالها */
+  .main-content.full .stats-grid .table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1.5rem !important;
+    display: block !important;
+  }
+
+  /* إصلاح مشكلة انقطاع الرسم البياني عشان يتمدد صح */
+  .main-content.full canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
